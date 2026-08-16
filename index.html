@@ -1,1 +1,1229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Ana Carolina | Product Management & Legal Product</title>
+
+    <meta name="description"
+        content="Portfólio de Ana Carolina — Product Management, Legal Product, Direito Bancário e Produtos Digitais.">
+
+    <style>
+        :root {
+            --bg: #f7f7f5;
+            --white: #ffffff;
+            --text: #171717;
+            --muted: #6b6b6b;
+            --border: #e5e5e5;
+            --accent: #ff6b00;
+            --accent-dark: #d95500;
+            --soft: #fff1e6;
+            --dark: #171717;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* NAVBAR */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(247, 247, 245, 0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 120px 0 100px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.6fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--soft);
+            color: var(--accent-dark);
+            padding: 7px 13px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 6vw, 76px);
+            line-height: 1.03;
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 19px;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid var(--dark);
+            transition: 0.2s;
+        }
+
+        .button.primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .button.primary:hover {
+            transform: translateY(-2px);
+            background: #333;
+        }
+
+        .button.secondary:hover {
+            background: white;
+        }
+
+        .hero-card {
+            background: var(--dark);
+            color: white;
+            border-radius: 24px;
+            padding: 30px;
+            min-height: 310px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.10);
+        }
+
+        .hero-card small {
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-card h2 {
+            font-size: 30px;
+            line-height: 1.15;
+        }
+
+        .hero-card .orange {
+            color: var(--accent);
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 40px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+        }
+
+        .section-intro {
+            max-width: 680px;
+            color: var(--muted);
+            margin-top: 15px;
+            font-size: 17px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #4d4d4d;
+        }
+
+        .highlight {
+            border-left: 4px solid var(--accent);
+            padding: 20px 25px;
+            background: white;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        /* CASE */
+
+        .case-section {
+            background: var(--dark);
+            color: white;
+        }
+
+        .case-section .section-intro {
+            color: #bdbdbd;
+        }
+
+        .case-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: end;
+            margin-bottom: 55px;
+        }
+
+        .case-label {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .case-title {
+            font-size: clamp(36px, 5vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+
+        .case-description {
+            color: #bdbdbd;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .case-card {
+            background: #232323;
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 28px;
+            min-height: 190px;
+        }
+
+        .case-number {
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .case-card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .case-card p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* JOURNEY */
+
+        .journey {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .journey-step {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 20px 14px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+        }
+
+        .journey-step strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .journey-step span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* LEGAL LENS */
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .legal-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .legal-card .icon {
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .legal-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .legal-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* SOLUTION */
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .phone {
+            max-width: 340px;
+            margin: auto;
+            background: #111;
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .phone-screen {
+            background: white;
+            border-radius: 21px;
+            padding: 28px 20px;
+        }
+
+        .phone-top {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .status {
+            background: #fff1e6;
+            color: #c84f00;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .status strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .phone-button {
+            display: block;
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 12px;
+            border-radius: 9px;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .solution-text h3 {
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .solution-text p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .solution-list {
+            list-style: none;
+        }
+
+        .solution-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 15px;
+        }
+
+        .solution-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: 800;
+            margin-right: 10px;
+        }
+
+        /* METRICS */
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .metric {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .metric-number {
+            color: var(--accent);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .metric p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            padding: 10px 16px;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 70px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: center;
+        }
+
+        footer h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            border: 1px solid #444;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .disclaimer {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero,
+            .about-grid,
+            .case-header,
+            .solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero-card {
+                min-height: 230px;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .legal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .journey {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            h2 {
+                font-size: 32px;
+            }
+
+            .hero {
+                padding: 65px 0;
+            }
+
+            .case-grid,
+            .legal-grid,
+            .metrics,
+            .journey {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Ana<span>.</span></a>
+
+                <ul class="nav-links">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#case">Case</a></li>
+                    <li><a href="#competencias">Competências</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero">
+            <div class="container" style="display: contents;">
+
+                <div>
+                    <span class="tag">Product Management · Legal Product · B2C</span>
+
+                    <h1>
+                        Direito, Produto e
+                        <span>Tecnologia.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Advogada de Direito Bancário em transição para Product Management,
+                        explorando como conhecimento jurídico, visão de negócio e tecnologia
+                        podem contribuir para produtos digitais mais simples, seguros e
+                        centrados no cliente.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#case" class="button primary">
+                            Conhecer meu case
+                        </a>
+
+                        <a href="#sobre" class="button secondary">
+                            Sobre mim
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <small>Meu foco</small>
+
+                    <h2>
+                        Transformar
+                        <span class="orange">problemas</span>
+                        em oportunidades de produto.
+                    </h2>
+
+                    <small>
+                        Customer · Business · Technology · Legal
+                    </small>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section id="sobre">
+            <div class="container">
+
+                <div class="section-title">
+                    <div class="eyebrow">01 — Sobre mim</div>
+                    <h2>Uma nova perspectiva para o Jurídico.</h2>
+
+                    <p class="section-intro">
+                        Minha trajetória profissional começou no Direito, com experiência
+                        em Direito Bancário e Mercado Financeiro. Atualmente, estou
+                        direcionando minha carreira para Produto e tecnologia.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+                            Minha experiência jurídica me desenvolveu em análise de riscos,
+                            interpretação de normas, elaboração e revisão de documentos,
+                            resolução de problemas e comunicação com diferentes
+                            stakeholders.
+                        </p>
+
+                        <p>
+                            Ao conhecer Product Management, encontrei uma área que conecta
+                            algumas dessas habilidades com tecnologia, negócio e experiência
+                            do cliente.
+                        </p>
+
+                        <p>
+                            Meu objetivo é atuar na interseção entre essas áreas, contribuindo
+                            para a construção e evolução de produtos digitais.
+                        </p>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <strong>Minha proposta</strong>
+
+                        <p>
+                            Usar a visão jurídica não apenas para identificar riscos,
+                            mas também para ajudar a construir soluções melhores para
+                            o negócio e para o cliente.
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CASE -->
+
+        <section id="case" class="case-section">
+
+            <div class="container">
+
+                <div class="case-header">
+
+                    <div>
+                        <div class="case-label">
+                            Case em destaque
+                        </div>
+
+                        <h2 class="case-title">
+                            Legal Product Lab
+                        </h2>
+                    </div>
+
+                    <p class="case-description">
+                        Estudo independente sobre uma jornada B2C de compra e pós-venda,
+                        explorando como Produto e Jurídico podem atuar juntos para
+                        solucionar problemas da experiência do consumidor.
+                    </p>
+
+                </div>
+
+
+                <div class="case-grid">
+
+                    <div class="case-card">
+                        <div class="case-number">01</div>
+                        <h3>Contexto</h3>
+                        <p>
+                            Entendimento do produto, do consumidor e do problema de negócio.
+                        </p>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-number">02</div>
+                        <h3>Pesquisa</h3>
+                        <p>
+                            Pesquisa exploratória para entender dores e comportamentos
+                            de consumidores.
+                        </p>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-number">03</div>
+                        <h3>Jornada</h3>
+                        <p>
+                            Mapeamento da experiência desde a compra até o pós-venda.
+                        </p>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-number">04</div>
+                        <h3>Legal Lens</h3>
+                        <p>
+                            Análise dos principais riscos relacionados à relação de consumo,
+                            informação e responsabilidades.
+                        </p>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-number">05</div>
+                        <h3>Priorização</h3>
+                        <p>
+                            Identificação do problema com maior potencial de impacto para
+                            o cliente.
+                        </p>
+                    </div>
+
+                    <div class="case-card">
+                        <div class="case-number">06</div>
+                        <h3>Solução</h3>
+                        <p>
+                            Proposta de melhoria de produto e definição de métricas para
+                            validar a hipótese.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROBLEMA -->
+
+        <section>
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="eyebrow">02 — Problema</div>
+
+                    <h2>
+                        Quando algo dá errado depois da compra.
+                    </h2>
+
+                    <p class="section-intro">
+                        A jornada de compra não termina no pagamento. Em uma experiência
+                        B2C, problemas como atraso, cancelamento ou reembolso podem
+                        transformar uma boa experiência em uma experiência frustrante.
+                    </p>
+
+                </div>
+
+
+                <div class="journey">
+
+                    <div class="journey-step">
+                        <strong>Compra</strong>
+                        <span>Cliente realiza o pedido</span>
+                    </div>
+
+                    <div class="journey-step">
+                        <strong>Confirmação</strong>
+                        <span>Pedido confirmado</span>
+                    </div>
+
+                    <div class="journey-step">
+                        <strong>Acompanhamento</strong>
+                        <span>Cliente acompanha</span>
+                    </div>
+
+                    <div class="journey-step">
+                        <strong>Problema</strong>
+                        <span>Atraso ou falha</span>
+                    </div>
+
+                    <div class="journey-step">
+                        <strong>Resolução</strong>
+                        <span>Suporte ou cancelamento</span>
+                    </div>
+
+                    <div class="journey-step">
+                        <strong>Finalização</strong>
+                        <span>Entrega ou reembolso</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- LEGAL LENS -->
+
+        <section style="background: #eeeeeb;" id="legal">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="eyebrow">03 — Legal Lens</div>
+
+                    <h2>
+                        Onde Direito e Produto se encontram.
+                    </h2>
+
+                    <p class="section-intro">
+                        A análise jurídica não precisa acontecer apenas no final do
+                        desenvolvimento. Ela pode contribuir para a definição da jornada,
+                        identificação de riscos e construção da solução.
+                    </p>
+
+                </div>
+
+
+                <div class="legal-grid">
+
+                    <div class="legal-card">
+                        <div class="icon">◌</div>
+                        <h3>Consumidor</h3>
+                        <p>
+                            Clareza das informações, oferta, cancelamento e experiência
+                            de resolução.
+                        </p>
+                    </div>
+
+                    <div class="legal-card">
+                        <div class="icon">◇</div>
+                        <h3>Responsabilidade</h3>
+                        <p>
+                            Identificação dos envolvidos na cadeia e análise das
+                            responsabilidades de cada participante.
+                        </p>
+                    </div>
+
+                    <div class="legal-card">
+                        <div class="icon">□</div>
+                        <h3>Contratos</h3>
+                        <p>
+                            Definição de responsabilidades, SLAs, atendimento e
+                            mecanismos de resolução.
+                        </p>
+                    </div>
+
+                    <div class="legal-card">
+                        <div class="icon">+</div>
+                        <h3>Produto</h3>
+                        <p>
+                            Transformação do risco identificado em oportunidade de
+                            melhoria da experiência.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLUÇÃO -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="eyebrow">04 — Solução</div>
+
+                    <h2>
+                        Menos incerteza. Mais autonomia.
+                    </h2>
+
+                    <p class="section-intro">
+                        Uma hipótese de solução é criar uma central de resolução
+                        integrada à jornada do pedido.
+                    </p>
+
+                </div>
+
+
+                <div class="solution-grid">
+
+                    <div class="phone">
+
+                        <div class="phone-screen">
+
+                            <div class="phone-top">
+                                ← Meu pedido
+                            </div>
+
+                            <h3 style="margin-bottom: 18px;">
+                                Pedido #12345
+                            </h3>
+
+                            <div class="status">
+
+                                <strong>
+                                    ⚠ Pedido atrasado
+                                </strong>
+
+                                Nova previsão: 18/08
+
+                            </div>
+
+                            <p style="font-size: 13px; color: #666;">
+                                O parceiro foi acionado e você receberá uma nova
+                                atualização sobre o pedido.
+                            </p>
+
+                            <a href="#" class="phone-button">
+                                Acompanhar pedido
+                            </a>
+
+                            <a href="#" class="phone-button"
+                                style="background: white; color: #222; border: 1px solid #ddd;">
+                                Cancelar pedido
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="solution-text">
+
+                        <h3>
+                            Central de resolução pós-compra
+                        </h3>
+
+                        <p>
+                            A proposta é transformar uma situação de incerteza em
+                            uma jornada clara, na qual o cliente consiga entender
+                            o problema, acompanhar sua resolução e escolher o
+                            próximo passo.
+                        </p>
+
+                        <ul class="solution-list">
+
+                            <li>
+                                Comunicação proativa sobre atrasos
+                            </li>
+
+                            <li>
+                                Status atualizado do pedido
+                            </li>
+
+                            <li>
+                                Próximo passo claramente indicado
+                            </li>
+
+                            <li>
+                                Opção de cancelamento quando aplicável
+                            </li>
+
+                            <li>
+                                Redução da necessidade de contato com atendimento
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MÉTRICAS -->
+
+        <section style="background: #eeeeeb;">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="eyebrow">05 — Métricas</div>
+
+                    <h2>
+                        Como eu saberia se funcionou?
+                    </h2>
+
+                    <p class="section-intro">
+                        A solução é uma hipótese. Antes de afirmar que ela funciona,
+                        é necessário definir como o impacto será medido.
+                    </p>
+
+                </div>
+
+
+                <div class="metrics">
+
+                    <div class="metric">
+                        <div class="metric-number">01</div>
+                        <strong>Resolução</strong>
+                        <p>
+                            Taxa de problemas resolvidos sem contato com atendimento.
+                        </p>
+                    </div>
+
+                    <div class="metric">
+                        <div class="metric-number">02</div>
+                        <strong>Tempo</strong>
+                        <p>
+                            Tempo médio entre a identificação do problema e sua resolução.
+                        </p>
+                    </div>
+
+                    <div class="metric">
+                        <div class="metric-number">03</div>
+                        <strong>Satisfação</strong>
+                        <p>
+                            Avaliação do cliente após a resolução do problema.
+                        </p>
+                    </div>
+
+                    <div class="metric">
+                        <div class="metric-number">04</div>
+                        <strong>Reclamações</strong>
+                        <p>
+                            Evolução do volume de reclamações relacionadas ao pós-venda.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPETÊNCIAS -->
+
+        <section id="competencias">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="eyebrow">06 — Competências</div>
+
+                    <h2>
+                        O que estou construindo.
+                    </h2>
+
+                </div>
+
+
+                <div class="skills">
+
+                    <span class="skill">Product Discovery</span>
+                    <span class="skill">Customer Journey</span>
+                    <span class="skill">Problem Solving</span>
+                    <span class="skill">UX</span>
+                    <span class="skill">Product Strategy</span>
+                    <span class="skill">Métricas</span>
+                    <span class="skill">Direito Bancário</span>
+                    <span class="skill">Direito do Consumidor</span>
+                    <span class="skill">Contratos</span>
+                    <span class="skill">Direito Digital</span>
+                    <span class="skill">LGPD</span>
+                    <span class="skill">Produtos Digitais</span>
+                    <span class="skill">Tecnologia</span>
+                    <span class="skill">Gestão de Riscos</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contato">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Vamos conversar?
+                    </div>
+
+                    <h2>
+                        Construindo minha próxima etapa.
+                    </h2>
+
+                    <p>
+                        Estou em busca de oportunidades para atuar na interseção
+                        entre Direito, Produto e Tecnologia.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <!-- TROQUE OS LINKS ABAIXO PELOS SEUS -->
+
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/anavieira00-product"
+                        target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="disclaimer">
+
+                Este portfólio apresenta estudos e projetos desenvolvidos para fins
+                de aprendizado e demonstração profissional. Os cases não representam
+                informações internas, decisões ou posicionamentos de empresas citadas.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
