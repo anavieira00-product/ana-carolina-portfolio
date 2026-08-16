@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,16 +16,22 @@
     --text:#172033;
     --muted:#667085;
     --line:#e4e7ec;
+
     --orange:#ff6b00;
     --orange-light:#fff1e6;
+
     --blue:#2563eb;
     --blue-light:#eff6ff;
+
     --green:#16a34a;
     --green-light:#ecfdf3;
+
     --red:#dc2626;
     --red-light:#fef2f2;
+
     --purple:#7c3aed;
     --purple-light:#f5f3ff;
+
     --dark:#111827;
 }
 
@@ -51,13 +59,11 @@ a{
     margin:auto;
 }
 
-/* NAV */
-
 header{
     position:sticky;
     top:0;
     z-index:100;
-    background:rgba(246,247,249,.92);
+    background:rgba(246,247,249,.94);
     backdrop-filter:blur(12px);
     border-bottom:1px solid var(--line);
 }
@@ -202,7 +208,7 @@ h2{
 
 .section-description{
     color:var(--muted);
-    max-width:700px;
+    max-width:720px;
     margin-top:14px;
 }
 
@@ -226,12 +232,7 @@ h2{
     border-radius:16px;
 }
 
-.about-card strong{
-    display:block;
-    margin-bottom:10px;
-}
-
-/* CASE INTRO */
+/* CASE */
 
 .case-intro{
     background:var(--dark);
@@ -264,62 +265,135 @@ h2{
     margin-bottom:15px;
 }
 
-/* DATA */
+/* NOTICE */
 
-.data-grid{
+.notice{
+    margin-top:30px;
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    color:#9a3412;
+    padding:18px 20px;
+    border-radius:12px;
+    font-size:13px;
+}
+
+/* BENCHMARK */
+
+.benchmark{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
     margin-top:40px;
 }
 
-.data-card{
+.benchmark-card{
     background:white;
     border:1px solid var(--line);
-    border-radius:15px;
+    border-radius:16px;
     padding:25px;
 }
 
-.data-number{
-    font-size:32px;
+.company{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:5px;
+}
+
+.company-note{
+    color:var(--muted);
+    font-size:11px;
+    margin-bottom:20px;
+}
+
+.benchmark-number{
+    font-size:30px;
     font-weight:800;
     color:var(--orange);
 }
 
-.data-label{
-    font-weight:700;
-    margin:5px 0;
-}
-
-.data-note{
-    color:var(--muted);
+.benchmark-label{
     font-size:12px;
+    color:#475467;
+    margin-bottom:15px;
 }
 
-/* EVIDENCE */
+.benchmark-source{
+    font-size:11px;
+    color:var(--blue);
+    padding-top:12px;
+    border-top:1px solid var(--line);
+}
 
-.evidence{
+/* PATTERNS */
+
+.pattern-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
     margin-top:40px;
 }
 
-.evidence-card{
+.pattern{
+    background:white;
+    border:1px solid var(--line);
+    padding:25px;
+    border-radius:15px;
+}
+
+.pattern-icon{
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.pattern h3{
+    margin-bottom:8px;
+}
+
+.pattern p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* SIMULATED DATA */
+
+.simulated{
+    background:#f1f5f9;
+}
+
+.simulated-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:40px;
+}
+
+.sim-card{
     background:white;
     border:1px solid var(--line);
     border-radius:15px;
     padding:25px;
 }
 
-.evidence-card h3{
-    margin-bottom:10px;
+.sim-card .number{
+    font-size:30px;
+    font-weight:800;
+    color:var(--blue);
 }
 
-.source{
+.sim-card small{
+    color:var(--muted);
+    font-size:11px;
+}
+
+.sim-badge{
+    display:inline-block;
+    background:var(--blue-light);
     color:var(--blue);
-    font-size:12px;
-    margin-top:18px;
+    padding:4px 7px;
+    border-radius:5px;
+    font-size:9px;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
 /* BOARD */
@@ -341,7 +415,7 @@ h2{
     justify-content:space-between;
     align-items:center;
     margin-bottom:20px;
-    min-width:1000px;
+    min-width:1050px;
 }
 
 .board-title{
@@ -354,7 +428,7 @@ h2{
 }
 
 .swimlanes{
-    min-width:1000px;
+    min-width:1050px;
     display:grid;
     gap:12px;
 }
@@ -420,34 +494,34 @@ h2{
     margin-bottom:8px;
 }
 
-/* PAIN POINT */
+/* PROBLEM */
 
-.pain-grid{
+.problem-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
     margin-top:40px;
 }
 
-.pain-card{
+.problem-card{
     background:white;
     border:1px solid var(--line);
     border-radius:15px;
     padding:25px;
 }
 
-.pain-card .number{
+.problem-card .number{
     color:var(--red);
+    font-size:11px;
     font-weight:800;
-    font-size:12px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
-.pain-card h3{
-    margin-bottom:10px;
+.problem-card h3{
+    margin-bottom:8px;
 }
 
-.pain-card p{
+.problem-card p{
     color:var(--muted);
     font-size:14px;
 }
@@ -455,7 +529,7 @@ h2{
 /* LEGAL */
 
 .legal-section{
-    background:#fff;
+    background:white;
 }
 
 .legal-grid{
@@ -478,7 +552,7 @@ h2{
     color:var(--purple);
     padding:5px 8px;
     border-radius:5px;
-    font-size:11px;
+    font-size:10px;
     font-weight:800;
     margin-bottom:15px;
 }
@@ -489,31 +563,6 @@ h2{
 }
 
 .legal-card p{
-    color:var(--muted);
-    font-size:13px;
-}
-
-/* RESPONSIBILITY */
-
-.responsibility{
-    margin-top:40px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.responsibility-card{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:15px;
-    padding:25px;
-}
-
-.responsibility-card h3{
-    margin-bottom:8px;
-}
-
-.responsibility-card p{
     color:var(--muted);
     font-size:13px;
 }
@@ -572,7 +621,7 @@ h2{
     font-size:13px;
 }
 
-/* PRODUCT SCREEN */
+/* SCREEN */
 
 .product-screen{
     background:var(--dark);
@@ -599,7 +648,7 @@ h2{
     background:var(--orange-light);
     padding:15px;
     border-radius:10px;
-    margin-bottom:15px;
+    margin:15px 0;
 }
 
 .order-status strong{
@@ -761,11 +810,13 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .data-grid{
+    .benchmark,
+    .pattern-grid,
+    .problem-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .pain-grid,
+    .simulated-grid,
     .legal-grid{
         grid-template-columns:1fr 1fr;
     }
@@ -782,8 +833,10 @@ footer{
         font-size:32px;
     }
 
-    .data-grid,
-    .pain-grid,
+    .benchmark,
+    .pattern-grid,
+    .problem-grid,
+    .simulated-grid,
     .legal-grid,
     .metrics-grid{
         grid-template-columns:1fr;
@@ -799,26 +852,36 @@ footer{
 }
 
 </style>
+
 </head>
 
 <body>
 
+
 <header>
+
 <div class="container">
+
 <nav>
 
-<a href="#" class="logo">Ana<span>.</span></a>
+<a href="#" class="logo">
+Ana<span>.</span>
+</a>
 
 <ul class="nav-links">
+
 <li><a href="#sobre">Sobre</a></li>
+<li><a href="#benchmark">Benchmark</a></li>
 <li><a href="#case">Case</a></li>
-<li><a href="#evidencias">Evidências</a></li>
 <li><a href="#solucao">Solução</a></li>
 <li><a href="#contato">Contato</a></li>
+
 </ul>
 
 </nav>
+
 </div>
+
 </header>
 
 
@@ -868,8 +931,10 @@ LinkedIn
 <small>Minha abordagem</small>
 
 <h2>
+
 Investigar o problema antes de
 <span>desenhar a solução.</span>
+
 </h2>
 
 <small>
@@ -905,6 +970,7 @@ de problemas e comunicação com diferentes áreas.
 
 </p>
 
+
 <div class="about-grid" style="margin-top:40px;">
 
 <div class="about-text">
@@ -922,6 +988,7 @@ mais claras, seguras e eficientes.
 
 </div>
 
+
 <div class="about-card">
 
 <strong>
@@ -929,9 +996,11 @@ Meu foco
 </strong>
 
 <p>
+
 Produtos digitais B2C, especialmente em ambientes financeiros,
 marketplaces e serviços digitais nos quais experiência do cliente,
 regulação e negócio precisam caminhar juntos.
+
 </p>
 
 </div>
@@ -954,28 +1023,45 @@ regulação e negócio precisam caminhar juntos.
 <div>
 
 <div class="study-tag">
-CASE INDEPENDENTE · B2C · MARKETPLACE
+CASE FICTÍCIO · MARKETPLACE B2C
 </div>
 
 <h2 class="case-title">
-Inter Shop
+
+Nexa Market
 <br>
-Jornada de pós-venda
+
+Jornada de pós-compra
+
 </h2>
 
 </div>
 
+
 <p class="case-subtitle">
 
-Como transformar uma jornada de pós-compra marcada por
-incerteza em uma experiência mais previsível para o consumidor?
+Como reduzir a fricção na resolução de problemas
+após uma compra em um marketplace B2C?
 
 <br><br>
 
-Este estudo foi desenvolvido com base em informações públicas.
-Não representa dados internos ou decisões do Inter.
+A Nexa Market é uma empresa fictícia criada para este
+projeto de portfólio.
 
 </p>
+
+</div>
+
+
+<div class="notice">
+
+<strong>Nota metodológica:</strong>
+
+Os dados internos da Nexa Market são simulados exclusivamente
+para fins de exercício de Product Management.
+
+As referências a Inter Shop, Shopee e Amazon aparecem apenas
+como benchmark baseado em informações públicas.
 
 </div>
 
@@ -984,93 +1070,133 @@ Não representa dados internos ou decisões do Inter.
 </section>
 
 
-<!-- DADOS -->
+<!-- BENCHMARK -->
 
-<section id="evidencias">
+<section id="benchmark">
 
 <div class="container">
 
 <div class="section-label">
-02 — Evidências públicas
+02 — Benchmark público
 </div>
 
 <h2>
-O que os dados públicos mostram?
+O que podemos aprender observando o mercado?
 </h2>
 
 <p class="section-description">
 
-Antes de propor uma solução, analisei indicadores e reclamações
-publicamente disponíveis sobre a Rede Inter Shop.
+Antes de criar uma solução para a Nexa Market, analisei
+indicadores públicos de três grandes players de marketplace.
+
+Os números abaixo não pertencem à Nexa.
 
 </p>
 
 
-<div class="data-grid">
+<div class="benchmark">
 
-<div class="data-card">
 
-<div class="data-number">
-366
+<!-- INTER -->
+
+<div class="benchmark-card">
+
+<div class="company">
+Inter Shop
 </div>
 
-<div class="data-label">
-reclamações
+<div class="company-note">
+Dados públicos · 01/01/2026–30/06/2026
 </div>
 
-<div class="data-note">
-Período: 01/01/2026 a 30/06/2026
-</div>
-
-</div>
-
-
-<div class="data-card">
-
-<div class="data-number">
+<div class="benchmark-number">
 35,4%
 </div>
 
-<div class="data-label">
+<div class="benchmark-label">
 reclamações resolvidas
 </div>
 
-<div class="data-note">
-Indicador apresentado pelo Reclame Aqui
-</div>
-
-</div>
-
-
-<div class="data-card">
-
-<div class="data-number">
+<div class="benchmark-number">
 27,1%
 </div>
 
-<div class="data-label">
+<div class="benchmark-label">
 voltariam a fazer negócio
 </div>
 
-<div class="data-note">
-Entre consumidores avaliadores
+<div class="benchmark-source">
+Fonte: Reclame Aqui — Rede Inter Shop
 </div>
 
 </div>
 
 
-<div class="data-card">
+<!-- SHOPEE -->
 
-<div class="data-number">
-2,6
+<div class="benchmark-card">
+
+<div class="company">
+Shopee
 </div>
 
-<div class="data-label">
-nota média
+<div class="company-note">
+Dados públicos · 01/01/2026–30/06/2026
 </div>
 
-<div class="data-note">
-Avaliação apresentada no período
+<div class="benchmark-number">
+64,2%
+</div>
+
+<div class="benchmark-label">
+reclamações resolvidas
+</div>
+
+<div class="benchmark-number">
+61,6%
+</div>
+
+<div class="benchmark-label">
+voltariam a fazer negócio
+</div>
+
+<div class="benchmark-source">
+Fonte: Reclame Aqui — Shopee
+</div>
+
+</div>
+
+
+<!-- AMAZON -->
+
+<div class="benchmark-card">
+
+<div class="company">
+Amazon
+</div>
+
+<div class="company-note">
+Dados públicos · 01/01/2026–30/06/2026
+</div>
+
+<div class="benchmark-number">
+87%
+</div>
+
+<div class="benchmark-label">
+reclamações resolvidas
+</div>
+
+<div class="benchmark-number">
+78,1%
+</div>
+
+<div class="benchmark-label">
+voltariam a fazer negócio
+</div>
+
+<div class="benchmark-source">
+Fonte: Reclame Aqui — Amazon
 </div>
 
 </div>
@@ -1078,42 +1204,232 @@ Avaliação apresentada no período
 </div>
 
 
-<div class="evidence">
+<div class="notice">
 
-<div class="evidence-card">
+<strong>Importante:</strong>
+
+Esses indicadores não permitem concluir que uma empresa possui
+uma experiência melhor ou pior de forma isolada. São referências
+públicas utilizadas neste projeto para gerar perguntas e hipóteses,
+e não uma comparação definitiva entre os produtos.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PATTERNS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+03 — Discovery
+</div>
+
+<h2>
+Quais padrões aparecem?
+</h2>
+
+<p class="section-description">
+
+A partir do benchmark e da análise qualitativa de reclamações
+públicas, transformei os sinais observados em oportunidades
+de investigação.
+
+</p>
+
+
+<div class="pattern-grid">
+
+<div class="pattern">
+
+<div class="pattern-icon">
+📦
+</div>
 
 <h3>
-🔴 Atraso na entrega
+Entrega
 </h3>
 
 <p>
-O filtro público de reclamações por “Atraso na entrega”
-apresenta <strong>276 reclamações</strong> no recorte consultado.
-</p>
 
-<p class="source">
-Fonte: Reclame Aqui — Rede Inter Shop.
+A previsibilidade do prazo e o acompanhamento do pedido
+são pontos recorrentes na experiência de marketplaces.
+
 </p>
 
 </div>
 
 
-<div class="evidence-card">
+<div class="pattern">
+
+<div class="pattern-icon">
+🔄
+</div>
 
 <h3>
-🟠 Produto com defeito
+Cancelamento e reembolso
 </h3>
 
 <p>
-O filtro público por “Produto com defeito” apresenta
-<strong>79 reclamações</strong> no recorte consultado.
-</p>
 
-<p class="source">
-Fonte: Reclame Aqui — Rede Inter Shop.
+Quando existe um problema, o consumidor precisa entender
+rapidamente quais ações estão disponíveis.
+
 </p>
 
 </div>
+
+
+<div class="pattern">
+
+<div class="pattern-icon">
+👤
+</div>
+
+<h3>
+Ownership
+</h3>
+
+<p>
+
+Em modelos com parceiros, logística e plataforma,
+pode existir complexidade sobre quem conduz a resolução.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SIMULATED DATA -->
+
+<section class="simulated">
+
+<div class="container">
+
+<div class="section-label">
+04 — Dados da Nexa
+</div>
+
+<h2>
+Agora, o problema fictício.
+</h2>
+
+<p class="section-description">
+
+Para transformar os sinais do benchmark em um exercício
+de Product Management, criei uma base hipotética para a Nexa Market.
+
+</p>
+
+
+<div class="simulated-grid">
+
+
+<div class="sim-card">
+
+<span class="sim-badge">
+SIMULADO
+</span>
+
+<div class="number">
+8,4%
+</div>
+
+<strong>
+pedidos com atraso
+</strong>
+
+<small>
+Base hipotética de 100 mil pedidos/mês
+</small>
+
+</div>
+
+
+<div class="sim-card">
+
+<span class="sim-badge">
+SIMULADO
+</span>
+
+<div class="number">
+62%
+</div>
+
+<strong>
+dos contatos são sobre atraso
+</strong>
+
+<small>
+Hipótese de distribuição do atendimento
+</small>
+
+</div>
+
+
+<div class="sim-card">
+
+<span class="sim-badge">
+SIMULADO
+</span>
+
+<div class="number">
+38%
+</div>
+
+<strong>
+taxa de recontato
+</strong>
+
+<small>
+Clientes que voltam a procurar suporte
+</small>
+
+</div>
+
+
+<div class="sim-card">
+
+<span class="sim-badge">
+SIMULADO
+</span>
+
+<div class="number">
+4,2 dias
+</div>
+
+<strong>
+tempo médio de resolução
+</strong>
+
+<small>
+Hipótese para o exercício
+</small>
+
+</div>
+
+</div>
+
+
+<div class="notice">
+
+<strong>Por que usar dados simulados?</strong>
+
+Como este é um case de portfólio e não tenho acesso aos sistemas
+internos de uma empresa real, os dados da Nexa são explicitamente
+hipotéticos. Eles servem para demonstrar como eu estruturaria
+uma análise, definiria KPIs e tomaria decisões de produto.
 
 </div>
 
@@ -1129,16 +1445,16 @@ Fonte: Reclame Aqui — Rede Inter Shop.
 <div class="container">
 
 <div class="section-label">
-03 — Jornada atual
+05 — Customer Journey
 </div>
 
 <h2>
-Onde a experiência quebra?
+Onde a experiência pode quebrar?
 </h2>
 
 <p class="section-description">
 
-Mapeei a jornada como um board de produto, distribuindo as
+Mapeei a jornada como um board de produto, distribuindo
 responsabilidades entre os principais atores.
 
 </p>
@@ -1149,11 +1465,11 @@ responsabilidades entre os principais atores.
 <div class="board-header">
 
 <div class="board-title">
-Jornada pós-compra · Inter Shop
+Nexa Market · Jornada pós-compra
 </div>
 
 <div class="board-meta">
-Discovery board · estudo independente
+Discovery board · hipótese de produto
 </div>
 
 </div>
@@ -1161,7 +1477,6 @@ Discovery board · estudo independente
 
 <div class="swimlanes">
 
-<!-- HEADER -->
 
 <div class="lane">
 
@@ -1198,9 +1513,9 @@ Resolução
 
 <div class="sticky blue">
 
-<strong>Compra realizada</strong>
+<strong>Compra</strong>
 
-Pedido confirmado.
+Realiza o pedido.
 
 </div>
 
@@ -1212,8 +1527,7 @@ Pedido confirmado.
 
 <strong>Acompanha</strong>
 
-Busca informações sobre
-status e entrega.
+Espera atualização.
 
 </div>
 
@@ -1223,10 +1537,9 @@ status e entrega.
 
 <div class="sticky red">
 
-<strong>⚠ Pain point</strong>
+<strong>⚠ Dor</strong>
 
-Pedido atrasado ou
-produto com problema.
+Pedido atrasado.
 
 </div>
 
@@ -1236,10 +1549,9 @@ produto com problema.
 
 <div class="sticky green">
 
-<strong>Resultado esperado</strong>
+<strong>Resultado</strong>
 
-Resolver sem precisar
-repetir informações.
+Problema resolvido.
 
 </div>
 
@@ -1262,7 +1574,7 @@ repetir informações.
 
 <strong>Status</strong>
 
-Pedido registrado no fluxo.
+Pedido criado.
 
 </div>
 
@@ -1274,8 +1586,7 @@ Pedido registrado no fluxo.
 
 <strong>Tracking</strong>
 
-Informação sobre pedido
-e logística.
+Mostra evolução.
 
 </div>
 
@@ -1287,9 +1598,7 @@ e logística.
 
 <strong>Gap</strong>
 
-Status e próximo passo
-podem não ser suficientes
-para o cliente.
+Próximo passo pouco claro.
 
 </div>
 
@@ -1301,8 +1610,7 @@ para o cliente.
 
 <strong>Opportunity</strong>
 
-Centralizar status,
-responsável e ação.
+Centralizar resolução.
 
 </div>
 
@@ -1325,7 +1633,7 @@ responsável e ação.
 
 <strong>Venda</strong>
 
-Parceiro processa pedido.
+Processa pedido.
 
 </div>
 
@@ -1337,7 +1645,7 @@ Parceiro processa pedido.
 
 <strong>Logística</strong>
 
-Entrega e atualização.
+Entrega.
 
 </div>
 
@@ -1349,8 +1657,7 @@ Entrega e atualização.
 
 <strong>Escalonamento</strong>
 
-Problema exige
-acionamento.
+Problema exige ação.
 
 </div>
 
@@ -1362,8 +1669,7 @@ acionamento.
 
 <strong>SLA</strong>
 
-Definir prazo e
-responsável.
+Define prazo.
 
 </div>
 
@@ -1386,8 +1692,7 @@ responsável.
 
 <strong>Oferta</strong>
 
-Informação clara e
-adequada ao consumidor.
+Regras aplicáveis.
 
 </div>
 
@@ -1397,10 +1702,9 @@ adequada ao consumidor.
 
 <div class="sticky purple">
 
-<strong>Contrato</strong>
+<strong>Contratos</strong>
 
-Definição de papéis
-e responsabilidades.
+Papéis definidos.
 
 </div>
 
@@ -1412,9 +1716,7 @@ e responsabilidades.
 
 <strong>Legal risk</strong>
 
-Avaliar cumprimento
-da oferta, cancelamento
-e responsabilidade.
+Avaliação do caso.
 
 </div>
 
@@ -1426,8 +1728,7 @@ e responsabilidade.
 
 <strong>Guardrail</strong>
 
-Jornada construída
-com segurança jurídica.
+Legal by design.
 
 </div>
 
@@ -1444,35 +1745,35 @@ com segurança jurídica.
 </section>
 
 
-<!-- PAIN POINTS -->
+<!-- PROBLEM -->
 
 <section>
 
 <div class="container">
 
 <div class="section-label">
-04 — Problem framing
+06 — Problem framing
 </div>
 
 <h2>
-O problema não é apenas o atraso.
+A hipótese de problema.
 </h2>
 
 <p class="section-description">
 
-A partir dos relatos públicos, a oportunidade parece estar
-na combinação entre problema operacional e falta de previsibilidade
-para o consumidor.
+Os dados simulados indicam uma oportunidade concentrada
+na previsibilidade e na resolução do pós-compra.
 
 </p>
 
 
-<div class="pain-grid">
+<div class="problem-grid">
 
-<div class="pain-card">
+
+<div class="problem-card">
 
 <div class="number">
-PAIN POINT 01
+PROBLEMA 01
 </div>
 
 <h3>
@@ -1480,46 +1781,50 @@ Falta de previsibilidade
 </h3>
 
 <p>
-O consumidor procura informações sobre status,
-transportadora e prazo quando o pedido apresenta
-problemas.
+
+O cliente não sabe exatamente o que aconteceu,
+quando terá uma nova resposta ou qual será o próximo passo.
+
 </p>
 
 </div>
 
 
-<div class="pain-card">
+<div class="problem-card">
 
 <div class="number">
-PAIN POINT 02
+PROBLEMA 02
 </div>
 
 <h3>
-Fricção no cancelamento
+Excesso de contato
 </h3>
 
 <p>
-Há relatos públicos envolvendo dificuldade ou demora
-para cancelar pedidos após problemas na entrega.
+
+A taxa hipotética de recontato de 38% sugere uma oportunidade
+de reduzir a necessidade de múltiplas interações.
+
 </p>
 
 </div>
 
 
-<div class="pain-card">
+<div class="problem-card">
 
 <div class="number">
-PAIN POINT 03
+PROBLEMA 03
 </div>
 
 <h3>
-Ownership pouco claro
+Ownership
 </h3>
 
 <p>
-Quando marketplace, parceiro, logística e atendimento
-participam da jornada, o cliente pode não saber quem
-é responsável por resolver o problema.
+
+Cliente, parceiro, operação e atendimento precisam compartilhar
+uma visão clara sobre quem conduz cada etapa da resolução.
+
 </p>
 
 </div>
@@ -1538,7 +1843,7 @@ participam da jornada, o cliente pode não saber quem
 <div class="container">
 
 <div class="section-label">
-05 — Legal Lens
+07 — Legal Lens
 </div>
 
 <h2>
@@ -1547,14 +1852,15 @@ Onde o Direito entra no produto?
 
 <p class="section-description">
 
-O objetivo não é transformar o produto em um fluxo jurídico,
-mas usar o Jurídico como parceiro na definição dos guardrails
-da experiência.
+O Jurídico entra como parceiro de Produto para transformar
+obrigações e riscos em regras de negócio e experiências
+compreensíveis.
 
 </p>
 
 
 <div class="legal-grid">
+
 
 <div class="legal-card">
 
@@ -1567,8 +1873,10 @@ Informação
 </h3>
 
 <p>
+
 Avaliar clareza das informações fornecidas ao consumidor
-sobre produto, prazo, condições e resolução.
+sobre produto, prazo e condições.
+
 </p>
 
 </div>
@@ -1585,8 +1893,10 @@ Oferta
 </h3>
 
 <p>
+
 Avaliar cumprimento das condições apresentadas na oferta
-e os procedimentos aplicáveis quando houver alteração.
+e os procedimentos aplicáveis em caso de alteração.
+
 </p>
 
 </div>
@@ -1603,8 +1913,10 @@ Cadeia de fornecedores
 </h3>
 
 <p>
-Mapear os participantes da operação e analisar,
-caso a caso, suas responsabilidades jurídicas.
+
+Mapear participantes e analisar suas responsabilidades
+conforme a atuação concreta de cada um.
+
 </p>
 
 </div>
@@ -1621,8 +1933,10 @@ Legal by design
 </h3>
 
 <p>
-Transformar requisitos jurídicos em regras e experiências
-compreensíveis para o usuário.
+
+Transformar requisitos jurídicos em regras de produto
+sem transformar a experiência em uma jornada burocrática.
+
 </p>
 
 </div>
@@ -1630,49 +1944,14 @@ compreensíveis para o usuário.
 </div>
 
 
-<div class="responsibility">
+<div class="notice">
 
-<div class="responsibility-card">
+<strong>Importante:</strong>
 
-<h3>
-👤 Cliente
-</h3>
-
-<p>
-Precisa receber informação clara e ter acesso a
-canais e mecanismos adequados para resolver o problema.
-</p>
-
-</div>
-
-
-<div class="responsibility-card">
-
-<h3>
-🏪 Parceiro
-</h3>
-
-<p>
-Responsabilidades contratuais e operacionais devem
-ser claramente definidas entre os participantes.
-</p>
-
-</div>
-
-
-<div class="responsibility-card">
-
-<h3>
-🏦 Plataforma
-</h3>
-
-<p>
-O papel da plataforma deve ser analisado conforme
-sua atuação concreta na relação e a configuração
-jurídica do caso.
-</p>
-
-</div>
+A existência de parceiros em uma operação não significa,
+por si só, que determinada empresa tenha responsabilidade
+jurídica em qualquer situação. A análise deve considerar
+o caso concreto, os contratos e a atuação de cada participante.
 
 </div>
 
@@ -1688,18 +1967,17 @@ jurídica do caso.
 <div class="container">
 
 <div class="section-label">
-06 — Opportunity
+08 — Solution
 </div>
 
 <h2>
-Transformar incerteza em previsibilidade.
+Central de Resolução Pós-Compra.
 </h2>
 
 <p class="section-description">
 
-Minha hipótese de produto é criar uma camada de resolução
-pós-compra que permita ao cliente entender o problema,
-saber quem está tratando e escolher o próximo passo.
+Minha hipótese é criar uma camada de resolução que transforme
+incerteza em previsibilidade.
 
 </p>
 
@@ -1719,8 +1997,6 @@ saber quem está tratando e escolher o próximo passo.
 Pedido #12345
 </h3>
 
-<br>
-
 <div class="order-status">
 
 <strong>
@@ -1734,7 +2010,7 @@ Nova previsão: 18/08
 <p style="font-size:12px;color:#667085;">
 
 O parceiro foi acionado.
-Você será atualizado assim que
+Você será atualizado quando
 houver uma nova informação.
 
 </p>
@@ -1755,6 +2031,7 @@ Preciso de ajuda
 
 <div class="solution-box">
 
+
 <div class="solution-step">
 
 <div class="step-number">
@@ -1766,7 +2043,7 @@ Preciso de ajuda
 <strong>Detectar</strong>
 
 <span>
-Identificar atraso ou outra ocorrência.
+Identificar automaticamente a ocorrência.
 </span>
 
 </div>
@@ -1849,6 +2126,7 @@ Criar caminho claro quando a primeira solução falhar.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1865,28 +2143,28 @@ Criar caminho claro quando a primeira solução falhar.
 <div class="container">
 
 <div class="section-label">
-07 — Métricas
+09 — Metrics
 </div>
 
 <h2>
-Como eu validaria a solução?
+Como eu mediria o sucesso?
 </h2>
 
 <p class="section-description">
 
-Não atribuo resultados fictícios ao projeto. Como não tenho
-acesso aos dados internos, abaixo estão os indicadores que
-eu acompanharia em um experimento real.
+Os indicadores abaixo são métricas propostas para o produto.
+Nenhum resultado foi atribuído a uma empresa real.
 
 </p>
 
 
 <div class="metrics-grid">
 
+
 <div class="metric-card">
 
 <span class="proposed">
-MÉTRICA PROPOSTA
+KPI
 </span>
 
 <h3>
@@ -1894,8 +2172,10 @@ Taxa de resolução digital
 </h3>
 
 <p>
+
 Percentual de ocorrências resolvidas sem necessidade
 de contato humano.
+
 </p>
 
 </div>
@@ -1904,24 +2184,7 @@ de contato humano.
 <div class="metric-card">
 
 <span class="proposed">
-MÉTRICA PROPOSTA
-</span>
-
-<h3>
-Tempo médio de resolução
-</h3>
-
-<p>
-Tempo entre identificação do problema e resolução.
-</p>
-
-</div>
-
-
-<div class="metric-card">
-
-<span class="proposed">
-MÉTRICA PROPOSTA
+KPI
 </span>
 
 <h3>
@@ -1929,8 +2192,9 @@ Taxa de recontato
 </h3>
 
 <p>
-Percentual de clientes que precisam entrar em contato
-novamente sobre o mesmo problema.
+
+Meta hipotética: reduzir a taxa de 38% para 25%.
+
 </p>
 
 </div>
@@ -1939,7 +2203,27 @@ novamente sobre o mesmo problema.
 <div class="metric-card">
 
 <span class="proposed">
-MÉTRICA PROPOSTA
+KPI
+</span>
+
+<h3>
+Tempo médio de resolução
+</h3>
+
+<p>
+
+Meta hipotética: reduzir o tempo de resolução
+sem comprometer a qualidade da solução.
+
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+KPI
 </span>
 
 <h3>
@@ -1947,7 +2231,10 @@ CSAT pós-resolução
 </h3>
 
 <p>
-Satisfação do consumidor após a solução do problema.
+
+Medir satisfação do consumidor imediatamente
+após a solução.
+
 </p>
 
 </div>
@@ -1956,25 +2243,7 @@ Satisfação do consumidor após a solução do problema.
 <div class="metric-card">
 
 <span class="proposed">
-MÉTRICA PROPOSTA
-</span>
-
-<h3>
-Cancelamento após atraso
-</h3>
-
-<p>
-Percentual de pedidos cancelados depois de uma
-ocorrência de atraso.
-</p>
-
-</div>
-
-
-<div class="metric-card">
-
-<span class="proposed">
-MÉTRICA PROPOSTA
+GUARDRAIL
 </span>
 
 <h3>
@@ -1982,9 +2251,129 @@ Reclamações / 1.000 pedidos
 </h3>
 
 <p>
-Indicador normalizado para acompanhar a evolução
-das reclamações em relação ao volume transacionado.
+
+Acompanhar se a melhoria digital realmente reduz
+a incidência proporcional de problemas.
+
 </p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+GUARDRAIL
+</span>
+
+<h3>
+Taxa de escalonamento
+</h3>
+
+<p>
+
+Garantir que a automação não esteja apenas
+transferindo problemas para outros canais.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIMENT -->
+
+<section class="simulated">
+
+<div class="container">
+
+<div class="section-label">
+10 — Experiment
+</div>
+
+<h2>
+Como eu validaria a hipótese?
+</h2>
+
+<div class="solution-box" style="margin-top:40px;">
+
+<div class="solution-step">
+
+<div class="step-number">
+A
+</div>
+
+<div>
+
+<strong>Grupo controle</strong>
+
+<span>
+Jornada atual de pós-venda.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+B
+</div>
+
+<div>
+
+<strong>Grupo teste</strong>
+
+<span>
+Nova Central de Resolução Pós-Compra.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+C
+</div>
+
+<div>
+
+<strong>Comparar</strong>
+
+<span>
+Recontato, tempo de resolução, CSAT e escalonamento.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+D
+</div>
+
+<div>
+
+<strong>Decidir</strong>
+
+<span>
+Escalar, iterar ou abandonar a hipótese com base nos dados.
+</span>
+
+</div>
 
 </div>
 
@@ -2004,7 +2393,7 @@ das reclamações em relação ao volume transacionado.
 <div>
 
 <div class="section-label">
-08 — Takeaway
+11 — Takeaway
 </div>
 
 <h2>
@@ -2014,8 +2403,8 @@ O que este case demonstra?
 <p>
 
 Minha proposta não é apenas apontar um risco jurídico.
-É transformar uma evidência em problema de produto,
-formular uma hipótese e pensar em como validá-la.
+É transformar sinais públicos em perguntas, construir
+uma hipótese de produto e definir como eu validaria essa hipótese.
 
 </p>
 
@@ -2025,7 +2414,7 @@ formular uma hipótese e pensar em como validá-la.
 <ul class="takeaway-list">
 
 <li>
-Pesquisa baseada em evidências públicas
+Benchmark competitivo
 </li>
 
 <li>
@@ -2037,15 +2426,15 @@ Customer Journey
 </li>
 
 <li>
-Análise de risco jurídico
+Product Discovery
 </li>
 
 <li>
-Product hypothesis
+Legal Lens
 </li>
 
 <li>
-Métricas e validação
+KPIs e experimentação
 </li>
 
 </ul>
@@ -2062,7 +2451,7 @@ Métricas e validação
 <div class="container">
 
 <div class="section-label">
-09 — Competências
+12 — Competências
 </div>
 
 <h2>
@@ -2073,6 +2462,7 @@ Minha interseção de habilidades.
 
 <span class="skill">Product Discovery</span>
 <span class="skill">Customer Journey</span>
+<span class="skill">Benchmarking</span>
 <span class="skill">Problem Solving</span>
 <span class="skill">Product Strategy</span>
 <span class="skill">UX</span>
@@ -2084,7 +2474,6 @@ Minha interseção de habilidades.
 <span class="skill">LGPD</span>
 <span class="skill">Gestão de Riscos</span>
 <span class="skill">Produtos Digitais</span>
-<span class="skill">Tecnologia</span>
 
 </div>
 
@@ -2137,18 +2526,23 @@ GitHub
 
 <div class="disclaimer">
 
-<strong>Nota metodológica:</strong>
-Este é um estudo independente baseado em informações públicas.
-Os indicadores apresentados foram consultados em páginas públicas
-do Reclame Aqui e não representam dados internos do Inter.
-Os números de filtros específicos, como atraso na entrega e produto
-com defeito, não foram somados ao total de reclamações.
+<strong>Metodologia:</strong>
+
+Nexa Market é uma empresa fictícia criada para este portfólio.
+Os indicadores da Nexa são simulados e servem exclusivamente
+para demonstrar raciocínio de Product Management.
+
+Os dados de Inter Shop, Shopee e Amazon são referências públicas
+consultadas no Reclame Aqui no recorte de 01/01/2026 a 30/06/2026.
+Eles não representam dados internos dessas empresas e não constituem
+uma avaliação definitiva da qualidade dos respectivos produtos ou serviços.
 
 </div>
 
 </div>
 
 </footer>
+
 
 </body>
 </html>
