@@ -1,1229 +1,2154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ana Carolina | Product Management & Legal Product</title>
-
-    <meta name="description"
-        content="Portfólio de Ana Carolina — Product Management, Legal Product, Direito Bancário e Produtos Digitais.">
-
-    <style>
-        :root {
-            --bg: #f7f7f5;
-            --white: #ffffff;
-            --text: #171717;
-            --muted: #6b6b6b;
-            --border: #e5e5e5;
-            --accent: #ff6b00;
-            --accent-dark: #d95500;
-            --soft: #fff1e6;
-            --dark: #171717;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(1120px, 90%);
-            margin: 0 auto;
-        }
-
-        /* NAVBAR */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(247, 247, 245, 0.94);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        nav {
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 800;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-            font-size: 14px;
-            color: #444;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* HERO */
-
-        .hero {
-            padding: 120px 0 100px;
-            display: grid;
-            grid-template-columns: 1.4fr 0.6fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .tag {
-            display: inline-block;
-            background: var(--soft);
-            color: var(--accent-dark);
-            padding: 7px 13px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        h1 {
-            font-size: clamp(42px, 6vw, 76px);
-            line-height: 1.03;
-            letter-spacing: -3px;
-            margin-bottom: 25px;
-        }
-
-        h1 span {
-            color: var(--accent);
-        }
-
-        .hero-text {
-            max-width: 680px;
-            color: var(--muted);
-            font-size: 19px;
-            margin-bottom: 35px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 13px 20px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 14px;
-            border: 1px solid var(--dark);
-            transition: 0.2s;
-        }
-
-        .button.primary {
-            background: var(--dark);
-            color: white;
-        }
-
-        .button.primary:hover {
-            transform: translateY(-2px);
-            background: #333;
-        }
-
-        .button.secondary:hover {
-            background: white;
-        }
-
-        .hero-card {
-            background: var(--dark);
-            color: white;
-            border-radius: 24px;
-            padding: 30px;
-            min-height: 310px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.10);
-        }
-
-        .hero-card small {
-            color: #aaa;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .hero-card h2 {
-            font-size: 30px;
-            line-height: 1.15;
-        }
-
-        .hero-card .orange {
-            color: var(--accent);
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 95px 0;
-        }
-
-        .section-title {
-            margin-bottom: 45px;
-        }
-
-        .eyebrow {
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 12px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 40px;
-            line-height: 1.15;
-            letter-spacing: -1.5px;
-        }
-
-        .section-intro {
-            max-width: 680px;
-            color: var(--muted);
-            margin-top: 15px;
-            font-size: 17px;
-        }
-
-        /* ABOUT */
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .about-text p {
-            margin-bottom: 18px;
-            color: #4d4d4d;
-        }
-
-        .highlight {
-            border-left: 4px solid var(--accent);
-            padding: 20px 25px;
-            background: white;
-            border-radius: 0 12px 12px 0;
-        }
-
-        .highlight strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        /* CASE */
-
-        .case-section {
-            background: var(--dark);
-            color: white;
-        }
-
-        .case-section .section-intro {
-            color: #bdbdbd;
-        }
-
-        .case-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: end;
-            margin-bottom: 55px;
-        }
-
-        .case-label {
-            color: var(--accent);
-            font-size: 13px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-
-        .case-title {
-            font-size: clamp(36px, 5vw, 58px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-        }
-
-        .case-description {
-            color: #bdbdbd;
-        }
-
-        .case-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .case-card {
-            background: #232323;
-            border: 1px solid #333;
-            border-radius: 16px;
-            padding: 28px;
-            min-height: 190px;
-        }
-
-        .case-number {
-            color: var(--accent);
-            font-weight: 800;
-            font-size: 13px;
-            margin-bottom: 25px;
-        }
-
-        .case-card h3 {
-            font-size: 19px;
-            margin-bottom: 10px;
-        }
-
-        .case-card p {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        /* JOURNEY */
-
-        .journey {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 10px;
-            margin-top: 35px;
-        }
-
-        .journey-step {
-            background: white;
-            border: 1px solid var(--border);
-            padding: 20px 14px;
-            border-radius: 12px;
-            text-align: center;
-            position: relative;
-        }
-
-        .journey-step strong {
-            display: block;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .journey-step span {
-            font-size: 12px;
-            color: var(--muted);
-        }
-
-        /* LEGAL LENS */
-
-        .legal-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .legal-card {
-            background: white;
-            border: 1px solid var(--border);
-            padding: 25px;
-            border-radius: 15px;
-        }
-
-        .legal-card .icon {
-            font-size: 24px;
-            margin-bottom: 18px;
-        }
-
-        .legal-card h3 {
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
-
-        .legal-card p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* SOLUTION */
-
-        .solution-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .phone {
-            max-width: 340px;
-            margin: auto;
-            background: #111;
-            padding: 12px;
-            border-radius: 30px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-        }
-
-        .phone-screen {
-            background: white;
-            border-radius: 21px;
-            padding: 28px 20px;
-        }
-
-        .phone-top {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 25px;
-        }
-
-        .status {
-            background: #fff1e6;
-            color: #c84f00;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
-
-        .status strong {
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .phone-button {
-            display: block;
-            text-align: center;
-            background: var(--dark);
-            color: white;
-            padding: 12px;
-            border-radius: 9px;
-            margin-top: 12px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        .solution-text h3 {
-            font-size: 28px;
-            margin-bottom: 18px;
-        }
-
-        .solution-text p {
-            color: var(--muted);
-            margin-bottom: 20px;
-        }
-
-        .solution-list {
-            list-style: none;
-        }
-
-        .solution-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 15px;
-        }
-
-        .solution-list li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: 800;
-            margin-right: 10px;
-        }
-
-        /* METRICS */
-
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .metric {
-            background: white;
-            border: 1px solid var(--border);
-            padding: 30px;
-            border-radius: 15px;
-        }
-
-        .metric-number {
-            color: var(--accent);
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-
-        .metric p {
-            color: var(--muted);
-            font-size: 14px;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 30px;
-            padding: 10px 16px;
-            font-size: 14px;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 70px 0;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            align-items: center;
-        }
-
-        footer h2 {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-
-        footer p {
-            color: #aaa;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-links a {
-            border: 1px solid #444;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 13px;
-        }
-
-        .footer-links a:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .disclaimer {
-            margin-top: 45px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #777;
-            font-size: 12px;
-        }
-
-        /* RESPONSIVO */
-
-        @media (max-width: 850px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero,
-            .about-grid,
-            .case-header,
-            .solution-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding: 80px 0;
-            }
-
-            .hero-card {
-                min-height: 230px;
-            }
-
-            .case-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .legal-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .metrics {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .journey {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .footer-content {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-        @media (max-width: 550px) {
-
-            h2 {
-                font-size: 32px;
-            }
-
-            .hero {
-                padding: 65px 0;
-            }
-
-            .case-grid,
-            .legal-grid,
-            .metrics,
-            .journey {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ana Carolina | Product & Legal Product</title>
+
+<style>
+
+:root{
+    --bg:#f6f7f9;
+    --white:#ffffff;
+    --text:#172033;
+    --muted:#667085;
+    --line:#e4e7ec;
+    --orange:#ff6b00;
+    --orange-light:#fff1e6;
+    --blue:#2563eb;
+    --blue-light:#eff6ff;
+    --green:#16a34a;
+    --green-light:#ecfdf3;
+    --red:#dc2626;
+    --red-light:#fef2f2;
+    --purple:#7c3aed;
+    --purple-light:#f5f3ff;
+    --dark:#111827;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1160px,92%);
+    margin:auto;
+}
+
+/* NAV */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(246,247,249,.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+}
+
+nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    font-size:14px;
+    color:#475467;
+}
+
+.nav-links a:hover{
+    color:var(--orange);
+}
+
+/* HERO */
+
+.hero{
+    padding:110px 0 90px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    background:var(--orange-light);
+    color:#c2410c;
+    border-radius:30px;
+    padding:7px 13px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+h1{
+    font-size:clamp(45px,6vw,76px);
+    line-height:1;
+    letter-spacing:-4px;
+    margin-bottom:25px;
+}
+
+h1 span{
+    color:var(--orange);
+}
+
+.hero-description{
+    color:var(--muted);
+    font-size:19px;
+    max-width:680px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.button{
+    padding:12px 19px;
+    border-radius:9px;
+    border:1px solid var(--dark);
+    font-size:14px;
+    font-weight:700;
+}
+
+.button.primary{
+    background:var(--dark);
+    color:white;
+}
+
+.button.secondary{
+    background:white;
+}
+
+.hero-panel{
+    background:var(--dark);
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.hero-panel small{
+    color:#98a2b3;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.hero-panel h2{
+    font-size:30px;
+    line-height:1.15;
+    margin:60px 0;
+}
+
+.hero-panel span{
+    color:var(--orange);
+}
+
+/* GENERAL */
+
+section{
+    padding:90px 0;
+}
+
+.section-label{
+    color:var(--orange);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:40px;
+    line-height:1.15;
+    letter-spacing:-1.5px;
+}
+
+.section-description{
+    color:var(--muted);
+    max-width:700px;
+    margin-top:14px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.about-text p{
+    color:#475467;
+    margin-bottom:18px;
+}
+
+.about-card{
+    background:white;
+    border:1px solid var(--line);
+    padding:30px;
+    border-radius:16px;
+}
+
+.about-card strong{
+    display:block;
+    margin-bottom:10px;
+}
+
+/* CASE INTRO */
+
+.case-intro{
+    background:var(--dark);
+    color:white;
+}
+
+.case-top{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:end;
+}
+
+.case-title{
+    font-size:clamp(40px,5vw,62px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.case-subtitle{
+    color:#aab1bd;
+}
+
+.study-tag{
+    display:inline-block;
+    color:var(--orange);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+/* DATA */
+
+.data-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-top:40px;
+}
+
+.data-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+}
+
+.data-number{
+    font-size:32px;
+    font-weight:800;
+    color:var(--orange);
+}
+
+.data-label{
+    font-weight:700;
+    margin:5px 0;
+}
+
+.data-note{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* EVIDENCE */
+
+.evidence{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+    margin-top:40px;
+}
+
+.evidence-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+}
+
+.evidence-card h3{
+    margin-bottom:10px;
+}
+
+.source{
+    color:var(--blue);
+    font-size:12px;
+    margin-top:18px;
+}
+
+/* BOARD */
+
+.board-section{
+    background:#eef0f4;
+}
+
+.board{
+    background:#dfe3e8;
+    padding:22px;
+    border-radius:18px;
+    overflow-x:auto;
+    margin-top:40px;
+}
+
+.board-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    min-width:1000px;
+}
+
+.board-title{
+    font-weight:800;
+}
+
+.board-meta{
+    font-size:12px;
+    color:#667085;
+}
+
+.swimlanes{
+    min-width:1000px;
+    display:grid;
+    gap:12px;
+}
+
+.lane{
+    display:grid;
+    grid-template-columns:150px repeat(4,1fr);
+    gap:10px;
+}
+
+.lane-name{
+    background:#f8f9fb;
+    border-radius:10px;
+    padding:15px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.board-cell{
+    min-height:135px;
+    background:#f8f9fb;
+    border-radius:10px;
+    padding:12px;
+}
+
+.sticky{
+    background:white;
+    border:1px solid #d9dde3;
+    border-left:4px solid var(--orange);
+    border-radius:8px;
+    padding:12px;
+    font-size:12px;
+    box-shadow:0 2px 5px rgba(0,0,0,.04);
+}
+
+.sticky.blue{
+    border-left-color:var(--blue);
+}
+
+.sticky.green{
+    border-left-color:var(--green);
+}
+
+.sticky.red{
+    border-left-color:var(--red);
+}
+
+.sticky.purple{
+    border-left-color:var(--purple);
+}
+
+.sticky strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:5px;
+}
+
+.column-title{
+    font-size:11px;
+    text-transform:uppercase;
+    color:#667085;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+/* PAIN POINT */
+
+.pain-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.pain-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+}
+
+.pain-card .number{
+    color:var(--red);
+    font-weight:800;
+    font-size:12px;
+    margin-bottom:20px;
+}
+
+.pain-card h3{
+    margin-bottom:10px;
+}
+
+.pain-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* LEGAL */
+
+.legal-section{
+    background:#fff;
+}
+
+.legal-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.legal-card{
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+    background:#fafafa;
+}
+
+.legal-card .tag{
+    display:inline-block;
+    background:var(--purple-light);
+    color:var(--purple);
+    padding:5px 8px;
+    border-radius:5px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.legal-card h3{
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.legal-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* RESPONSIBILITY */
+
+.responsibility{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.responsibility-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+}
+
+.responsibility-card h3{
+    margin-bottom:8px;
+}
+
+.responsibility-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* SOLUTION */
+
+.solution{
+    background:#f1f5f9;
+}
+
+.solution-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    margin-top:45px;
+}
+
+.solution-box{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    border:1px solid var(--line);
+}
+
+.solution-step{
+    display:flex;
+    gap:15px;
+    padding:17px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.solution-step:last-child{
+    border-bottom:none;
+}
+
+.step-number{
+    width:30px;
+    height:30px;
+    background:var(--dark);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    flex-shrink:0;
+}
+
+.solution-step strong{
+    display:block;
+}
+
+.solution-step span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* PRODUCT SCREEN */
+
+.product-screen{
+    background:var(--dark);
+    border-radius:28px;
+    padding:12px;
+    max-width:360px;
+    margin:auto;
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+}
+
+.screen{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+}
+
+.screen-top{
+    font-size:12px;
+    color:#667085;
+    margin-bottom:25px;
+}
+
+.order-status{
+    background:var(--orange-light);
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.order-status strong{
+    display:block;
+    color:#c2410c;
+}
+
+.action{
+    display:block;
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:11px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+/* METRICS */
+
+.metrics-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:40px;
+}
+
+.metric-card{
+    background:white;
+    border:1px solid var(--line);
+    padding:25px;
+    border-radius:15px;
+}
+
+.metric-card h3{
+    margin-bottom:8px;
+}
+
+.metric-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.proposed{
+    display:inline-block;
+    background:var(--blue-light);
+    color:var(--blue);
+    padding:4px 7px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+/* TAKEAWAY */
+
+.takeaway{
+    background:var(--dark);
+    color:white;
+}
+
+.takeaway-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.takeaway p{
+    color:#aab1bd;
+    margin-top:15px;
+}
+
+.takeaway-list{
+    list-style:none;
+}
+
+.takeaway-list li{
+    padding:13px 0;
+    border-bottom:1px solid #333b48;
+}
+
+.takeaway-list li::before{
+    content:"→";
+    color:var(--orange);
+    margin-right:10px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:35px;
+}
+
+.skill{
+    background:white;
+    border:1px solid var(--line);
+    padding:10px 15px;
+    border-radius:25px;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b0f16;
+    color:white;
+    padding:70px 0;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.footer-links{
+    display:flex;
+    gap:10px;
+}
+
+.footer-links a{
+    border:1px solid #343b48;
+    padding:10px 15px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.footer-links a:hover{
+    border-color:var(--orange);
+    color:var(--orange);
+}
+
+.disclaimer{
+    border-top:1px solid #252c37;
+    margin-top:45px;
+    padding-top:20px;
+    color:#667085;
+    font-size:11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-grid,
+    .case-top,
+    .about-grid,
+    .solution-grid,
+    .takeaway-grid{
+        grid-template-columns:1fr;
+    }
+
+    .data-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .pain-grid,
+    .legal-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:550px){
+
+    h2{
+        font-size:32px;
+    }
+
+    .data-grid,
+    .pain-grid,
+    .legal-grid,
+    .metrics-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:70px 0;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-
-    <header>
-        <div class="container">
-            <nav>
-                <a href="#" class="logo">Ana<span>.</span></a>
-
-                <ul class="nav-links">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#case">Case</a></li>
-                    <li><a href="#competencias">Competências</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="container">
+<nav>
 
-
-    <!-- HERO -->
+<a href="#" class="logo">Ana<span>.</span></a>
 
-    <main>
+<ul class="nav-links">
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#case">Case</a></li>
+<li><a href="#evidencias">Evidências</a></li>
+<li><a href="#solucao">Solução</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
 
-        <section class="hero">
-            <div class="container" style="display: contents;">
+</nav>
+</div>
+</header>
 
-                <div>
-                    <span class="tag">Product Management · Legal Product · B2C</span>
 
-                    <h1>
-                        Direito, Produto e
-                        <span>Tecnologia.</span>
-                    </h1>
+<!-- HERO -->
 
-                    <p class="hero-text">
-                        Advogada de Direito Bancário em transição para Product Management,
-                        explorando como conhecimento jurídico, visão de negócio e tecnologia
-                        podem contribuir para produtos digitais mais simples, seguros e
-                        centrados no cliente.
-                    </p>
+<section class="hero">
 
-                    <div class="buttons">
-                        <a href="#case" class="button primary">
-                            Conhecer meu case
-                        </a>
+<div class="container hero-grid">
 
-                        <a href="#sobre" class="button secondary">
-                            Sobre mim
-                        </a>
-                    </div>
-                </div>
+<div>
 
-                <div class="hero-card">
-                    <small>Meu foco</small>
+<div class="badge">
+PRODUCT MANAGEMENT · LEGAL PRODUCT · B2C
+</div>
 
-                    <h2>
-                        Transformar
-                        <span class="orange">problemas</span>
-                        em oportunidades de produto.
-                    </h2>
+<h1>
+Direito + Produto + <span>Tecnologia.</span>
+</h1>
 
-                    <small>
-                        Customer · Business · Technology · Legal
-                    </small>
-                </div>
+<p class="hero-description">
 
-            </div>
-        </section>
+Advogada de Direito Bancário em transição para Product Management,
+explorando como visão jurídica, experiência do cliente e tecnologia
+podem contribuir para produtos digitais melhores.
 
+</p>
 
-        <!-- SOBRE -->
+<div class="buttons">
 
-        <section id="sobre">
-            <div class="container">
+<a href="#case" class="button primary">
+Ver case
+</a>
 
-                <div class="section-title">
-                    <div class="eyebrow">01 — Sobre mim</div>
-                    <h2>Uma nova perspectiva para o Jurídico.</h2>
+<a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/"
+target="_blank"
+class="button secondary">
+LinkedIn
+</a>
 
-                    <p class="section-intro">
-                        Minha trajetória profissional começou no Direito, com experiência
-                        em Direito Bancário e Mercado Financeiro. Atualmente, estou
-                        direcionando minha carreira para Produto e tecnologia.
-                    </p>
-                </div>
+</div>
 
-                <div class="about-grid">
-
-                    <div class="about-text">
-
-                        <p>
-                            Minha experiência jurídica me desenvolveu em análise de riscos,
-                            interpretação de normas, elaboração e revisão de documentos,
-                            resolução de problemas e comunicação com diferentes
-                            stakeholders.
-                        </p>
-
-                        <p>
-                            Ao conhecer Product Management, encontrei uma área que conecta
-                            algumas dessas habilidades com tecnologia, negócio e experiência
-                            do cliente.
-                        </p>
-
-                        <p>
-                            Meu objetivo é atuar na interseção entre essas áreas, contribuindo
-                            para a construção e evolução de produtos digitais.
-                        </p>
-
-                    </div>
-
-                    <div class="highlight">
-
-                        <strong>Minha proposta</strong>
-
-                        <p>
-                            Usar a visão jurídica não apenas para identificar riscos,
-                            mas também para ajudar a construir soluções melhores para
-                            o negócio e para o cliente.
-                        </p>
+</div>
 
-                    </div>
 
-                </div>
-            </div>
-        </section>
+<div class="hero-panel">
 
+<small>Minha abordagem</small>
 
-        <!-- CASE -->
+<h2>
+Investigar o problema antes de
+<span>desenhar a solução.</span>
+</h2>
 
-        <section id="case" class="case-section">
+<small>
+Customer · Business · Technology · Legal
+</small>
 
-            <div class="container">
+</div>
 
-                <div class="case-header">
+</div>
 
-                    <div>
-                        <div class="case-label">
-                            Case em destaque
-                        </div>
+</section>
 
-                        <h2 class="case-title">
-                            Legal Product Lab
-                        </h2>
-                    </div>
 
-                    <p class="case-description">
-                        Estudo independente sobre uma jornada B2C de compra e pós-venda,
-                        explorando como Produto e Jurídico podem atuar juntos para
-                        solucionar problemas da experiência do consumidor.
-                    </p>
+<!-- SOBRE -->
 
-                </div>
+<section id="sobre">
 
+<div class="container">
 
-                <div class="case-grid">
+<div class="section-label">
+01 — Sobre
+</div>
 
-                    <div class="case-card">
-                        <div class="case-number">01</div>
-                        <h3>Contexto</h3>
-                        <p>
-                            Entendimento do produto, do consumidor e do problema de negócio.
-                        </p>
-                    </div>
+<h2>
+Uma perspectiva jurídica aplicada a Produto.
+</h2>
 
-                    <div class="case-card">
-                        <div class="case-number">02</div>
-                        <h3>Pesquisa</h3>
-                        <p>
-                            Pesquisa exploratória para entender dores e comportamentos
-                            de consumidores.
-                        </p>
-                    </div>
+<p class="section-description">
 
-                    <div class="case-card">
-                        <div class="case-number">03</div>
-                        <h3>Jornada</h3>
-                        <p>
-                            Mapeamento da experiência desde a compra até o pós-venda.
-                        </p>
-                    </div>
+Minha experiência no Direito Bancário desenvolveu competências em
+análise de riscos, contratos, interpretação normativa, resolução
+de problemas e comunicação com diferentes áreas.
 
-                    <div class="case-card">
-                        <div class="case-number">04</div>
-                        <h3>Legal Lens</h3>
-                        <p>
-                            Análise dos principais riscos relacionados à relação de consumo,
-                            informação e responsabilidades.
-                        </p>
-                    </div>
+</p>
 
-                    <div class="case-card">
-                        <div class="case-number">05</div>
-                        <h3>Priorização</h3>
-                        <p>
-                            Identificação do problema com maior potencial de impacto para
-                            o cliente.
-                        </p>
-                    </div>
+<div class="about-grid" style="margin-top:40px;">
 
-                    <div class="case-card">
-                        <div class="case-number">06</div>
-                        <h3>Solução</h3>
-                        <p>
-                            Proposta de melhoria de produto e definição de métricas para
-                            validar a hipótese.
-                        </p>
-                    </div>
+<div class="about-text">
 
-                </div>
+<p>
+Ao conhecer Product Management, encontrei uma área que conecta
+essas habilidades com tecnologia, negócio e experiência do cliente.
+</p>
 
-            </div>
-        </section>
+<p>
+Minha proposta é utilizar o conhecimento jurídico não apenas para
+identificar riscos, mas para participar da construção de soluções
+mais claras, seguras e eficientes.
+</p>
 
+</div>
 
-        <!-- PROBLEMA -->
+<div class="about-card">
 
-        <section>
-            <div class="container">
+<strong>
+Meu foco
+</strong>
 
-                <div class="section-title">
+<p>
+Produtos digitais B2C, especialmente em ambientes financeiros,
+marketplaces e serviços digitais nos quais experiência do cliente,
+regulação e negócio precisam caminhar juntos.
+</p>
 
-                    <div class="eyebrow">02 — Problema</div>
+</div>
 
-                    <h2>
-                        Quando algo dá errado depois da compra.
-                    </h2>
+</div>
 
-                    <p class="section-intro">
-                        A jornada de compra não termina no pagamento. Em uma experiência
-                        B2C, problemas como atraso, cancelamento ou reembolso podem
-                        transformar uma boa experiência em uma experiência frustrante.
-                    </p>
+</div>
 
-                </div>
+</section>
 
 
-                <div class="journey">
+<!-- CASE -->
 
-                    <div class="journey-step">
-                        <strong>Compra</strong>
-                        <span>Cliente realiza o pedido</span>
-                    </div>
+<section id="case" class="case-intro">
 
-                    <div class="journey-step">
-                        <strong>Confirmação</strong>
-                        <span>Pedido confirmado</span>
-                    </div>
+<div class="container">
 
-                    <div class="journey-step">
-                        <strong>Acompanhamento</strong>
-                        <span>Cliente acompanha</span>
-                    </div>
+<div class="case-top">
 
-                    <div class="journey-step">
-                        <strong>Problema</strong>
-                        <span>Atraso ou falha</span>
-                    </div>
+<div>
 
-                    <div class="journey-step">
-                        <strong>Resolução</strong>
-                        <span>Suporte ou cancelamento</span>
-                    </div>
+<div class="study-tag">
+CASE INDEPENDENTE · B2C · MARKETPLACE
+</div>
 
-                    <div class="journey-step">
-                        <strong>Finalização</strong>
-                        <span>Entrega ou reembolso</span>
-                    </div>
+<h2 class="case-title">
+Inter Shop
+<br>
+Jornada de pós-venda
+</h2>
 
-                </div>
+</div>
 
-            </div>
-        </section>
+<p class="case-subtitle">
 
+Como transformar uma jornada de pós-compra marcada por
+incerteza em uma experiência mais previsível para o consumidor?
 
-        <!-- LEGAL LENS -->
+<br><br>
 
-        <section style="background: #eeeeeb;" id="legal">
+Este estudo foi desenvolvido com base em informações públicas.
+Não representa dados internos ou decisões do Inter.
 
-            <div class="container">
+</p>
 
-                <div class="section-title">
+</div>
 
-                    <div class="eyebrow">03 — Legal Lens</div>
+</div>
 
-                    <h2>
-                        Onde Direito e Produto se encontram.
-                    </h2>
+</section>
 
-                    <p class="section-intro">
-                        A análise jurídica não precisa acontecer apenas no final do
-                        desenvolvimento. Ela pode contribuir para a definição da jornada,
-                        identificação de riscos e construção da solução.
-                    </p>
 
-                </div>
+<!-- DADOS -->
 
+<section id="evidencias">
 
-                <div class="legal-grid">
+<div class="container">
 
-                    <div class="legal-card">
-                        <div class="icon">◌</div>
-                        <h3>Consumidor</h3>
-                        <p>
-                            Clareza das informações, oferta, cancelamento e experiência
-                            de resolução.
-                        </p>
-                    </div>
+<div class="section-label">
+02 — Evidências públicas
+</div>
 
-                    <div class="legal-card">
-                        <div class="icon">◇</div>
-                        <h3>Responsabilidade</h3>
-                        <p>
-                            Identificação dos envolvidos na cadeia e análise das
-                            responsabilidades de cada participante.
-                        </p>
-                    </div>
+<h2>
+O que os dados públicos mostram?
+</h2>
 
-                    <div class="legal-card">
-                        <div class="icon">□</div>
-                        <h3>Contratos</h3>
-                        <p>
-                            Definição de responsabilidades, SLAs, atendimento e
-                            mecanismos de resolução.
-                        </p>
-                    </div>
+<p class="section-description">
 
-                    <div class="legal-card">
-                        <div class="icon">+</div>
-                        <h3>Produto</h3>
-                        <p>
-                            Transformação do risco identificado em oportunidade de
-                            melhoria da experiência.
-                        </p>
-                    </div>
+Antes de propor uma solução, analisei indicadores e reclamações
+publicamente disponíveis sobre a Rede Inter Shop.
 
-                </div>
+</p>
 
-            </div>
 
-        </section>
+<div class="data-grid">
 
+<div class="data-card">
 
-        <!-- SOLUÇÃO -->
+<div class="data-number">
+366
+</div>
 
-        <section>
+<div class="data-label">
+reclamações
+</div>
 
-            <div class="container">
+<div class="data-note">
+Período: 01/01/2026 a 30/06/2026
+</div>
 
-                <div class="section-title">
+</div>
 
-                    <div class="eyebrow">04 — Solução</div>
 
-                    <h2>
-                        Menos incerteza. Mais autonomia.
-                    </h2>
+<div class="data-card">
 
-                    <p class="section-intro">
-                        Uma hipótese de solução é criar uma central de resolução
-                        integrada à jornada do pedido.
-                    </p>
+<div class="data-number">
+35,4%
+</div>
 
-                </div>
+<div class="data-label">
+reclamações resolvidas
+</div>
 
+<div class="data-note">
+Indicador apresentado pelo Reclame Aqui
+</div>
 
-                <div class="solution-grid">
+</div>
 
-                    <div class="phone">
 
-                        <div class="phone-screen">
+<div class="data-card">
 
-                            <div class="phone-top">
-                                ← Meu pedido
-                            </div>
+<div class="data-number">
+27,1%
+</div>
 
-                            <h3 style="margin-bottom: 18px;">
-                                Pedido #12345
-                            </h3>
+<div class="data-label">
+voltariam a fazer negócio
+</div>
 
-                            <div class="status">
+<div class="data-note">
+Entre consumidores avaliadores
+</div>
 
-                                <strong>
-                                    ⚠ Pedido atrasado
-                                </strong>
+</div>
 
-                                Nova previsão: 18/08
 
-                            </div>
+<div class="data-card">
 
-                            <p style="font-size: 13px; color: #666;">
-                                O parceiro foi acionado e você receberá uma nova
-                                atualização sobre o pedido.
-                            </p>
+<div class="data-number">
+2,6
+</div>
 
-                            <a href="#" class="phone-button">
-                                Acompanhar pedido
-                            </a>
+<div class="data-label">
+nota média
+</div>
 
-                            <a href="#" class="phone-button"
-                                style="background: white; color: #222; border: 1px solid #ddd;">
-                                Cancelar pedido
-                            </a>
+<div class="data-note">
+Avaliação apresentada no período
+</div>
 
-                        </div>
+</div>
 
-                    </div>
+</div>
 
 
-                    <div class="solution-text">
+<div class="evidence">
 
-                        <h3>
-                            Central de resolução pós-compra
-                        </h3>
+<div class="evidence-card">
 
-                        <p>
-                            A proposta é transformar uma situação de incerteza em
-                            uma jornada clara, na qual o cliente consiga entender
-                            o problema, acompanhar sua resolução e escolher o
-                            próximo passo.
-                        </p>
+<h3>
+🔴 Atraso na entrega
+</h3>
 
-                        <ul class="solution-list">
+<p>
+O filtro público de reclamações por “Atraso na entrega”
+apresenta <strong>276 reclamações</strong> no recorte consultado.
+</p>
 
-                            <li>
-                                Comunicação proativa sobre atrasos
-                            </li>
+<p class="source">
+Fonte: Reclame Aqui — Rede Inter Shop.
+</p>
 
-                            <li>
-                                Status atualizado do pedido
-                            </li>
+</div>
 
-                            <li>
-                                Próximo passo claramente indicado
-                            </li>
 
-                            <li>
-                                Opção de cancelamento quando aplicável
-                            </li>
+<div class="evidence-card">
 
-                            <li>
-                                Redução da necessidade de contato com atendimento
-                            </li>
+<h3>
+🟠 Produto com defeito
+</h3>
 
-                        </ul>
+<p>
+O filtro público por “Produto com defeito” apresenta
+<strong>79 reclamações</strong> no recorte consultado.
+</p>
 
-                    </div>
+<p class="source">
+Fonte: Reclame Aqui — Rede Inter Shop.
+</p>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
-        <!-- MÉTRICAS -->
 
-        <section style="background: #eeeeeb;">
+<!-- BOARD -->
 
-            <div class="container">
+<section class="board-section">
 
-                <div class="section-title">
+<div class="container">
 
-                    <div class="eyebrow">05 — Métricas</div>
+<div class="section-label">
+03 — Jornada atual
+</div>
 
-                    <h2>
-                        Como eu saberia se funcionou?
-                    </h2>
+<h2>
+Onde a experiência quebra?
+</h2>
 
-                    <p class="section-intro">
-                        A solução é uma hipótese. Antes de afirmar que ela funciona,
-                        é necessário definir como o impacto será medido.
-                    </p>
+<p class="section-description">
 
-                </div>
+Mapeei a jornada como um board de produto, distribuindo as
+responsabilidades entre os principais atores.
 
+</p>
 
-                <div class="metrics">
 
-                    <div class="metric">
-                        <div class="metric-number">01</div>
-                        <strong>Resolução</strong>
-                        <p>
-                            Taxa de problemas resolvidos sem contato com atendimento.
-                        </p>
-                    </div>
+<div class="board">
 
-                    <div class="metric">
-                        <div class="metric-number">02</div>
-                        <strong>Tempo</strong>
-                        <p>
-                            Tempo médio entre a identificação do problema e sua resolução.
-                        </p>
-                    </div>
+<div class="board-header">
 
-                    <div class="metric">
-                        <div class="metric-number">03</div>
-                        <strong>Satisfação</strong>
-                        <p>
-                            Avaliação do cliente após a resolução do problema.
-                        </p>
-                    </div>
+<div class="board-title">
+Jornada pós-compra · Inter Shop
+</div>
 
-                    <div class="metric">
-                        <div class="metric-number">04</div>
-                        <strong>Reclamações</strong>
-                        <p>
-                            Evolução do volume de reclamações relacionadas ao pós-venda.
-                        </p>
-                    </div>
+<div class="board-meta">
+Discovery board · estudo independente
+</div>
 
-                </div>
+</div>
 
-            </div>
 
-        </section>
+<div class="swimlanes">
 
+<!-- HEADER -->
 
-        <!-- COMPETÊNCIAS -->
+<div class="lane">
 
-        <section id="competencias">
+<div></div>
 
-            <div class="container">
+<div class="column-title">
+Compra
+</div>
 
-                <div class="section-title">
+<div class="column-title">
+Pedido
+</div>
 
-                    <div class="eyebrow">06 — Competências</div>
+<div class="column-title">
+Problema
+</div>
 
-                    <h2>
-                        O que estou construindo.
-                    </h2>
+<div class="column-title">
+Resolução
+</div>
 
-                </div>
+</div>
 
 
-                <div class="skills">
+<!-- CLIENTE -->
 
-                    <span class="skill">Product Discovery</span>
-                    <span class="skill">Customer Journey</span>
-                    <span class="skill">Problem Solving</span>
-                    <span class="skill">UX</span>
-                    <span class="skill">Product Strategy</span>
-                    <span class="skill">Métricas</span>
-                    <span class="skill">Direito Bancário</span>
-                    <span class="skill">Direito do Consumidor</span>
-                    <span class="skill">Contratos</span>
-                    <span class="skill">Direito Digital</span>
-                    <span class="skill">LGPD</span>
-                    <span class="skill">Produtos Digitais</span>
-                    <span class="skill">Tecnologia</span>
-                    <span class="skill">Gestão de Riscos</span>
+<div class="lane">
 
-                </div>
+<div class="lane-name">
+👤 Cliente
+</div>
 
-            </div>
+<div class="board-cell">
 
-        </section>
+<div class="sticky blue">
 
-    </main>
+<strong>Compra realizada</strong>
 
+Pedido confirmado.
 
-    <!-- FOOTER -->
+</div>
 
-    <footer id="contato">
+</div>
 
-        <div class="container">
+<div class="board-cell">
 
-            <div class="footer-content">
+<div class="sticky">
 
-                <div>
+<strong>Acompanha</strong>
 
-                    <div class="eyebrow">
-                        Vamos conversar?
-                    </div>
+Busca informações sobre
+status e entrega.
 
-                    <h2>
-                        Construindo minha próxima etapa.
-                    </h2>
+</div>
 
-                    <p>
-                        Estou em busca de oportunidades para atuar na interseção
-                        entre Direito, Produto e Tecnologia.
-                    </p>
+</div>
 
-                </div>
+<div class="board-cell">
 
+<div class="sticky red">
 
-                <div class="footer-links">
+<strong>⚠ Pain point</strong>
 
-                    <!-- TROQUE OS LINKS ABAIXO PELOS SEUS -->
+Pedido atrasado ou
+produto com problema.
 
-                    <a href="https://www.linkedin.com/" target="_blank">
-                        LinkedIn
-                    </a>
+</div>
 
-                    <a href="https://github.com/anavieira00-product"
-                        target="_blank">
-                        GitHub
-                    </a>
+</div>
 
-                </div>
+<div class="board-cell">
 
-            </div>
+<div class="sticky green">
 
+<strong>Resultado esperado</strong>
 
-            <div class="disclaimer">
+Resolver sem precisar
+repetir informações.
 
-                Este portfólio apresenta estudos e projetos desenvolvidos para fins
-                de aprendizado e demonstração profissional. Os cases não representam
-                informações internas, decisões ou posicionamentos de empresas citadas.
+</div>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </footer>
+
+<!-- PRODUTO -->
+
+<div class="lane">
+
+<div class="lane-name">
+🧩 Produto
+</div>
+
+<div class="board-cell">
+
+<div class="sticky blue">
+
+<strong>Status</strong>
+
+Pedido registrado no fluxo.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky">
+
+<strong>Tracking</strong>
+
+Informação sobre pedido
+e logística.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky red">
+
+<strong>Gap</strong>
+
+Status e próximo passo
+podem não ser suficientes
+para o cliente.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky green">
+
+<strong>Opportunity</strong>
+
+Centralizar status,
+responsável e ação.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PARCEIRO -->
+
+<div class="lane">
+
+<div class="lane-name">
+🏪 Parceiro
+</div>
+
+<div class="board-cell">
+
+<div class="sticky purple">
+
+<strong>Venda</strong>
+
+Parceiro processa pedido.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky purple">
+
+<strong>Logística</strong>
+
+Entrega e atualização.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky red">
+
+<strong>Escalonamento</strong>
+
+Problema exige
+acionamento.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky green">
+
+<strong>SLA</strong>
+
+Definir prazo e
+responsável.
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- JURÍDICO -->
+
+<div class="lane">
+
+<div class="lane-name">
+⚖ Jurídico
+</div>
+
+<div class="board-cell">
+
+<div class="sticky purple">
+
+<strong>Oferta</strong>
+
+Informação clara e
+adequada ao consumidor.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky purple">
+
+<strong>Contrato</strong>
+
+Definição de papéis
+e responsabilidades.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky red">
+
+<strong>Legal risk</strong>
+
+Avaliar cumprimento
+da oferta, cancelamento
+e responsabilidade.
+
+</div>
+
+</div>
+
+<div class="board-cell">
+
+<div class="sticky green">
+
+<strong>Guardrail</strong>
+
+Jornada construída
+com segurança jurídica.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAIN POINTS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+04 — Problem framing
+</div>
+
+<h2>
+O problema não é apenas o atraso.
+</h2>
+
+<p class="section-description">
+
+A partir dos relatos públicos, a oportunidade parece estar
+na combinação entre problema operacional e falta de previsibilidade
+para o consumidor.
+
+</p>
+
+
+<div class="pain-grid">
+
+<div class="pain-card">
+
+<div class="number">
+PAIN POINT 01
+</div>
+
+<h3>
+Falta de previsibilidade
+</h3>
+
+<p>
+O consumidor procura informações sobre status,
+transportadora e prazo quando o pedido apresenta
+problemas.
+</p>
+
+</div>
+
+
+<div class="pain-card">
+
+<div class="number">
+PAIN POINT 02
+</div>
+
+<h3>
+Fricção no cancelamento
+</h3>
+
+<p>
+Há relatos públicos envolvendo dificuldade ou demora
+para cancelar pedidos após problemas na entrega.
+</p>
+
+</div>
+
+
+<div class="pain-card">
+
+<div class="number">
+PAIN POINT 03
+</div>
+
+<h3>
+Ownership pouco claro
+</h3>
+
+<p>
+Quando marketplace, parceiro, logística e atendimento
+participam da jornada, o cliente pode não saber quem
+é responsável por resolver o problema.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LEGAL -->
+
+<section class="legal-section">
+
+<div class="container">
+
+<div class="section-label">
+05 — Legal Lens
+</div>
+
+<h2>
+Onde o Direito entra no produto?
+</h2>
+
+<p class="section-description">
+
+O objetivo não é transformar o produto em um fluxo jurídico,
+mas usar o Jurídico como parceiro na definição dos guardrails
+da experiência.
+
+</p>
+
+
+<div class="legal-grid">
+
+<div class="legal-card">
+
+<span class="tag">
+CDC
+</span>
+
+<h3>
+Informação
+</h3>
+
+<p>
+Avaliar clareza das informações fornecidas ao consumidor
+sobre produto, prazo, condições e resolução.
+</p>
+
+</div>
+
+
+<div class="legal-card">
+
+<span class="tag">
+CDC
+</span>
+
+<h3>
+Oferta
+</h3>
+
+<p>
+Avaliar cumprimento das condições apresentadas na oferta
+e os procedimentos aplicáveis quando houver alteração.
+</p>
+
+</div>
+
+
+<div class="legal-card">
+
+<span class="tag">
+RESPONSABILIDADE
+</span>
+
+<h3>
+Cadeia de fornecedores
+</h3>
+
+<p>
+Mapear os participantes da operação e analisar,
+caso a caso, suas responsabilidades jurídicas.
+</p>
+
+</div>
+
+
+<div class="legal-card">
+
+<span class="tag">
+PRODUTO
+</span>
+
+<h3>
+Legal by design
+</h3>
+
+<p>
+Transformar requisitos jurídicos em regras e experiências
+compreensíveis para o usuário.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="responsibility">
+
+<div class="responsibility-card">
+
+<h3>
+👤 Cliente
+</h3>
+
+<p>
+Precisa receber informação clara e ter acesso a
+canais e mecanismos adequados para resolver o problema.
+</p>
+
+</div>
+
+
+<div class="responsibility-card">
+
+<h3>
+🏪 Parceiro
+</h3>
+
+<p>
+Responsabilidades contratuais e operacionais devem
+ser claramente definidas entre os participantes.
+</p>
+
+</div>
+
+
+<div class="responsibility-card">
+
+<h3>
+🏦 Plataforma
+</h3>
+
+<p>
+O papel da plataforma deve ser analisado conforme
+sua atuação concreta na relação e a configuração
+jurídica do caso.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOLUTION -->
+
+<section id="solucao" class="solution">
+
+<div class="container">
+
+<div class="section-label">
+06 — Opportunity
+</div>
+
+<h2>
+Transformar incerteza em previsibilidade.
+</h2>
+
+<p class="section-description">
+
+Minha hipótese de produto é criar uma camada de resolução
+pós-compra que permita ao cliente entender o problema,
+saber quem está tratando e escolher o próximo passo.
+
+</p>
+
+
+<div class="solution-grid">
+
+
+<div class="product-screen">
+
+<div class="screen">
+
+<div class="screen-top">
+← Meus pedidos
+</div>
+
+<h3>
+Pedido #12345
+</h3>
+
+<br>
+
+<div class="order-status">
+
+<strong>
+⚠ Pedido atrasado
+</strong>
+
+Nova previsão: 18/08
+
+</div>
+
+<p style="font-size:12px;color:#667085;">
+
+O parceiro foi acionado.
+Você será atualizado assim que
+houver uma nova informação.
+
+</p>
+
+<a class="action">
+Acompanhar resolução
+</a>
+
+<a class="action"
+style="background:white;color:#111;border:1px solid #ddd;">
+Preciso de ajuda
+</a>
+
+</div>
+
+</div>
+
+
+<div class="solution-box">
+
+<div class="solution-step">
+
+<div class="step-number">
+1
+</div>
+
+<div>
+
+<strong>Detectar</strong>
+
+<span>
+Identificar atraso ou outra ocorrência.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+2
+</div>
+
+<div>
+
+<strong>Informar</strong>
+
+<span>
+Explicar o que aconteceu de forma proativa.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+3
+</div>
+
+<div>
+
+<strong>Ownership</strong>
+
+<span>
+Mostrar quem está tratando a ocorrência.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+4
+</div>
+
+<div>
+
+<strong>Resolver</strong>
+
+<span>
+Disponibilizar as ações aplicáveis ao caso.
+</span>
+
+</div>
+
+</div>
+
+
+<div class="solution-step">
+
+<div class="step-number">
+5
+</div>
+
+<div>
+
+<strong>Escalonar</strong>
+
+<span>
+Criar caminho claro quando a primeira solução falhar.
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- METRICS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+07 — Métricas
+</div>
+
+<h2>
+Como eu validaria a solução?
+</h2>
+
+<p class="section-description">
+
+Não atribuo resultados fictícios ao projeto. Como não tenho
+acesso aos dados internos, abaixo estão os indicadores que
+eu acompanharia em um experimento real.
+
+</p>
+
+
+<div class="metrics-grid">
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+Taxa de resolução digital
+</h3>
+
+<p>
+Percentual de ocorrências resolvidas sem necessidade
+de contato humano.
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+Tempo médio de resolução
+</h3>
+
+<p>
+Tempo entre identificação do problema e resolução.
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+Taxa de recontato
+</h3>
+
+<p>
+Percentual de clientes que precisam entrar em contato
+novamente sobre o mesmo problema.
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+CSAT pós-resolução
+</h3>
+
+<p>
+Satisfação do consumidor após a solução do problema.
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+Cancelamento após atraso
+</h3>
+
+<p>
+Percentual de pedidos cancelados depois de uma
+ocorrência de atraso.
+</p>
+
+</div>
+
+
+<div class="metric-card">
+
+<span class="proposed">
+MÉTRICA PROPOSTA
+</span>
+
+<h3>
+Reclamações / 1.000 pedidos
+</h3>
+
+<p>
+Indicador normalizado para acompanhar a evolução
+das reclamações em relação ao volume transacionado.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TAKEAWAY -->
+
+<section class="takeaway">
+
+<div class="container takeaway-grid">
+
+<div>
+
+<div class="section-label">
+08 — Takeaway
+</div>
+
+<h2>
+O que este case demonstra?
+</h2>
+
+<p>
+
+Minha proposta não é apenas apontar um risco jurídico.
+É transformar uma evidência em problema de produto,
+formular uma hipótese e pensar em como validá-la.
+
+</p>
+
+</div>
+
+
+<ul class="takeaway-list">
+
+<li>
+Pesquisa baseada em evidências públicas
+</li>
+
+<li>
+Problem framing
+</li>
+
+<li>
+Customer Journey
+</li>
+
+<li>
+Análise de risco jurídico
+</li>
+
+<li>
+Product hypothesis
+</li>
+
+<li>
+Métricas e validação
+</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-label">
+09 — Competências
+</div>
+
+<h2>
+Minha interseção de habilidades.
+</h2>
+
+<div class="skills">
+
+<span class="skill">Product Discovery</span>
+<span class="skill">Customer Journey</span>
+<span class="skill">Problem Solving</span>
+<span class="skill">Product Strategy</span>
+<span class="skill">UX</span>
+<span class="skill">Métricas</span>
+<span class="skill">Direito Bancário</span>
+<span class="skill">Direito do Consumidor</span>
+<span class="skill">Contratos</span>
+<span class="skill">Direito Digital</span>
+<span class="skill">LGPD</span>
+<span class="skill">Gestão de Riscos</span>
+<span class="skill">Produtos Digitais</span>
+<span class="skill">Tecnologia</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contato">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<div class="section-label">
+Vamos conversar?
+</div>
+
+<h2>
+Ana Carolina
+</h2>
+
+<p style="color:#98a2b3;margin-top:8px;">
+Product Management · Legal Product · B2C
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/"
+target="_blank">
+LinkedIn
+</a>
+
+<a href="https://github.com/anavieira00-product"
+target="_blank">
+GitHub
+</a>
+
+</div>
+
+</div>
+
+
+<div class="disclaimer">
+
+<strong>Nota metodológica:</strong>
+Este é um estudo independente baseado em informações públicas.
+Os indicadores apresentados foram consultados em páginas públicas
+do Reclame Aqui e não representam dados internos do Inter.
+Os números de filtros específicos, como atraso na entrega e produto
+com defeito, não foram somados ao total de reclamações.
+
+</div>
+
+</div>
+
+</footer>
 
 </body>
 </html>
