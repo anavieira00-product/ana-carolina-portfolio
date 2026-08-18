@@ -3,130 +3,699 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ana Carolina | Product Manager</title>
+<title>Ana Carolina | Product Management</title>
 
 <style>
 :root{
---bg:#f6f7f9;--white:#fff;--text:#172033;--muted:#667085;--line:#e4e7ec;
---orange:#ff6b00;--orange-light:#fff1e6;--blue:#2563eb;--blue-light:#eff6ff;
---green:#16a34a;--red:#dc2626;--purple:#7c3aed;--dark:#111827;
+    --bg:#f6f7f9;
+    --white:#fff;
+    --text:#172033;
+    --muted:#667085;
+    --line:#e4e7ec;
+    --orange:#ff6b00;
+    --orange-light:#fff1e6;
+    --blue:#2563eb;
+    --blue-light:#eff6ff;
+    --green:#16a34a;
+    --red:#dc2626;
+    --purple:#7c3aed;
+    --purple-light:#f5f3ff;
+    --dark:#111827;
 }
+
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:100;background:rgba(246,247,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{height:64px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:21px;font-weight:800}.logo span{color:var(--orange)}
-.nav-links{display:flex;gap:25px;list-style:none;font-size:13px;color:#475467}
+
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(246,247,249,.94);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+}
+
+nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{font-size:21px;font-weight:800}
+.logo span{color:var(--orange)}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    font-size:14px;
+    color:#475467;
+}
+
 .nav-links a:hover{color:var(--orange)}
 
-section{padding:70px 0}.hero{padding:90px 0 70px}
-.hero-grid,.case-top,.about-grid,.solution-grid,.takeaway-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-.badge,.section-label,.study-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.3px}
-.badge{display:inline-block;background:var(--orange-light);color:#c2410c;border-radius:20px;padding:6px 11px;margin-bottom:20px}
-h1{font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-4px;margin-bottom:22px}
+section{padding:80px 0}
+
+.section-label{
+    color:var(--orange);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:40px;
+    line-height:1.15;
+    letter-spacing:-1.5px;
+}
+
+.section-description{
+    color:var(--muted);
+    max-width:720px;
+    margin-top:12px;
+}
+
+.card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:25px;
+}
+
+.mt40{margin-top:40px}
+
+/* HERO */
+
+.hero{padding:100px 0 80px}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+    background:var(--orange-light);
+    color:#c2410c;
+    border-radius:30px;
+    padding:7px 13px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:22px;
+}
+
+h1{
+    font-size:clamp(45px,6vw,76px);
+    line-height:1;
+    letter-spacing:-4px;
+    margin-bottom:22px;
+}
+
 h1 span{color:var(--orange)}
-h2{font-size:38px;line-height:1.12;letter-spacing:-1.5px}
-h3{line-height:1.25}
-.hero-description,.section-description{color:var(--muted);max-width:700px}
-.hero-description{font-size:18px;margin-bottom:25px}
-.buttons{display:flex;gap:10px;flex-wrap:wrap}.button{padding:10px 17px;border-radius:8px;border:1px solid var(--dark);font-size:13px;font-weight:700}
-.primary{background:var(--dark);color:white}.secondary{background:white}
-.hero-panel{background:var(--dark);color:white;padding:28px;border-radius:18px;box-shadow:0 18px 40px #0002}
-.hero-panel small{color:#98a2b3;text-transform:uppercase;letter-spacing:1px;font-size:10px}
-.hero-panel h2{font-size:28px;margin:45px 0}.hero-panel span{color:var(--orange)}
-.section-label,.study-tag{color:var(--orange);margin-bottom:8px}.section-description{margin-top:10px}
 
-.about-text p{color:#475467;margin-bottom:14px}.about-card,.card,.metric-card,.legal-card,.solution-box{background:white;border:1px solid var(--line);border-radius:14px;padding:24px}
-.about-card strong{display:block;margin-bottom:8px}
-.intersection{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.pill{padding:8px 12px;background:white;border:1px solid var(--line);border-radius:20px;font-size:12px}
-.pill.main{background:var(--dark);color:white;border-color:var(--dark)}
+.hero-description{
+    color:var(--muted);
+    font-size:19px;
+    max-width:680px;
+    margin-bottom:28px;
+}
 
-.process{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:30px}
-.process div{background:white;border:1px solid var(--line);border-radius:10px;padding:15px 8px;text-align:center;font-size:11px;font-weight:800}
-.process span{display:block;color:var(--orange);font-size:16px;margin-bottom:4px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
 
-.case-intro,.takeaway{background:var(--dark);color:white}
-.case-title{font-size:clamp(40px,5vw,60px);line-height:1;letter-spacing:-3px}
-.case-subtitle{color:#aab1bd;font-size:15px}
-.notice{margin-top:22px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:15px 17px;border-radius:10px;font-size:12px}
-.notice strong{font-weight:800}
+.button{
+    padding:12px 19px;
+    border-radius:9px;
+    border:1px solid var(--dark);
+    font-size:14px;
+    font-weight:700;
+}
 
-.benchmark,.pattern-grid,.problem-grid,.legal-grid,.metrics-grid{display:grid;gap:15px;margin-top:30px}
-.benchmark{grid-template-columns:repeat(4,1fr)}.pattern-grid,.problem-grid{grid-template-columns:repeat(3,1fr)}
-.legal-grid{grid-template-columns:repeat(4,1fr)}.metrics-grid{grid-template-columns:repeat(3,1fr)}
-.card .number,.benchmark-number{font-size:27px;font-weight:800;color:var(--orange);margin-top:10px}
-.card small,.muted{font-size:11px;color:var(--muted)}
-.card p,.pattern p,.problem-card p,.legal-card p,.metric-card p{font-size:13px;color:var(--muted);margin-top:7px}
-.card .tag,.proposed,.sim-badge,.legal-tag{display:inline-block;font-size:9px;font-weight:800;padding:4px 7px;border-radius:5px}
-.public{background:var(--blue-light);color:var(--blue)}.sim-badge{background:var(--orange-light);color:#c2410c}
-.legal-tag{background:#f5f3ff;color:var(--purple)}
-.benchmark-source{border-top:1px solid var(--line);margin-top:15px;padding-top:10px;font-size:10px;color:var(--blue)}
+.button.primary{background:var(--dark);color:white}
+.button.secondary{background:white}
 
-.discovery{background:#f1f5f9}.pattern-icon{font-size:22px;margin-bottom:10px}.pattern h3{font-size:17px}
-.pattern{background:white;border:1px solid var(--line);border-radius:14px;padding:22px}
+.hero-panel{
+    background:var(--dark);
+    color:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
 
-.question-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:25px}
-.question{background:white;border:1px solid var(--line);padding:15px;border-radius:10px;font-size:13px}
-.question::before{content:"?";color:var(--orange);font-weight:800;margin-right:8px}
+.hero-panel small{
+    color:#98a2b3;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
 
-.journey{margin-top:30px;overflow-x:auto}
-.journey-row{display:grid;grid-template-columns:repeat(6,1fr);min-width:800px}
-.journey-cell{padding:15px;border:1px solid var(--line);background:white;font-size:12px}
-.journey-cell strong{display:block;margin-bottom:5px}.journey-cell span{color:var(--muted)}
-.journey-head{background:var(--dark);color:white;font-weight:800}
+.hero-panel h2{
+    font-size:30px;
+    line-height:1.15;
+    margin:55px 0;
+}
 
-.problem-card .number{font-size:10px;color:var(--red);font-weight:800}.problem-card h3{margin-top:5px}
+.hero-panel span{color:var(--orange)}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.about-text p{
+    color:#475467;
+    margin-bottom:16px;
+}
+
+.about-card p{
+    color:var(--muted);
+    margin-top:8px;
+}
+
+/* CASE */
+
+.case-intro{
+    background:var(--dark);
+    color:white;
+}
+
+.case-top{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:end;
+}
+
+.case-title{
+    font-size:clamp(40px,5vw,62px);
+    line-height:1;
+    letter-spacing:-3px;
+}
+
+.case-subtitle{color:#aab1bd}
+
+.study-tag{
+    display:inline-block;
+    color:var(--orange);
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+
+.notice{
+    margin-top:25px;
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    color:#9a3412;
+    padding:16px 18px;
+    border-radius:12px;
+    font-size:13px;
+}
+
+/* BENCHMARK */
+
+.benchmark,
+.pattern-grid,
+.problem-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:35px;
+}
+
+.company{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:4px;
+}
+
+.company-note{
+    color:var(--muted);
+    font-size:11px;
+    margin-bottom:18px;
+}
+
+.benchmark-number{
+    font-size:30px;
+    font-weight:800;
+    color:var(--orange);
+}
+
+.benchmark-label{
+    font-size:12px;
+    color:#475467;
+    margin-bottom:14px;
+}
+
+.benchmark-source{
+    font-size:11px;
+    color:var(--blue);
+    padding-top:10px;
+    border-top:1px solid var(--line);
+}
+
+/* DISCOVERY */
+
+.pattern-icon{font-size:25px;margin-bottom:12px}
+.pattern h3{margin-bottom:7px}
+.pattern p,.problem-card p{color:var(--muted);font-size:13px}
+
+/* SIMULATED DATA */
+
+.simulated{background:#f1f5f9}
+
+.simulated-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.sim-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:15px;
+    padding:22px;
+}
+
+.sim-card .number{
+    font-size:30px;
+    font-weight:800;
+    color:var(--blue);
+}
+
+.sim-card small{
+    color:var(--muted);
+    font-size:11px;
+}
+
+.sim-badge,
+.proposed{
+    display:inline-block;
+    background:var(--blue-light);
+    color:var(--blue);
+    padding:4px 7px;
+    border-radius:5px;
+    font-size:9px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+/* BOARD */
+
+.board-section{background:#eef0f4}
+
+.board{
+    background:#dfe3e8;
+    padding:20px;
+    border-radius:18px;
+    overflow-x:auto;
+    margin-top:35px;
+}
+
+.board-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+    min-width:1050px;
+}
+
+.board-title{font-weight:800}
+.board-meta{font-size:12px;color:#667085}
+
+.swimlanes{
+    min-width:1050px;
+    display:grid;
+    gap:10px;
+}
+
+.lane{
+    display:grid;
+    grid-template-columns:150px repeat(4,1fr);
+    gap:10px;
+}
+
+.lane-name,
+.board-cell{
+    background:#f8f9fb;
+    border-radius:10px;
+}
+
+.lane-name{
+    padding:14px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.board-cell{
+    min-height:125px;
+    padding:11px;
+}
+
+.column-title{
+    font-size:11px;
+    text-transform:uppercase;
+    color:#667085;
+    font-weight:800;
+}
+
+.sticky{
+    background:white;
+    border:1px solid #d9dde3;
+    border-left:4px solid var(--orange);
+    border-radius:8px;
+    padding:11px;
+    font-size:12px;
+    box-shadow:0 2px 5px rgba(0,0,0,.04);
+}
+
+.sticky.blue{border-left-color:var(--blue)}
+.sticky.green{border-left-color:var(--green)}
+.sticky.red{border-left-color:var(--red)}
+.sticky.purple{border-left-color:var(--purple)}
+
+.sticky strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:4px;
+}
+
+/* PROBLEM */
+
+.problem-card .number{
+    color:var(--red);
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:16px;
+}
+
+.problem-card h3{margin-bottom:7px}
+
+/* LEGAL */
 
 .legal-section{background:white}
-.legal-card h3{margin-top:8px;font-size:17px}
-.legal-flow{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;gap:10px;margin-top:25px}
-.legal-flow div{background:#fafafa;border:1px solid var(--line);border-radius:10px;padding:14px;font-size:12px}
-.arrow{text-align:center;color:var(--orange);font-weight:800!important;background:none!important;border:0!important}
 
-.solution{background:#f1f5f9}.solution-box{margin-top:0}
-.solution-step{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
-.solution-step:last-child{border-bottom:0}.step-number{width:28px;height:28px;background:var(--dark);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
-.solution-step strong{display:block;font-size:14px}.solution-step span{color:var(--muted);font-size:12px}
-.product-screen{background:var(--dark);border-radius:25px;padding:10px;max-width:340px;margin:auto}
-.screen{background:white;border-radius:18px;padding:22px}.screen-top{font-size:11px;color:var(--muted);margin-bottom:20px}
-.order-status{background:var(--orange-light);padding:13px;border-radius:9px;margin:12px 0;font-size:12px}
-.order-status strong{display:block;color:#c2410c}.action{display:block;background:var(--dark);color:white;text-align:center;padding:9px;border-radius:7px;font-size:11px;font-weight:700;margin-top:8px}
+.legal-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:35px;
+}
 
-.roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:30px}
-.roadmap .card h3{margin:8px 0}.roadmap ul{padding-left:17px;color:var(--muted);font-size:12px}
+.legal-card{background:#fafafa}
 
-.metric-card h3{margin:7px 0}.proposed{background:var(--blue-light);color:var(--blue)}
-.metric-card .guard{background:#ecfdf3;color:var(--green)}
+.legal-card .tag{
+    display:inline-block;
+    background:var(--purple-light);
+    color:var(--purple);
+    padding:5px 8px;
+    border-radius:5px;
+    font-size:10px;
+    font-weight:800;
+    margin-bottom:13px;
+}
 
-.experiment{background:#f1f5f9}.experiment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}
-.experiment-card{background:white;border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
-.experiment-card strong{display:block;font-size:14px}.experiment-card span{font-size:11px;color:var(--muted)}
+.legal-card h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
 
-.case-compare{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:30px}
-.case-compare .card:first-child{border-top:4px solid var(--orange)}.case-compare .card:last-child{border-top:4px solid var(--blue)}
+.legal-card p{
+    color:var(--muted);
+    font-size:13px;
+}
 
-.takeaway-grid{align-items:start}.takeaway p{color:#aab1bd;margin-top:12px;font-size:14px}
-.takeaway-list{list-style:none}.takeaway-list li{padding:9px 0;border-bottom:1px solid #333b48;font-size:13px}
-.takeaway-list li::before{content:"→";color:var(--orange);margin-right:8px}
+/* SOLUTION */
 
-.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.skill{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:20px;font-size:12px}
-.skill.product{border-color:#c7d2fe;background:#eef2ff}.skill.legal{border-color:#ddd6fe;background:#f5f3ff}
+.solution{background:#f1f5f9}
 
-footer{background:#0b0f16;color:white;padding:55px 0}
-.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:25px}.footer-links{display:flex;gap:8px}.footer-links a{border:1px solid #343b48;padding:9px 13px;border-radius:7px;font-size:12px}
-.footer-links a:hover{border-color:var(--orange);color:var(--orange)}
-.disclaimer{border-top:1px solid #252c37;margin-top:30px;padding-top:16px;color:#667085;font-size:10px}
+.solution-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+    margin-top:40px;
+}
+
+.solution-box{
+    background:white;
+    border-radius:18px;
+    padding:28px;
+    border:1px solid var(--line);
+}
+
+.solution-step{
+    display:flex;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.solution-step:last-child{border-bottom:none}
+
+.step-number{
+    width:30px;
+    height:30px;
+    background:var(--dark);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    flex-shrink:0;
+}
+
+.solution-step strong{display:block}
+.solution-step span{color:var(--muted);font-size:13px}
+
+.product-screen{
+    background:var(--dark);
+    border-radius:28px;
+    padding:12px;
+    max-width:360px;
+    margin:auto;
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+}
+
+.screen{
+    background:white;
+    border-radius:20px;
+    padding:24px;
+}
+
+.screen-top{
+    font-size:12px;
+    color:#667085;
+    margin-bottom:22px;
+}
+
+.order-status{
+    background:var(--orange-light);
+    padding:14px;
+    border-radius:10px;
+    margin:14px 0;
+}
+
+.order-status strong{
+    display:block;
+    color:#c2410c;
+}
+
+.screen-text{
+    font-size:12px;
+    color:#667085;
+}
+
+.action{
+    display:block;
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:11px;
+    border-radius:8px;
+    font-size:12px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.action.secondary{
+    background:white;
+    color:var(--text);
+    border:1px solid #ddd;
+}
+
+/* METRICS */
+
+.metrics-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:35px;
+}
+
+.metric-card h3{margin-bottom:7px}
+
+.metric-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* TAKEAWAY */
+
+.takeaway{
+    background:var(--dark);
+    color:white;
+}
+
+.takeaway-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+}
+
+.takeaway p{
+    color:#aab1bd;
+    margin-top:14px;
+}
+
+.takeaway-list{list-style:none}
+
+.takeaway-list li{
+    padding:11px 0;
+    border-bottom:1px solid #333b48;
+}
+
+.takeaway-list li::before{
+    content:"→";
+    color:var(--orange);
+    margin-right:10px;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:30px;
+}
+
+.skill{
+    background:white;
+    border:1px solid var(--line);
+    padding:9px 14px;
+    border-radius:25px;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b0f16;
+    color:white;
+    padding:60px 0;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.footer-links{
+    display:flex;
+    gap:10px;
+}
+
+.footer-links a{
+    border:1px solid #343b48;
+    padding:10px 15px;
+    border-radius:8px;
+    font-size:13px;
+}
+
+.footer-links a:hover{
+    border-color:var(--orange);
+    color:var(--orange);
+}
+
+.disclaimer{
+    border-top:1px solid #252c37;
+    margin-top:40px;
+    padding-top:18px;
+    color:#667085;
+    font-size:11px;
+}
+
+/* RESPONSIVE */
 
 @media(max-width:850px){
-.nav-links{display:none}.hero-grid,.case-top,.about-grid,.solution-grid,.takeaway-grid{grid-template-columns:1fr}
-.benchmark,.legal-grid,.metrics-grid,.roadmap{grid-template-columns:1fr 1fr}.process{grid-template-columns:repeat(4,1fr)}
+    .nav-links{display:none}
+
+    .hero-grid,
+    .case-top,
+    .about-grid,
+    .solution-grid,
+    .takeaway-grid{
+        grid-template-columns:1fr;
+    }
+
+    .benchmark,
+    .pattern-grid,
+    .problem-grid,
+    .legal-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .simulated-grid{grid-template-columns:1fr 1fr}
+
+    .footer-grid{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
+
 @media(max-width:550px){
-section{padding:55px 0}.hero{padding:65px 0 50px}h1{letter-spacing:-2px}h2{font-size:31px}
-.benchmark,.pattern-grid,.problem-grid,.legal-grid,.metrics-grid,.roadmap,.experiment-grid,.case-compare,.question-list{grid-template-columns:1fr}
-.process{grid-template-columns:1fr 1fr}.footer-grid{flex-direction:column;align-items:flex-start}.legal-flow{grid-template-columns:1fr}
-.arrow{transform:rotate(90deg)}
+    section{padding:65px 0}
+
+    h2{font-size:32px}
+
+    h1{
+        letter-spacing:-2px;
+        font-size:48px;
+    }
+
+    .hero{padding:70px 0}
+
+    .benchmark,
+    .pattern-grid,
+    .problem-grid,
+    .simulated-grid,
+    .legal-grid,
+    .metrics-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-panel h2{margin:40px 0}
 }
 </style>
 </head>
@@ -139,158 +708,139 @@ section{padding:55px 0}.hero{padding:65px 0 50px}h1{letter-spacing:-2px}h2{font-
 <a href="#" class="logo">Ana<span>.</span></a>
 <ul class="nav-links">
 <li><a href="#sobre">Sobre</a></li>
-<li><a href="#processo">Como penso Produto</a></li>
-<li><a href="#cases">Cases</a></li>
-<li><a href="#skills">Skills</a></li>
+<li><a href="#benchmark">Benchmark</a></li>
+<li><a href="#case">Case</a></li>
+<li><a href="#solucao">Solução</a></li>
 <li><a href="#contato">Contato</a></li>
 </ul>
 </nav>
 </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <div class="container hero-grid">
 <div>
-<div class="badge">PRODUCT MANAGEMENT · DISCOVERY · STRATEGY</div>
-<h1>Product Manager com visão de <span>produto.</span></h1>
+<div class="badge">PRODUCT MANAGEMENT · LEGAL PRODUCT</div>
+<h1>Direito + Produto + <span>Tecnologia.</span></h1>
 <p class="hero-description">
-Profissional em transição para Product Management, com background em Direito Bancário e experiência em análise de problemas, riscos, processos e tomada de decisão.
+Advogada de Direito Bancário em transição para Product Management,
+explorando como visão jurídica, experiência do cliente e tecnologia
+podem contribuir para produtos digitais melhores.
 </p>
 <div class="buttons">
-<a href="#cases" class="button primary">Ver cases</a>
+<a href="#case" class="button primary">Ver case</a>
 <a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank" class="button secondary">LinkedIn</a>
-<a href="https://github.com/anavieira00-product" target="_blank" class="button secondary">GitHub</a>
 </div>
 </div>
 
 <div class="hero-panel">
 <small>Minha abordagem</small>
 <h2>Investigar o problema antes de <span>desenhar a solução.</span></h2>
-<small>Customer · Business · Technology · Data</small>
+<small>Customer · Business · Technology · Legal</small>
 </div>
 </div>
 </section>
 
-<!-- SOBRE -->
 <section id="sobre">
 <div class="container">
 <div class="section-label">01 — Sobre</div>
-<h2>Produto é o centro. O Direito é um diferencial.</h2>
+<h2>Uma perspectiva jurídica aplicada a Produto.</h2>
 <p class="section-description">
-Minha trajetória no Direito desenvolveu uma visão analítica para investigar problemas, avaliar riscos, interpretar cenários e transformar situações complexas em decisões estruturadas.
+Minha experiência no Direito Bancário desenvolveu competências em
+análise de riscos, contratos, interpretação normativa, resolução
+de problemas e comunicação com diferentes áreas.
 </p>
 
-<div class="about-grid" style="margin-top:30px">
+<div class="about-grid mt40">
 <div class="about-text">
 <p>
-Ao conhecer Product Management, encontrei uma área que conecta essas habilidades com tecnologia, negócio, experiência do usuário e construção de soluções.
+Ao conhecer Product Management, encontrei uma área que conecta
+essas habilidades com tecnologia, negócio e experiência do cliente.
 </p>
 <p>
-Meu objetivo é atuar em Produto de forma ampla, independentemente do segmento. O background jurídico adiciona uma camada complementar de conhecimento, especialmente útil em produtos que envolvam riscos, contratos, regulação ou consumidores.
+Minha proposta é utilizar o conhecimento jurídico não apenas para
+identificar riscos, mas para participar da construção de soluções
+mais claras, seguras e eficientes.
 </p>
 </div>
 
-<div class="about-card">
-<strong>Minha interseção</strong>
-<div class="intersection">
-<span class="pill main">Product</span>
-<span class="pill">Dados</span>
-<span class="pill">Tecnologia</span>
-<span class="pill">Negócio</span>
-<span class="pill">UX</span>
-<span class="pill">Background jurídico</span>
-</div>
+<div class="card about-card">
+<strong>Meu foco</strong>
+<p>
+Produtos e serviços digitais B2B e B2C, especialmente em ambientes
+financeiros, marketplaces e serviços digitais nos quais experiência
+do cliente, negócio, tecnologia e regulação precisam caminhar juntos.
+</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- PROCESSO -->
-<section id="processo">
-<div class="container">
-<div class="section-label">02 — Como penso Produto</div>
-<h2>Do problema ao aprendizado.</h2>
-<p class="section-description">
-Meu processo parte da investigação e evolui por hipóteses, soluções, métricas e experimentação.
-</p>
-
-<div class="process">
-<div><span>01</span>Discovery</div>
-<div><span>02</span>Problem</div>
-<div><span>03</span>Opportunity</div>
-<div><span>04</span>Solution</div>
-<div><span>05</span>Metrics</div>
-<div><span>06</span>Experiment</div>
-<div><span>07</span>Learning</div>
-</div>
-</div>
-</section>
-
-<!-- CASES -->
-<section id="cases" class="case-intro">
+<section id="case" class="case-intro">
 <div class="container">
 <div class="case-top">
 <div>
-<div class="study-tag">CASE 01 · MARKETPLACE</div>
-<h2 class="case-title">Ownership na resolução pós-compra.</h2>
+<div class="study-tag">CASE FICTÍCIO · PRODUTO DIGITAL</div>
+<h2 class="case-title">Nexa Market<br>Jornada de pós-compra</h2>
 </div>
+
 <p class="case-subtitle">
-Como tornar mais previsível a resolução de problemas em uma plataforma que conecta consumidores e parceiros?
+Como reduzir a fricção na resolução de problemas após uma compra
+em um produto digital?
+<br><br>
+A Nexa Market é uma empresa fictícia criada para este projeto
+de portfólio.
 </p>
 </div>
 
 <div class="notice">
 <strong>Nota metodológica:</strong>
-este case utiliza referências públicas para gerar hipóteses. Dados internos e resultados da empresa são simulados exclusivamente para demonstrar raciocínio de Produto.
+Os dados internos da Nexa Market são simulados exclusivamente para
+fins de exercício de Product Management. As referências externas
+são utilizadas apenas como benchmark baseado em informações públicas.
 </div>
 </div>
 </section>
 
-<!-- BENCHMARK -->
-<section>
+<section id="benchmark">
 <div class="container">
-<div class="section-label">03 — Benchmark</div>
-<h2>Diferentes produtos, diferentes problemas.</h2>
+<div class="section-label">02 — Benchmark público</div>
+<h2>O que podemos aprender observando diferentes mercados?</h2>
 <p class="section-description">
-O benchmark não busca definir qual empresa possui o melhor produto. Os dados públicos são utilizados como sinais para levantar perguntas de discovery.
+Antes de criar uma solução para a Nexa Market, analisei indicadores
+públicos de diferentes segmentos para identificar padrões de
+experiência, atendimento e resolução de problemas.
 </p>
 
 <div class="benchmark">
 
-<div class="card">
-<span class="tag public">SETOR FINANCEIRO</span>
-<h3>Marketplace financeiro</h3>
-<p>Plataforma conectando consumidores, serviços financeiros e parceiros.</p>
-<div class="benchmark-number">Reclamações</div>
-<small>Indicador público utilizado como sinal de investigação.</small>
+<div class="card benchmark-card">
+<div class="company">Setor bancário</div>
+<div class="company-note">Referência pública · Reclame Aqui</div>
+<div class="benchmark-number">35,4%</div>
+<div class="benchmark-label">reclamações resolvidas</div>
+<div class="benchmark-number">27,1%</div>
+<div class="benchmark-label">voltariam a fazer negócio</div>
 <div class="benchmark-source">Fonte: Reclame Aqui</div>
 </div>
 
-<div class="card">
-<span class="tag public">COMÉRCIO DIGITAL</span>
-<h3>Marketplace</h3>
-<p>Plataforma conectando consumidores e vendedores.</p>
-<div class="benchmark-number">Pós-compra</div>
-<small>Atrasos, cancelamentos, reembolsos e resolução.</small>
+<div class="card benchmark-card">
+<div class="company">Setor de marketplace</div>
+<div class="company-note">Referência pública · Reclame Aqui</div>
+<div class="benchmark-number">64,2%</div>
+<div class="benchmark-label">reclamações resolvidas</div>
+<div class="benchmark-number">61,6%</div>
+<div class="benchmark-label">voltariam a fazer negócio</div>
 <div class="benchmark-source">Fonte: Reclame Aqui</div>
 </div>
 
-<div class="card">
-<span class="tag public">ALIMENTAÇÃO</span>
-<h3>Delivery</h3>
-<p>Plataforma conectando consumidores, restaurantes e logística.</p>
-<div class="benchmark-number">Ownership</div>
-<small>Problemas podem envolver diferentes participantes.</small>
-<div class="benchmark-source">Fonte: Reclame Aqui</div>
-</div>
-
-<div class="card">
-<span class="tag public">MOBILIDADE</span>
-<h3>Locação de veículos</h3>
-<p>Serviço digital envolvendo locação, operação, cobrança e seguros.</p>
-<div class="benchmark-number">Incidentes</div>
-<small>Ocorrências podem gerar jornadas operacionais complexas.</small>
+<div class="card benchmark-card">
+<div class="company">Setor de serviços</div>
+<div class="company-note">Referência pública · Reclame Aqui</div>
+<div class="benchmark-number">87%</div>
+<div class="benchmark-label">reclamações resolvidas</div>
+<div class="benchmark-number">78,1%</div>
+<div class="benchmark-label">voltariam a fazer negócio</div>
 <div class="benchmark-source">Fonte: Reclame Aqui</div>
 </div>
 
@@ -298,395 +848,491 @@ O benchmark não busca definir qual empresa possui o melhor produto. Os dados p�
 
 <div class="notice">
 <strong>Importante:</strong>
-o Reclame Aqui não representa sozinho a experiência completa de um produto. Neste projeto, ele é tratado como uma fonte pública de sinais, e não como prova de causalidade ou avaliação definitiva.
+Os indicadores são referências públicas e não permitem concluir,
+isoladamente, que um setor possui uma experiência melhor ou pior.
+Neste projeto, eles são utilizados para gerar perguntas e hipóteses.
 </div>
 </div>
 </section>
 
-<!-- DISCOVERY -->
-<section class="discovery">
+<section>
 <div class="container">
-<div class="section-label">04 — Discovery</div>
-<h2>Do sinal à pergunta.</h2>
+<div class="section-label">03 — Discovery</div>
+<h2>Quais padrões aparecem?</h2>
 <p class="section-description">
-Os sinais observados no benchmark foram transformados em perguntas que poderiam ser investigadas por Produto.
+A partir do benchmark e da análise qualitativa de reclamações
+públicas, transformei os sinais observados em oportunidades
+de investigação.
 </p>
 
 <div class="pattern-grid">
-<div class="pattern">
+
+<div class="card pattern">
 <div class="pattern-icon">📦</div>
-<h3>Entrega</h3>
-<p>O usuário sabe onde está o pedido e quando receberá uma nova atualização?</p>
+<h3>Previsibilidade</h3>
+<p>
+O cliente precisa entender o status da solicitação, o prazo
+e o próximo passo esperado.
+</p>
 </div>
-<div class="pattern">
+
+<div class="card pattern">
 <div class="pattern-icon">🔄</div>
-<h3>Cancelamento</h3>
-<p>Quando algo dá errado, o cliente sabe quais ações estão disponíveis?</p>
+<h3>Resolução</h3>
+<p>
+Quando existe um problema, o consumidor precisa saber rapidamente
+quais ações estão disponíveis.
+</p>
 </div>
-<div class="pattern">
-<div class="pattern-icon">👥</div>
+
+<div class="card pattern">
+<div class="pattern-icon">👤</div>
 <h3>Ownership</h3>
-<p>O consumidor entende quem está conduzindo a resolução?</p>
-</div>
+<p>
+Diferentes áreas e parceiros precisam ter clareza sobre quem
+conduz cada etapa da resolução.
+</p>
 </div>
 
-<div class="question-list">
-<div class="question">Em que momento o cliente percebe que existe um problema?</div>
-<div class="question">Ele recebe informação suficiente?</div>
-<div class="question">Qual é o próximo passo?</div>
-<div class="question">O primeiro contato resolve?</div>
-<div class="question">Quem possui o ownership?</div>
-<div class="question">Quanto tempo o cliente espera por uma resposta?</div>
 </div>
 </div>
 </section>
 
-<!-- JOURNEY -->
-<section>
+<section class="simulated">
 <div class="container">
-<div class="section-label">05 — Customer Journey</div>
-<h2>Onde a experiência quebra?</h2>
+<div class="section-label">04 — Dados da Nexa</div>
+<h2>Agora, o problema fictício.</h2>
 <p class="section-description">
-"Quebra" aqui significa uma fricção relevante na jornada, não necessariamente uma falha técnica do produto.
+Para transformar os sinais do benchmark em um exercício de Product
+Management, criei uma base hipotética para a Nexa Market.
 </p>
 
-<div class="journey">
-<div class="journey-row">
-<div class="journey-cell journey-head">Etapa</div>
-<div class="journey-cell journey-head">Compra</div>
-<div class="journey-cell journey-head">Pedido</div>
-<div class="journey-cell journey-head">Problema</div>
-<div class="journey-cell journey-head">Ajuda</div>
-<div class="journey-cell journey-head">Resolução</div>
+<div class="simulated-grid">
+
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">8,4%</div>
+<strong>pedidos com atraso</strong>
+<small>Base hipotética de 100 mil pedidos/mês</small>
 </div>
 
-<div class="journey-row">
-<div class="journey-cell"><strong>Usuário</strong><span>Objetivo</span></div>
-<div class="journey-cell"><strong>Comprar</strong><span>Finalizar pedido</span></div>
-<div class="journey-cell"><strong>Acompanhar</strong><span>Receber informação</span></div>
-<div class="journey-cell"><strong>Entender</strong><span>Saber o que ocorreu</span></div>
-<div class="journey-cell"><strong>Resolver</strong><span>Encontrar ajuda</span></div>
-<div class="journey-cell"><strong>Encerrar</strong><span>Ter previsibilidade</span></div>
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">62%</div>
+<strong>dos contatos são sobre atraso</strong>
+<small>Hipótese de distribuição do atendimento</small>
 </div>
 
-<div class="journey-row">
-<div class="journey-cell"><strong>Fricção</strong></div>
-<div class="journey-cell">—</div>
-<div class="journey-cell">Informação limitada</div>
-<div class="journey-cell">Problema identificado</div>
-<div class="journey-cell">Próximo passo incerto</div>
-<div class="journey-cell">Múltiplos contatos</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- PROBLEM -->
-<section>
-<div class="container">
-<div class="section-label">06 — Problem Framing</div>
-<h2>Qual problema estamos tentando resolver?</h2>
-<p class="section-description">
-A partir dos sinais e da jornada, a hipótese de problema fica mais específica.
-</p>
-
-<div class="problem-grid">
-<div class="pattern">
-<div class="number">PROBLEMA 01</div>
-<h3>Falta de previsibilidade</h3>
-<p>O cliente pode não saber o que aconteceu, quando terá uma nova resposta ou qual será o próximo passo.</p>
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">38%</div>
+<strong>taxa de recontato</strong>
+<small>Clientes que voltam a procurar suporte</small>
 </div>
 
-<div class="pattern">
-<div class="number">PROBLEMA 02</div>
-<h3>Excesso de contato</h3>
-<p>Quando a informação não está disponível, o usuário pode precisar procurar atendimento repetidamente.</p>
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">4,2 dias</div>
+<strong>tempo médio de resolução</strong>
+<small>Hipótese para o exercício</small>
 </div>
 
-<div class="pattern">
-<div class="number">PROBLEMA 03</div>
-<h3>Ownership pouco claro</h3>
-<p>Em operações com parceiros, pode existir dificuldade para entender quem está conduzindo a resolução.</p>
-</div>
 </div>
 
 <div class="notice">
-<strong>Hipótese:</strong>
-quando ocorre um problema no pós-compra, a falta de clareza sobre status, ownership e próximo passo pode aumentar a fricção e o recontato.
+<strong>Por que usar dados simulados?</strong>
+Como este é um case de portfólio e não tenho acesso aos sistemas
+internos de uma empresa real, os dados da Nexa são explicitamente
+hipotéticos. Eles servem para demonstrar como eu estruturaria
+uma análise, definiria KPIs e tomaria decisões de produto.
 </div>
 </div>
 </section>
 
-<!-- LEGAL -->
+<section class="board-section">
+<div class="container">
+<div class="section-label">05 — Customer Journey</div>
+<h2>Onde a experiência pode quebrar?</h2>
+<p class="section-description">
+Mapeei a jornada como um board de produto, distribuindo
+responsabilidades entre os principais atores.
+</p>
+
+<div class="board">
+<div class="board-header">
+<div class="board-title">Nexa Market · Jornada pós-compra</div>
+<div class="board-meta">Discovery board · hipótese de produto</div>
+</div>
+
+<div class="swimlanes">
+
+<div class="lane">
+<div></div>
+<div class="column-title">Compra</div>
+<div class="column-title">Pedido</div>
+<div class="column-title">Problema</div>
+<div class="column-title">Resolução</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">👤 Cliente</div>
+<div class="board-cell"><div class="sticky blue"><strong>Compra</strong>Realiza o pedido.</div></div>
+<div class="board-cell"><div class="sticky"><strong>Acompanha</strong>Espera atualização.</div></div>
+<div class="board-cell"><div class="sticky red"><strong>⚠ Dor</strong>Pedido atrasado.</div></div>
+<div class="board-cell"><div class="sticky green"><strong>Resultado</strong>Problema resolvido.</div></div>
+</div>
+
+<div class="lane">
+<div class="lane-name">🧩 Produto</div>
+<div class="board-cell"><div class="sticky blue"><strong>Status</strong>Pedido criado.</div></div>
+<div class="board-cell"><div class="sticky"><strong>Tracking</strong>Mostra evolução.</div></div>
+<div class="board-cell"><div class="sticky red"><strong>Gap</strong>Próximo passo pouco claro.</div></div>
+<div class="board-cell"><div class="sticky green"><strong>Opportunity</strong>Centralizar resolução.</div></div>
+</div>
+
+<div class="lane">
+<div class="lane-name">🏪 Parceiro</div>
+<div class="board-cell"><div class="sticky purple"><strong>Venda</strong>Processa pedido.</div></div>
+<div class="board-cell"><div class="sticky purple"><strong>Logística</strong>Entrega.</div></div>
+<div class="board-cell"><div class="sticky red"><strong>Escalonamento</strong>Problema exige ação.</div></div>
+<div class="board-cell"><div class="sticky green"><strong>SLA</strong>Define prazo.</div></div>
+</div>
+
+<div class="lane">
+<div class="lane-name">⚖ Jurídico</div>
+<div class="board-cell"><div class="sticky purple"><strong>Oferta</strong>Regras aplicáveis.</div></div>
+<div class="board-cell"><div class="sticky purple"><strong>Contratos</strong>Papéis definidos.</div></div>
+<div class="board-cell"><div class="sticky red"><strong>Legal risk</strong>Avaliação do caso.</div></div>
+<div class="board-cell"><div class="sticky green"><strong>Guardrail</strong>Legal by design.</div></div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">06 — Problem Framing</div>
+<h2>A hipótese de problema.</h2>
+<p class="section-description">
+Os dados simulados indicam uma oportunidade concentrada
+na previsibilidade e na resolução do pós-compra.
+</p>
+
+<div class="problem-grid">
+
+<div class="card problem-card">
+<div class="number">PROBLEMA 01</div>
+<h3>Falta de previsibilidade</h3>
+<p>
+O cliente não sabe exatamente o que aconteceu, quando terá
+uma nova resposta ou qual será o próximo passo.
+</p>
+</div>
+
+<div class="card problem-card">
+<div class="number">PROBLEMA 02</div>
+<h3>Excesso de contato</h3>
+<p>
+A taxa hipotética de recontato de 38% sugere uma oportunidade
+de reduzir a necessidade de múltiplas interações.
+</p>
+</div>
+
+<div class="card problem-card">
+<div class="number">PROBLEMA 03</div>
+<h3>Ownership</h3>
+<p>
+Cliente, parceiro, operação e atendimento precisam compartilhar
+uma visão clara sobre quem conduz cada etapa.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
 <section class="legal-section">
 <div class="container">
-<div class="section-label">07 — Diferencial jurídico</div>
-<h2>Onde meu background jurídico agrega?</h2>
+<div class="section-label">07 — Legal Lens</div>
+<h2>Onde o Direito entra no produto?</h2>
 <p class="section-description">
-O Direito não define a solução. Ele ajuda a identificar restrições, riscos e requisitos que precisam ser considerados no desenho do produto.
+O Jurídico entra como parceiro de Produto para transformar
+obrigações e riscos em regras de negócio e experiências
+compreensíveis.
 </p>
 
 <div class="legal-grid">
-<div class="legal-card">
-<span class="legal-tag">CONSUMIDOR</span>
+
+<div class="card legal-card">
+<span class="tag">CONSUMIDOR</span>
 <h3>Informação</h3>
-<p>Transformar a necessidade de informação clara em requisitos de experiência e comunicação.</p>
+<p>
+Avaliar clareza das informações fornecidas ao consumidor
+sobre produto, prazo e condições.
+</p>
 </div>
 
-<div class="legal-card">
-<span class="legal-tag">NEGÓCIO</span>
-<h3>Responsabilidades</h3>
-<p>Mapear participantes, papéis e responsabilidades para apoiar regras de negócio.</p>
+<div class="card legal-card">
+<span class="tag">OFERTA</span>
+<h3>Regras</h3>
+<p>
+Avaliar cumprimento das condições apresentadas e os
+procedimentos aplicáveis em caso de alteração.
+</p>
 </div>
 
-<div class="legal-card">
-<span class="legal-tag">RISCO</span>
-<h3>Guardrails</h3>
-<p>Antecipar riscos e definir limites para automações e decisões de produto.</p>
+<div class="card legal-card">
+<span class="tag">RESPONSABILIDADE</span>
+<h3>Cadeia de fornecedores</h3>
+<p>
+Mapear participantes e analisar suas responsabilidades
+conforme a atuação concreta de cada um.
+</p>
 </div>
 
-<div class="legal-card">
-<span class="legal-tag">LEGAL BY DESIGN</span>
-<h3>Produto</h3>
-<p>Incorporar requisitos jurídicos ao produto sem transformar a experiência em burocracia.</p>
-</div>
+<div class="card legal-card">
+<span class="tag">PRODUTO</span>
+<h3>Legal by design</h3>
+<p>
+Transformar requisitos jurídicos em regras de produto
+sem transformar a experiência em uma jornada burocrática.
+</p>
 </div>
 
-<div class="legal-flow">
-<div><strong>Necessidade jurídica</strong><br>Informação clara ao consumidor.</div>
-<div class="arrow">→</div>
-<div><strong>Requisito de produto</strong><br>Status, próxima etapa e previsão de atualização.</div>
+</div>
 
-<div><strong>Necessidade jurídica</strong><br>Clareza sobre responsabilidades.</div>
-<div class="arrow">→</div>
-<div><strong>Requisito de produto</strong><br>Mostrar quem está tratando a ocorrência.</div>
+<div class="notice">
+<strong>Importante:</strong>
+A existência de parceiros em uma operação não significa,
+por si só, que determinada empresa tenha responsabilidade
+jurídica em qualquer situação. A análise deve considerar
+o caso concreto, os contratos e a atuação de cada participante.
 </div>
 </div>
 </section>
 
-<!-- SOLUTION -->
-<section class="solution">
+<section id="solucao" class="solution">
 <div class="container">
 <div class="section-label">08 — Solution</div>
-<h2>Central de Resolução.</h2>
+<h2>Central de Resolução Pós-Compra.</h2>
 <p class="section-description">
-A solução não é simplesmente "um atendimento online". É uma camada de produto para tornar a resolução mais previsível.
+Minha hipótese é criar uma camada de resolução que transforme
+incerteza em previsibilidade.
 </p>
 
 <div class="solution-grid">
+
 <div class="product-screen">
 <div class="screen">
 <div class="screen-top">← Meus pedidos</div>
 <h3>Pedido #12345</h3>
+
 <div class="order-status">
 <strong>⚠ Pedido atrasado</strong>
 Nova previsão: 18/08
 </div>
-<p style="font-size:11px;color:#667085">
-O parceiro foi acionado. Você será atualizado quando houver uma nova informação.
+
+<p class="screen-text">
+O parceiro foi acionado. Você será atualizado quando
+houver uma nova informação.
 </p>
+
 <a class="action">Acompanhar resolução</a>
-<a class="action" style="background:white;color:#111;border:1px solid #ddd">Preciso de ajuda</a>
+<a class="action secondary">Preciso de ajuda</a>
 </div>
 </div>
 
 <div class="solution-box">
-<div class="solution-step"><div class="step-number">1</div><div><strong>Detectar</strong><span>Identificar automaticamente a ocorrência.</span></div></div>
-<div class="solution-step"><div class="step-number">2</div><div><strong>Informar</strong><span>Explicar o que aconteceu de forma proativa.</span></div></div>
-<div class="solution-step"><div class="step-number">3</div><div><strong>Ownership</strong><span>Mostrar quem está tratando a ocorrência.</span></div></div>
-<div class="solution-step"><div class="step-number">4</div><div><strong>Resolver</strong><span>Disponibilizar as ações aplicáveis ao caso.</span></div></div>
-<div class="solution-step"><div class="step-number">5</div><div><strong>Escalonar</strong><span>Criar caminho quando a primeira solução falhar.</span></div></div>
+
+<div class="solution-step">
+<div class="step-number">1</div>
+<div><strong>Detectar</strong><span>Identificar automaticamente a ocorrência.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">2</div>
+<div><strong>Informar</strong><span>Explicar o que aconteceu de forma proativa.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">3</div>
+<div><strong>Ownership</strong><span>Mostrar quem está tratando a ocorrência.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">4</div>
+<div><strong>Resolver</strong><span>Disponibilizar as ações aplicáveis ao caso.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">5</div>
+<div><strong>Escalonar</strong><span>Criar caminho claro quando a primeira solução falhar.</span></div>
+</div>
+
 </div>
 </div>
 </div>
 </section>
 
-<!-- ROADMAP -->
 <section>
 <div class="container">
-<div class="section-label">09 — Roadmap</div>
-<h2>Como eu evoluiria o produto?</h2>
-<p class="section-description">
-Roadmap hipotético para demonstrar priorização e evolução incremental.
-</p>
-
-<div class="roadmap">
-<div class="card">
-<span class="tag public">FASE 1 · MVP</span>
-<h3>Visibilidade</h3>
-<ul>
-<li>Status da ocorrência</li>
-<li>Comunicação proativa</li>
-<li>Próximo passo</li>
-<li>Ownership</li>
-</ul>
-</div>
-
-<div class="card">
-<span class="tag public">FASE 2</span>
-<h3>Automação</h3>
-<ul>
-<li>Integração com parceiros</li>
-<li>Notificações inteligentes</li>
-<li>Escalonamento</li>
-<li>Automação de ocorrências</li>
-</ul>
-</div>
-
-<div class="card">
-<span class="tag public">FASE 3</span>
-<h3>Predição</h3>
-<ul>
-<li>Identificação antecipada</li>
-<li>Analytics</li>
-<li>Personalização</li>
-<li>Prevenção de problemas</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-
-<!-- METRICS -->
-<section>
-<div class="container">
-<div class="section-label">10 — Metrics</div>
+<div class="section-label">09 — Metrics</div>
 <h2>Como eu mediria o sucesso?</h2>
 <p class="section-description">
-Métricas propostas para validar se a solução realmente melhora a experiência.
+Os indicadores abaixo são métricas propostas para o produto.
+Nenhum resultado foi atribuído a uma empresa real.
 </p>
 
 <div class="metrics-grid">
-<div class="metric-card"><span class="proposed">NORTH STAR</span><h3>Resolução dentro do prazo</h3><p>Percentual de ocorrências resolvidas com sucesso dentro do prazo esperado.</p></div>
-<div class="metric-card"><span class="proposed">KPI</span><h3>Taxa de recontato</h3><p>Medir quantos clientes precisam procurar novamente o suporte.</p></div>
-<div class="metric-card"><span class="proposed">KPI</span><h3>Tempo de resolução</h3><p>Tempo médio entre abertura e encerramento da ocorrência.</p></div>
-<div class="metric-card"><span class="proposed">KPI</span><h3>CSAT</h3><p>Satisfação do cliente após a resolução.</p></div>
-<div class="metric-card"><span class="proposed guard">GUARDRAIL</span><h3>Escalonamento</h3><p>Garantir que a automação não esteja apenas transferindo problemas.</p></div>
-<div class="metric-card"><span class="proposed guard">GUARDRAIL</span><h3>Reclamações / 1.000 pedidos</h3><p>Acompanhar a incidência proporcional de problemas.</p></div>
+
+<div class="card metric-card">
+<span class="proposed">KPI</span>
+<h3>Taxa de resolução digital</h3>
+<p>Percentual de ocorrências resolvidas sem necessidade de contato humano.</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">KPI</span>
+<h3>Taxa de recontato</h3>
+<p>Meta hipotética: reduzir a taxa de 38% para 25%.</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">KPI</span>
+<h3>Tempo médio de resolução</h3>
+<p>Meta hipotética: reduzir o tempo de resolução sem comprometer a qualidade.</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">KPI</span>
+<h3>CSAT pós-resolução</h3>
+<p>Medir satisfação do consumidor imediatamente após a solução.</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">GUARDRAIL</span>
+<h3>Reclamações / 1.000 pedidos</h3>
+<p>Acompanhar se a melhoria digital realmente reduz a incidência proporcional de problemas.</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">GUARDRAIL</span>
+<h3>Taxa de escalonamento</h3>
+<p>Garantir que a automação não esteja apenas transferindo problemas para outros canais.</p>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- EXPERIMENT -->
-<section class="experiment">
+<section class="simulated">
 <div class="container">
-<div class="section-label">11 — Experiment</div>
+<div class="section-label">10 — Experiment</div>
 <h2>Como eu validaria a hipótese?</h2>
 
-<div class="experiment-grid">
-<div class="experiment-card"><strong>Controle</strong><span>Jornada atual</span></div>
-<div class="experiment-card"><strong>Teste</strong><span>Central de Resolução</span></div>
-<div class="experiment-card"><strong>Comparar</strong><span>Recontato, resolução e CSAT</span></div>
-<div class="experiment-card"><strong>Decidir</strong><span>Escalar, iterar ou abandonar</span></div>
+<div class="solution-box mt40">
+
+<div class="solution-step">
+<div class="step-number">A</div>
+<div><strong>Grupo controle</strong><span>Jornada atual de pós-venda.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">B</div>
+<div><strong>Grupo teste</strong><span>Nova Central de Resolução Pós-Compra.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">C</div>
+<div><strong>Comparar</strong><span>Recontato, tempo de resolução, CSAT e escalonamento.</span></div>
+</div>
+
+<div class="solution-step">
+<div class="step-number">D</div>
+<div><strong>Decidir</strong><span>Escalar, iterar ou abandonar a hipótese com base nos dados.</span></div>
+</div>
+
 </div>
 </div>
 </section>
 
-<!-- CASE 02 -->
-<section>
-<div class="container">
-<div class="section-label">12 — Case 02 · Mobilidade</div>
-<h2>Do incidente à resolução.</h2>
-<p class="section-description">
-Em produtos de mobilidade, uma ocorrência pode envolver operação, contrato, cobrança, seguro e atendimento. O desafio de Produto muda.
-</p>
-
-<div class="case-compare">
-<div class="card">
-<span class="tag public">PROBLEMA</span>
-<h3>Jornada operacional complexa</h3>
-<p>Após um incidente, o cliente pode precisar registrar informações, acompanhar análise, entender cobertura, valores e próximos passos.</p>
-</div>
-
-<div class="card">
-<span class="tag public">SOLUÇÃO HIPOTÉTICA</span>
-<h3>Incident Journey</h3>
-<p>Um fluxo digital para registrar ocorrência, enviar documentação, acompanhar status, visualizar decisões e contestar quando aplicável.</p>
-</div>
-</div>
-
-<div class="notice">
-<strong>Insight de Produto:</strong>
-não existe uma solução universal. A solução deve responder ao problema, ao modelo de negócio e à jornada específica do usuário.
-</div>
-</div>
-</section>
-
-<!-- TAKEAWAY -->
 <section class="takeaway">
 <div class="container takeaway-grid">
 <div>
-<div class="section-label">13 — Takeaway</div>
-<h2>O que este portfólio demonstra?</h2>
+<div class="section-label">11 — Takeaway</div>
+<h2>O que este case demonstra?</h2>
 <p>
-Mais do que apresentar uma solução, os cases demonstram como estruturo problemas, investigo oportunidades, penso na experiência, defino métricas e valido hipóteses.
+Minha proposta não é apenas apontar um risco jurídico.
+É transformar sinais públicos em perguntas, construir
+uma hipótese de produto e definir como eu validaria essa hipótese.
 </p>
 </div>
 
 <ul class="takeaway-list">
-<li>Product Discovery</li>
-<li>Problem Framing</li>
+<li>Benchmark competitivo</li>
+<li>Problem framing</li>
 <li>Customer Journey</li>
-<li>Product Strategy</li>
-<li>Roadmap</li>
-<li>Métricas e KPIs</li>
-<li>Experimentação</li>
-<li>Visão de negócio</li>
+<li>Product Discovery</li>
+<li>Legal Lens</li>
+<li>KPIs e experimentação</li>
 </ul>
 </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
+<section>
 <div class="container">
-<div class="section-label">14 — Competências</div>
+<div class="section-label">12 — Competências</div>
 <h2>Minha interseção de habilidades.</h2>
 
 <div class="skills">
-<span class="skill product">Product Discovery</span>
-<span class="skill product">Product Strategy</span>
-<span class="skill product">Customer Journey</span>
-<span class="skill product">Problem Solving</span>
-<span class="skill product">Roadmap</span>
-<span class="skill product">Product Metrics</span>
-<span class="skill product">Experimentation</span>
-<span class="skill product">UX</span>
+<span class="skill">Product Discovery</span>
+<span class="skill">Customer Journey</span>
 <span class="skill">Benchmarking</span>
-<span class="skill">Business Thinking</span>
-<span class="skill">Stakeholder Management</span>
-<span class="skill">Data Analysis</span>
-<span class="skill">Process Management</span>
-<span class="skill">Risk Analysis</span>
-<span class="skill legal">Direito Bancário</span>
-<span class="skill legal">Direito do Consumidor</span>
-<span class="skill legal">Contratos</span>
-<span class="skill legal">LGPD</span>
-<span class="skill legal">Regulação</span>
-<span class="skill legal">Gestão de Riscos</span>
+<span class="skill">Problem Solving</span>
+<span class="skill">Product Strategy</span>
+<span class="skill">UX</span>
+<span class="skill">Métricas</span>
+<span class="skill">Direito Bancário</span>
+<span class="skill">Direito do Consumidor</span>
+<span class="skill">Contratos</span>
+<span class="skill">Direito Digital</span>
+<span class="skill">LGPD</span>
+<span class="skill">Gestão de Riscos</span>
+<span class="skill">Produtos Digitais</span>
 </div>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer id="contato">
 <div class="container">
 <div class="footer-grid">
+
 <div>
 <div class="section-label">Vamos conversar?</div>
 <h2>Ana Carolina</h2>
-<p style="color:#98a2b3;margin-top:6px;font-size:13px">Product Management · Discovery · Strategy</p>
+<p style="color:#98a2b3;margin-top:6px;">
+Product Management · Legal Product
+</p>
 </div>
 
 <div class="footer-links">
 <a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank">LinkedIn</a>
 <a href="https://github.com/anavieira00-product" target="_blank">GitHub</a>
 </div>
+
 </div>
 
 <div class="disclaimer">
 <strong>Metodologia:</strong>
-Os cases apresentados são exercícios de Product Management. Quando dados públicos são utilizados, eles servem como sinais para investigação e devem ser consultados diretamente nas fontes originais. Dados internos, metas e resultados não disponíveis publicamente não são apresentados como fatos.
+Nexa Market é uma empresa fictícia criada para este portfólio.
+Os indicadores da Nexa são simulados e servem exclusivamente
+para demonstrar raciocínio de Product Management.
+As referências externas são baseadas em informações públicas
+e não representam dados internos de empresas reais.
 </div>
+
 </div>
 </footer>
 
