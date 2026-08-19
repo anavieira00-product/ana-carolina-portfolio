@@ -1221,636 +1221,315 @@ Utilizamos os sinais públicos do mercado para antecipar dores, estruturar a gov
 </section>
 
 
-<!-- ==================== CASE 02: FROTAPRO (VISTORIA PREVENTIVA & GESTÃO DE AVARIAS) ==================== -->
+<!-- ==================== CASE 02: FROTA PRO (GESTÃO PREVENTIVA & SINISTROS) ==================== -->
 
 <section id="case2" class="case-intro" style="border-top: 5px solid var(--orange);">
 <div class="container">
 <div class="case-top">
 <div>
 <div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & OPERAÇÕES</div>
-<h2 class="case-title">FrotaPro<br>Vistoria Preventiva & Gestão de Avarias</h2>
+<h2 class="case-title">FrotaPro<br>Gestão Preventiva & Sinistros de Frota</h2>
 </div>
 
 <p class="case-subtitle">
-Como prevenir conflitos na devolução de veículos, identificar novas avarias com precisão e reduzir prejuízos causados por danos não registrados durante o período de utilização?
+Como prevenir disputas de avarias pré-existentes (check-in/check-out), evitar prejuízos com arranhões não identificados e acelerar a liberação de sinistros com vistoria guiada e manutenção preditiva?
 <br><br>
-A FrotaPro é um produto fictício de gestão preventiva de veículos criado exclusivamente para este portfólio, com foco em vistoria digital, rastreabilidade e gestão de avarias.
+A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veículos criado para este portfólio.
 </p>
 </div>
 
 <div class="notice">
 <strong>Contexto do Negócio:</strong>
-Em operações de locação e gestão de frotas, o estado do veículo pode mudar entre a retirada e a devolução. Quando a vistoria inicial é incompleta, a vistoria final é realizada de forma superficial ou não existe comparação estruturada entre os dois momentos, surgem disputas sobre a origem das avarias, dificuldade para responsabilização e custos que acabam sendo absorvidos pela operação.
+Em operações de frotas e locação (como frotas para motoristas de app ou empresas de logística), a falta de registro prévio do estado do veículo gera perdas milionárias com avarias sem autoria (arranhões, amassados) e atrasos em reformas e perícias de seguros.
 </div>
 </div>
 </section>
 
-
 <section>
 <div class="container">
 <div class="section-label">11 — Discovery & Gargalos da Operação</div>
-<h2>Onde a experiência quebra no processo de vistoria?</h2>
-
+<h2>Por que processos de vistoria e sinistro tradicionais geram tanto prejuízo?</h2>
 <p class="section-description">
-O problema não está apenas na existência de avarias. O principal gargalo está na <strong>falta de comparação confiável entre o estado do veículo antes e depois da utilização</strong>. Sem um registro padronizado do check-in e do check-out, uma nova avaria pode ser confundida com um dano preexistente — ou um dano causado durante o uso pode não ser identificado no momento correto.
+Analisando o fluxo de frotas e locadoras, identificamos que a ausência de registro preventivo e de padrão na vistoria cria uma reação em cadeia: <strong>arranhões não identificados na entrega -> disputas sobre a culpa do dano -> fotos ruins no sinistro -> perícia recusada -> carro parado no pátio (downtime).</strong>
 </p>
 
 <div class="pattern-grid">
 
 <div class="card pattern">
 <div class="pattern-icon">🔍</div>
-<h3>Vistoria Inicial Incompleta</h3>
+<h3>Avarias e Arranhões Sem Autoria</h3>
 <p>
-A retirada do veículo pode acontecer sem que todas as áreas externas e internas sejam registradas de maneira padronizada. Pequenas avarias preexistentes acabam não entrando no histórico do veículo.
+Condutores devolvem o carro com pequenos danos. Como a vistoria inicial foi informal ou em papel, o motorista nega a autoria ("já estava assim") e a empresa absorve o custo da funilaria/recauchutagem.
 </p>
 </div>
 
 <div class="card pattern">
-<div class="pattern-icon">🔄</div>
-<h3>Ausência de Comparação Antes x Depois</h3>
+<div class="pattern-icon">📸</div>
+<h3>Fotos Inválidas / Incompletas</h3>
 <p>
-A vistoria de devolução é analisada isoladamente. Sem uma referência visual estruturada do estado anterior, a operação precisa reconstruir manualmente o histórico para entender se o dano é novo ou preexistente.
+Em caso de acidentes, condutores registram o dano de forma escura ou desfocada, fazendo a seguradora recusar o orçamento de reparo na 1ª análise.
 </p>
 </div>
 
 <div class="card pattern">
-<div class="pattern-icon">⚠️</div>
-<h3>Novas Avarias Não Identificadas</h3>
+<div class="pattern-icon">⏳</div>
+<h3>Alto Downtime do Veículo</h3>
 <p>
-Arranhões, amassados ou danos menores podem ser ocultados, não comunicados ou simplesmente passar despercebidos durante a devolução, principalmente quando não existe um checklist obrigatório.
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">📋</div>
-<h3>Retrabalho e Disputas</h3>
-<p>
-Quando uma nova avaria é descoberta posteriormente, equipes precisam revisar fotos, contratos, mensagens e históricos para determinar quando o dano ocorreu e quem era responsável pelo veículo.
+Sem triagem rápida para reparos estéticos simples vs. sinistro grave, o veículo fica semanas inativo aguardando liberação e acumulando prejuízo operacional.
 </p>
 </div>
 
 </div>
-
-<div class="notice" style="margin-top:35px;">
-<strong>Problem Framing:</strong>
-Como podemos transformar a vistoria de um registro pontual em um processo preventivo de <strong>comparação antes x depois</strong>, permitindo identificar novas avarias no momento da devolução e reduzir disputas sobre responsabilidade?
-</div>
-
 </div>
 </section>
-
 
 <section class="simulated">
 <div class="container">
 <div class="section-label">12 — Dados Simulados da FrotaPro</div>
-<h2>Cenário operacional antes da solução</h2>
-
-<p class="section-description">
-Os indicadores abaixo são <strong>hipóteses simuladas exclusivamente para este case de portfólio</strong>. Não representam dados internos de nenhuma empresa real.
-</p>
+<h2>Cenário operacional e financeiro antes do produto</h2>
 
 <div class="simulated-grid">
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
-<div class="number">18%</div>
-<strong>devoluções com necessidade de revisão</strong>
-<small>Casos em que a equipe precisa verificar novamente o histórico do veículo após a devolução</small>
+<div class="number">R$ 480k</div>
+<strong>custo mensal por avarias não identificadas</strong>
+<small>Arranhões e danos descobertos pós-devolução sem autoria</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
-<div class="number">31%</div>
-<strong>das avarias identificadas posteriormente</strong>
-<small>Danos percebidos somente após a conclusão da vistoria de devolução</small>
+<div class="number">12,5 dias</div>
+<strong>tempo médio de liberação (SLA)</strong>
+<small>Desde o aviso do dano até o início da funilaria/reparo</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
-<div class="number">4,2 dias</div>
-<strong>tempo médio para resolver divergências</strong>
-<small>Período estimado entre a identificação posterior do dano e a definição da ocorrência</small>
+<div class="number">24%</div>
+<strong>sinistros recusados na 1ª análise</strong>
+<small>Necessidade constante de reenvio de laudos por foto ruim</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
-<div class="number">22%</div>
-<strong>dos casos com retrabalho</strong>
-<small>Processos que exigem nova análise de fotos, histórico ou contato com o responsável</small>
+<div class="number">15%</div>
+<strong>fração da frota inativa por avaria</strong>
+<small>Veículos imobilizados em pátio aguardando triagem</small>
 </div>
 
 </div>
 </div>
 </section>
-
-
-<section class="board-section">
-<div class="container">
-<div class="section-label">13 — Customer & Process Journey</div>
-<h2>Uma única avaria pode atravessar várias áreas</h2>
-
-<p class="section-description">
-A jornada demonstra que a vistoria não é responsabilidade isolada de uma única equipe. A informação passa pela operação, atendimento, documentação, gestão da frota e, em casos de divergência, pode envolver o Jurídico.
-</p>
-
-<div class="board">
-
-<div class="swimlanes">
-
-<div class="lane">
-<div class="lane-name">OPERAÇÃO</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Retirada</strong>
-<span>Veículo entregue ao condutor</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Uso do veículo</strong>
-<span>Período de utilização</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Devolução</strong>
-<span>Veículo retorna à operação</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Nova avaria?</strong>
-<span>Comparação necessária</span>
-</div>
-</div>
-</div>
-
-
-<div class="lane">
-<div class="lane-name">VISTORIA</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Check-in</strong>
-<span>Fotos e checklist inicial</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Histórico</strong>
-<span>Estado registrado</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Check-out</strong>
-<span>Nova vistoria</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Antes x Depois</strong>
-<span>Identificação da diferença</span>
-</div>
-</div>
-</div>
-
-
-<div class="lane">
-<div class="lane-name">GESTÃO DE FROTA</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Cadastro</strong>
-<span>Veículo e contrato</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Acompanhamento</strong>
-<span>Responsabilidade durante uso</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Triagem</strong>
-<span>Avaliação da nova avaria</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Encaminhamento</strong>
-<span>Reparo ou contestação</span>
-</div>
-</div>
-</div>
-
-
-<div class="lane">
-<div class="lane-name">JURÍDICO</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Regras</strong>
-<span>Critérios de responsabilização</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Exceção</strong>
-<span>Tratamento de divergências</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Contestação</strong>
-<span>Análise de evidências</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Decisão</strong>
-<span>Suporte documental</span>
-</div>
-</div>
-</div>
-
-
-<div class="lane">
-<div class="lane-name">PRODUTO / SISTEMA</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Checklist</strong>
-<span>Orientação da vistoria</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Histórico</strong>
-<span>Registro das evidências</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Comparação</strong>
-<span>Antes x Depois</span>
-</div>
-</div>
-
-<div class="board-cell">
-<div class="sticky">
-<strong>Alerta</strong>
-<span>Nova avaria identificada</span>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="notice" style="margin-top:30px;">
-<strong>Onde a experiência quebra?</strong>
-Quando o processo depende de análise manual e a vistoria final não possui uma referência estruturada do estado inicial. O sistema precisa transformar o histórico do veículo em uma <strong>fonte de comparação</strong>, e não apenas em um arquivo de fotos.
-</div>
-
-</div>
-</section>
-
-
-<section>
-<div class="container">
-<div class="section-label">14 — Problem Framing & Priorização</div>
-<h2>Quais problemas devemos resolver primeiro?</h2>
-
-<p class="section-description">
-A partir da jornada, a hipótese de produto prioriza os pontos que mais contribuem para disputas, retrabalho e dificuldade de responsabilização.
-</p>
-
-<div class="problem-grid">
-
-<div class="problem-card">
-<span class="tag">PROBLEMA 01</span>
-<h3>Estado inicial mal documentado</h3>
-<p>
-Se a condição do veículo antes da utilização não estiver registrada de maneira padronizada, a operação perde a principal referência para avaliar alterações posteriores.
-</p>
-<strong>Causa provável:</strong>
-<span>checklist incompleto e ausência de padrão para captura das evidências.</span>
-</div>
-
-<div class="problem-card">
-<span class="tag">PROBLEMA 02</span>
-<h3>Vistoria final sem comparação</h3>
-<p>
-O check-out pode registrar o estado atual, mas não necessariamente evidencia o que mudou em relação à retirada.
-</p>
-<strong>Causa provável:</strong>
-<span>processos independentes e histórico pouco estruturado.</span>
-</div>
-
-<div class="problem-card">
-<span class="tag">PROBLEMA 03</span>
-<h3>Novas avarias descobertas tarde demais</h3>
-<p>
-Quando o dano é identificado somente depois da devolução, aumenta a dificuldade para reconstruir o momento em que ocorreu.
-</p>
-<strong>Causa provável:</strong>
-<span>ausência de validação obrigatória antes da conclusão do check-out.</span>
-</div>
-
-<div class="problem-card">
-<span class="tag">PROBLEMA 04</span>
-<h3>Responsabilidade pouco clara</h3>
-<p>
-Quando existe uma divergência, diferentes áreas precisam buscar informações para determinar quem deve analisar ou tratar a ocorrência.
-</p>
-<strong>Causa provável:</strong>
-<span>falta de ownership, regras de encaminhamento e histórico centralizado.</span>
-</div>
-
-</div>
-</div>
-</section>
-
 
 <section class="legal-section">
 <div class="container">
-<div class="section-label">15 — Legal Lens & Compliance</div>
-<h2>Transformando experiência jurídica em regras de produto</h2>
-
+<div class="section-label">13 — Legal & Compliance Lens no Sinistro e Check-in</div>
+<h2>Como transformar regras contratuais e regulatórias em travas de segurança no produto</h2>
 <p class="section-description">
-Neste case, o Jurídico não aparece somente quando surge uma disputa. A proposta é incorporar desde o desenho do produto critérios de <strong>evidência, responsabilidade, rastreabilidade e tratamento adequado de dados</strong>, transformando necessidades jurídicas e operacionais em requisitos claros de produto.
+Vistorias e aberturas de sinistro dependem de rigidez probatória. O Jurídico atuou estruturando os requisitos exigidos para garantir responsabilização justa de condutores e aprovação imediata pelas seguradoras.
 </p>
 
 <div class="legal-grid">
 
 <div class="card legal-card">
-<span class="tag">EVIDÊNCIA</span>
-<h3>Registro Antes x Depois</h3>
+<span class="tag">CONTRATOS</span>
+<h3>Provisão de Avarias & Isenção</h3>
 <p>
-Estruturar o registro do estado do veículo na retirada e na devolução para permitir comparação objetiva das condições identificadas em cada momento.
+Registro fotográfico irrefutável na retirada (check-in) que isenta o condutor atual de danos antigos e viabiliza a cobrança justa de novos danos.
 </p>
 </div>
 
 <div class="card legal-card">
-<span class="tag">RESPONSABILIDADE</span>
-<h3>Critérios de Ownership</h3>
+<span class="tag">SEGUROS</span>
+<h3>Padrão Probatório Securitário</h3>
 <p>
-Definir regras de encaminhamento para que cada tipo de divergência tenha responsável, prazo e próxima ação claramente estabelecidos.
+Definição dos requisitos mínimos de imagem exigidos pelas apólices para eliminar recusas técnicas de peritos da seguradora.
 </p>
 </div>
 
 <div class="card legal-card">
 <span class="tag">LGPD</span>
-<h3>Proteção de Dados</h3>
+<h3>Tratamento de Dados de Terceiros</h3>
 <p>
-Considerar, desde o desenho do fluxo, quais dados pessoais são necessários para a operação, quem deve acessá-los e como as informações devem ser tratadas.
+Conformidade na coleta e armazenamento de documentos (CNH, B.O., dados de terceiros envolvidos no acidente).
 </p>
 </div>
 
 <div class="card legal-card">
 <span class="tag">AUDITORIA</span>
-<h3>Rastreabilidade do Processo</h3>
+<h3>Imutabilidade de Registros</h3>
 <p>
-Registrar alterações, avaliações, responsáveis e decisões para permitir reconstrução do histórico da ocorrência sem depender de conversas paralelas ou informações dispersas.
+Uso de carimbos de geolocalização e horário no envio das fotos para comprovar o estado exato do veículo na entrega e no sinistro.
 </p>
 </div>
 
 </div>
-
-<div class="notice" style="margin-top:30px;">
-<strong>Legal by Design:</strong>
-A contribuição jurídica neste produto não é simplesmente "aprovar a solução". É ajudar a transformar <strong>riscos, regras, critérios de evidência e responsabilidades</strong> em requisitos que possam ser incorporados à experiência do usuário e ao funcionamento do sistema.
-</div>
-
 </div>
 </section>
 
-
 <section class="solution">
 <div class="container">
-<div class="section-label">16 — Solution</div>
-<h2>FrotaPro — Vistoria Preventiva Antes x Depois</h2>
-
+<div class="section-label">14 — Solution</div>
+<h2>Plataforma de Vistoria Preventiva (Check-in/Out) & Sinistro Guiado</h2>
 <p class="section-description">
-A solução proposta transforma a vistoria em uma jornada contínua. O veículo é registrado antes da utilização, acompanhado por um histórico estruturado e novamente vistoriado na devolução. O sistema compara as evidências e sinaliza possíveis novas avarias antes que o processo seja encerrado.
+Uma jornada mobile em que o condutor registra preventivamente o estado do veículo no aluguel e, em caso de avaria ou colisão, é guiado para capturar as fotos no ângulo exato com validação instantânea de qualidade.
 </p>
 
 <div class="solution-grid">
 
 <div class="product-screen">
 <div class="screen">
-
 <div class="screen-top">← FrotaPro Mobile</div>
-
-<h3>Vistoria de Devolução</h3>
+<h3>Vistoria de Check-in</h3>
 
 <div class="order-status" style="background:var(--blue-light);">
-<strong style="color:var(--blue);">🔎 Comparação Antes x Depois</strong>
+<strong style="color:var(--blue);">📸 Passo 1: Mapear Arranhões / Avarias</strong>
+Enquadre a lateral com a silhueta da câmera.
 </div>
 
 <p class="screen-text">
-<strong>Veículo:</strong> FR-10234
-<br>
-<strong>Condutor:</strong> Cliente identificado no contrato
-<br>
-<strong>Status:</strong> Nova avaria identificada
+2 avarias pré-existentes identificadas e salvas no contrato de entrega.
 </p>
 
-<div class="order-status" style="background:#fff7ed;">
-<strong style="color:var(--orange);">⚠️ Divergência encontrada</strong>
-<br>
-Arranhão na lateral dianteira não identificado no check-in.
-</div>
-
-<p class="screen-text">
-O sistema solicita confirmação da evidência antes de concluir a devolução.
-</p>
-
-<a class="action">Registrar Evidência</a>
-<a class="action secondary">Revisar Vistoria Inicial</a>
-
+<a class="action">Confirmar Retirada Segura</a>
+<a class="action secondary">Registrar Novo Sinistro / Dano</a>
 </div>
 </div>
-
 
 <div class="solution-box">
 
 <div class="solution-step">
 <div class="step-number">1</div>
-<div>
-<strong>Check-in Padronizado</strong>
-<span>
-Antes da utilização, o sistema orienta o responsável a registrar as principais áreas do veículo, seguindo um checklist visual obrigatório. A vistoria inicial cria a referência para a comparação futura.
-</span>
-</div>
+<div><strong>Vistoria Preventiva no Check-in</strong><span>Registro obrigatório com silhueta digital na retirada/devolução. Isenta o motorista de danos antigos e atribui novos arranhões ao condutor correto.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">2</div>
-<div>
-<strong>Histórico Visual do Veículo</strong>
-<span>
-As evidências ficam associadas ao veículo, contrato e momento da vistoria, criando um histórico organizado para futuras consultas e comparações.
-</span>
-</div>
+<div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou fora de ângulo para garatir a perícia.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">3</div>
-<div>
-<strong>Check-out Guiado</strong>
-<span>
-Na devolução, o usuário percorre novamente o checklist. O sistema solicita os registros necessários antes de permitir a conclusão da vistoria.
-</span>
-</div>
+<div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS, Timestamp e ID do Condutor garantem validade jurídica e contratual do laudo.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">4</div>
-<div>
-<strong>Comparação Antes x Depois</strong>
-<span>
-O sistema apresenta as evidências dos dois momentos para facilitar a identificação de alterações no estado do veículo e destacar possíveis novas avarias.
-</span>
-</div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">5</div>
-<div>
-<strong>Tratamento da Divergência</strong>
-<span>
-Quando uma possível nova avaria é identificada, o sistema cria uma ocorrência com evidências, responsável, status e próxima ação, evitando que o caso desapareça no fluxo operacional.
-</span>
-</div>
+<div><strong>Triagem Inteligente & Agendamento</strong><span>Direciona pequenos reparos (recauchutagem/funilaria rápida) para oficinas credenciadas e sinistros graves para seguradoras em 48h.</span></div>
 </div>
 
 </div>
 </div>
 
-
+<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 02) -->
 <div class="notice" style="background:var(--purple-light); border-color:#c4b5fd; color:#5b21b6; margin-top:35px;">
-
-<strong style="font-size:15px; display:block; margin-bottom:6px;">
-💡 Diferencial em Relação ao Processo Tradicional
-</strong>
-
+<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
 <p style="margin:0; font-size:13px; color:#4c1d95;">
-
-<strong>Processo tradicional:</strong>
-o veículo é vistoriado na retirada, novamente na devolução e, quando existe uma diferença, alguém precisa comparar manualmente fotos e informações para descobrir o que aconteceu.
-
-<br><br>
-
-<strong>O diferencial da FrotaPro:</strong>
-transformar o processo em uma jornada preventiva de <strong>antes x depois</strong>. O sistema cria uma referência do estado inicial e exige uma nova verificação na devolução, permitindo identificar possíveis novas avarias antes que o veículo seja liberado.
-
-<br><br>
-
-<strong>Hipótese de valor:</strong>
-quanto mais estruturada for a comparação entre os dois momentos, menor tende a ser a dependência de memória, mensagens paralelas e análises manuais para resolver divergências.
+<strong>O que o mercado faz:</strong> Apps passivos que atuam apenas após a batida/acidente ou formulários de vistoria em papel que não evitam a fraude de "o arranhão já estava aqui", gerando disputas com condutores e prejuízos absorvidos pela empresa.<br>
+<strong>O meu diferencial:</strong> Uma <strong>plataforma preventiva end-to-end (Check-in + Sinistro)</strong>. Registra o estado inicial exato do veículo no momento da retirada para isentar condutores honestos e cobrar responsabilidade com prova digital irrefutável. Em caso de colisão, a vistoria guiada garante aprovação do laudo em até 48h, reduzindo o downtime e o custo invisível de veículos parados ao mínimo.
 </p>
-
 </div>
 
 </div>
 </section>
 
-
 <section>
 <div class="container">
-<div class="section-label">17 — Metrics</div>
+<div class="section-label">15 — Metrics</div>
 <h2>Impacto Esperado no Case FrotaPro</h2>
-
-<p class="section-description">
-As metas abaixo são <strong>hipóteses de impacto</strong> para validar a proposta de produto. Como este é um projeto fictício, não representam resultados reais obtidos em uma operação.
-</p>
 
 <div class="metrics-grid">
 
 <div class="card metric-card">
-<span class="proposed">META PROPOSTA</span>
-<h3>Redução de Avarias Não Identificadas</h3>
-<p>
-Reduzir em até 60% os casos em que novas avarias são descobertas somente após a conclusão da devolução, por meio da vistoria obrigatória antes x depois.
-</p>
+<span class="proposed">PREVENÇÃO DE CUSTO</span>
+<h3>Recuperação de Avarias Sem Autoria</h3>
+<p>Redução de 75% nos prejuízos com arranhões e danos não identificados através da vistoria preventiva no check-in.</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">IMPACTO ESPERADO</span>
-<h3>Menos Retrabalho Operacional</h3>
-<p>
-Reduzir em 40% a necessidade de revisões manuais de histórico, fotos e informações para determinar a origem de uma divergência.
-</p>
+<span class="proposed">EFICIÊNCIA OPERACIONAL</span>
+<h3>Queda no Downtime da Frota</h3>
+<p>Redução do tempo de liberação do veículo para reparo/funilaria de 12,5 para 2,5 dias.</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">IMPACTO ESPERADO</span>
-<h3>Maior Rastreabilidade</h3>
-<p>
-Aumentar a proporção de ocorrências com evidências, responsável e próxima ação registrados dentro do próprio fluxo do produto.
-</p>
+<span class="proposed">REDUÇÃO DE RECUSAS</span>
+<h3>Aprovação de Perícias de Sinistro</h3>
+<p>Queda na taxa de rejeição de laudos por seguradoras de 24% para menos de 3%.</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">META PROPOSTA</span>
-<h3>Redução de Disputas</h3>
-<p>
-Reduzir a quantidade de casos em que a operação não consegue determinar, com base no histórico disponível, se a avaria já existia ou surgiu durante a utilização.
-</p>
+<span class="proposed">COMPLIANCE & RISCO</span>
+<h3>Segurança Jurídica & Disputas</h3>
+<p>Zero contestações contratuais com suporte de carimbo digital imutável de geolocalização e timestamp.</p>
 </div>
 
 </div>
 </div>
 </section>
 
-
 <section class="takeaway">
 <div class="container takeaway-grid">
-
 <div>
-<div class="section-label">18 — Takeaway Case 02</div>
-
-<h2>Da análise jurídica à construção do produto</h2>
-
+<div class="section-label">16 — Takeaway Case 02</div>
+<h2>Conclusão da Abordagem</h2>
 <p>
-Este case demonstra como uma experiência jurídica pode contribuir para Product Management sem transformar o produto em uma solução puramente jurídica. A análise de riscos, documentos, responsabilidades e evidências pode ser convertida em <strong>regras de negócio, requisitos de produto e decisões de experiência</strong>.
-</p>
-
-<p>
-A proposta da FrotaPro parte de uma hipótese simples: se a operação consegue registrar de forma padronizada o estado do veículo antes e depois da utilização, torna-se possível identificar mudanças mais cedo e reduzir a dependência de análises posteriores.
+Aliar governança preventiva na retirada do veículo a um fluxo de vistoria guiada por software elimina os custos invisíveis de avarias e acelera a manutenção da frota.
 </p>
 </div>
 
 <ul class="takeaway-list">
-<li>Problem Framing orientado a processo</li>
-<li>Prevenção de retrabalho e conflitos</li>
-<li>Comparação estruturada Antes x Depois</li>
-<li>Legal by Design</li>
-<li>Gestão de stakeholders</li>
-<li>Transformação de regras em requisitos de produto</li>
+<li>Prevenção de conflitos e prejuízos no Check-in</li>
+<li>Rigidez probatória sem perda de usabilidade</li>
+<li>Validação preventiva antifraude na ponta</li>
+<li>Redução drástica do downtime e dos arranhões sem autoria</li>
 </ul>
-
 </div>
 </section>
 
-<!-- ==================== FIM DO CASE 02 ==================== -->
+<!-- ==================== HABILIDADES ==================== -->
+
+<section>
+<div class="container">
+<div class="section-label">17 — Competências</div>
+<h2>Habilidades & Ferramentas</h2>
+
+<div class="skills">
+<div class="skill">Product Discovery</div>
+<div class="skill">Problem Framing</div>
+<div class="skill">Mapeamento de Jornada (Service Design)</div>
+<div class="skill">Legal Product Design & Compliance</div>
+<div class="skill">Análise de Riscos & Prevenção à Fraude</div>
+<div class="skill">Análise de Dados & Benchmarking</div>
+<div class="skill">SQL (Básico / Intermediário)</div>
+<div class="skill">Figma & Prototipagem</div>
+<div class="skill">Gestão de Stakeholders</div>
+</div>
+</div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer id="contato">
+<div class="container">
+<div class="footer-grid">
+<div>
+<h3 style="font-size:24px; margin-bottom:8px;">Vamos conversar?</h3>
+<p style="color:#98a2b3; font-size:14px;">Aberto a oportunidades em Product Management / Product Operations.</p>
+</div>
+
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank">LinkedIn</a>
+<a href="mailto:contato@exemplo.com">E-mail</a>
+</div>
+</div>
+
+<div class="disclaimer">
+© 2026 Ana Carolina. Projeto de portfólio desenvolvido para demonstrar a aplicação de competências jurídicas, análise de risco e gestão de produto digital.
+</div>
+</div>
+</footer>
+
+</body>
+</html>
