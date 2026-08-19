@@ -1221,146 +1221,304 @@ Utilizamos os sinais públicos do mercado para antecipar dores, estruturar a gov
 </section>
 
 
-<!-- ==================== CASE 02: FROTA PRO (GESTÃO PREVENTIVA & SINISTROS) ==================== -->
+<!-- ==================== CASE 02: FROTAPRO ==================== -->
 
-<section id="case2" class="case-intro" style="border-top: 5px solid var(--orange);">
+<section id="case2" class="case-intro" style="border-top:5px solid var(--orange);">
 <div class="container">
 <div class="case-top">
 <div>
-<div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & OPERAÇÕES</div>
-<h2 class="case-title">FrotaPro<br>Gestão Preventiva & Sinistros de Frota</h2>
+<div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & PRODUCT OPERATIONS</div>
+<h2 class="case-title">FrotaPro<br>Vistoria Inteligente & Gestão de Avarias</h2>
 </div>
 
 <p class="case-subtitle">
-Como prevenir disputas de avarias pré-existentes (check-in/check-out), evitar prejuízos com arranhões não identificados e acelerar a liberação de sinistros com vistoria guiada e manutenção preditiva?
+Como tornar a identificação e a gestão de avarias mais confiável,
+objetiva e eficiente durante o ciclo de retirada e devolução do veículo?
 <br><br>
-A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veículos criado para este portfólio.
+A FrotaPro é uma solução fictícia voltada à gestão de veículos de uma
+empresa de locação.
 </p>
 </div>
 
 <div class="notice">
-<strong>Contexto do Negócio:</strong>
-Em operações de frotas e locação (como frotas para motoristas de app ou empresas de logística), a falta de registro prévio do estado do veículo gera perdas milionárias com avarias sem autoria (arranhões, amassados) e atrasos em reformas e perícias de seguros.
+<strong>Nota metodológica:</strong>
+Todos os dados, métricas e indicadores apresentados neste Case 02 são
+simulados e foram criados exclusivamente para fins de portfólio.
+Nenhum dado representa a operação, os indicadores ou os processos de
+uma empresa real.
 </div>
 </div>
 </section>
 
 <section>
 <div class="container">
-<div class="section-label">11 — Discovery & Gargalos da Operação</div>
-<h2>Por que processos de vistoria e sinistro tradicionais geram tanto prejuízo?</h2>
+<div class="section-label">11 — Contexto & Discovery</div>
+<h2>O problema não é realizar uma vistoria. É tornar a evidência confiável.</h2>
 <p class="section-description">
-Analisando o fluxo de frotas e locadoras, identificamos que a ausência de registro preventivo e de padrão na vistoria cria uma reação em cadeia: <strong>arranhões não identificados na entrega -> disputas sobre a culpa do dano -> fotos ruins no sinistro -> perícia recusada -> carro parado no pátio (downtime).</strong>
+Em uma operação de locação, a empresa já realiza controles sobre as
+condições dos veículos e permanece responsável por manutenção,
+condições operacionais e segurança do automóvel. O desafio de produto
+explorado aqui é outro: transformar o registro de retirada e devolução
+em uma base visual padronizada, comparável e rastreável.
 </p>
 
 <div class="pattern-grid">
 
 <div class="card pattern">
-<div class="pattern-icon">🔍</div>
-<h3>Avarias e Arranhões Sem Autoria</h3>
-<p>
-Condutores devolvem o carro com pequenos danos. Como a vistoria inicial foi informal ou em papel, o motorista nega a autoria ("já estava assim") e a empresa absorve o custo da funilaria/recauchutagem.
-</p>
-</div>
-
-<div class="card pattern">
 <div class="pattern-icon">📸</div>
-<h3>Fotos Inválidas / Incompletas</h3>
+<h3>Evidência Fragmentada</h3>
 <p>
-Em caso de acidentes, condutores registram o dano de forma escura ou desfocada, fazendo a seguradora recusar o orçamento de reparo na 1ª análise.
+Fotos podem existir, mas sem padronização de ângulo, localização da
+avaria e vínculo claro com a vistoria de retirada.
 </p>
 </div>
 
 <div class="card pattern">
-<div class="pattern-icon">⏳</div>
-<h3>Alto Downtime do Veículo</h3>
+<div class="pattern-icon">🔎</div>
+<h3>Comparação Subjetiva</h3>
 <p>
-Sem triagem rápida para reparos estéticos simples vs. sinistro grave, o veículo fica semanas inativo aguardando liberação e acumulando prejuízo operacional.
+Na devolução, a identificação de uma possível nova avaria depende da
+comparação entre registros feitos em momentos diferentes.
 </p>
 </div>
 
+<div class="card pattern">
+<div class="pattern-icon">⚖️</div>
+<h3>Decisão sem Contexto</h3>
+<p>
+Uma possível diferença visual não deve resultar automaticamente em
+cobrança. É necessário preservar evidência e permitir revisão humana.
+</p>
+</div>
+
+</div>
+
+<div class="notice" style="background:var(--blue-light);border-color:#bfdbfe;color:#1e40af;">
+<strong>Pergunta central do produto:</strong>
+Como transformar uma vistoria subjetiva e fragmentada em um processo
+mais <strong>padronizado, rastreável e baseado em evidências</strong>?
 </div>
 </div>
 </section>
 
 <section class="simulated">
 <div class="container">
-<div class="section-label">12 — Dados Simulados da FrotaPro</div>
-<h2>Cenário operacional e financeiro antes do produto</h2>
+<div class="section-label">12 — Hipóteses & Dados Simulados</div>
+<h2>Onde está a oportunidade de produto?</h2>
+<p class="section-description">
+Para testar a hipótese de valor do produto, foram criados indicadores
+simulados que representam possíveis gargalos operacionais em um cenário
+fictício.
+</p>
 
 <div class="simulated-grid">
 
 <div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">R$ 480k</div>
-<strong>custo mensal por avarias não identificadas</strong>
-<small>Arranhões e danos descobertos pós-devolução sem autoria</small>
+<span class="sim-badge">DADO SIMULADO</span>
+<div class="number">18 min</div>
+<strong>tempo médio de vistoria</strong>
+<small>Tempo estimado para registrar e conferir o veículo</small>
 </div>
 
 <div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">12,5 dias</div>
-<strong>tempo médio de liberação (SLA)</strong>
-<small>Desde o aviso do dano até o início da funilaria/reparo</small>
+<span class="sim-badge">DADO SIMULADO</span>
+<div class="number">31%</div>
+<strong>vistorias com necessidade de revisão</strong>
+<small>Hipótese de inconsistências ou registros insuficientes</small>
 </div>
 
 <div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">24%</div>
-<strong>sinistros recusados na 1ª análise</strong>
-<small>Necessidade constante de reenvio de laudos por foto ruim</small>
+<span class="sim-badge">DADO SIMULADO</span>
+<div class="number">22%</div>
+<strong>casos contestados</strong>
+<small>Possíveis divergências entre retirada e devolução</small>
 </div>
 
 <div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">15%</div>
-<strong>fração da frota inativa por avaria</strong>
-<small>Veículos imobilizados em pátio aguardando triagem</small>
+<span class="sim-badge">DADO SIMULADO</span>
+<div class="number">2,4 dias</div>
+<strong>tempo médio de análise</strong>
+<small>Da identificação da possível avaria até a decisão</small>
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="legal-section">
+<section class="board-section">
 <div class="container">
-<div class="section-label">13 — Legal & Compliance Lens no Sinistro e Check-in</div>
-<h2>Como transformar regras contratuais e regulatórias em travas de segurança no produto</h2>
+<div class="section-label">13 — Jornada do Produto</div>
+<h2>Retirada → Uso → Devolução → Análise</h2>
 <p class="section-description">
-Vistorias e aberturas de sinistro dependem de rigidez probatória. O Jurídico atuou estruturando os requisitos exigidos para garantir responsabilização justa de condutores e aprovação imediata pelas seguradoras.
+A jornada foi desenhada para manter uma referência visual do veículo ao
+longo da locação e utilizar a IA como apoio à comparação, sem transformar
+a detecção automática em uma decisão definitiva.
 </p>
 
-<div class="legal-grid">
+<div class="board">
+<div class="board-header">
+<div class="board-title">FrotaPro · Jornada de Vistoria Inteligente</div>
+<div class="board-meta">Product flow · evidência + IA + validação humana</div>
+</div>
 
-<div class="card legal-card">
-<span class="tag">CONTRATOS</span>
-<h3>Provisão de Avarias & Isenção</h3>
+<div class="swimlanes">
+
+<div class="lane">
+<div></div>
+<div class="column-title">Retirada</div>
+<div class="column-title">Uso</div>
+<div class="column-title">Devolução</div>
+<div class="column-title">Análise</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">🚗 Veículo</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Estado inicial</strong>
+Imagens registradas antes da entrega.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Referência</strong>
+Estado vinculado àquela locação.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky">
+<strong>Novo registro</strong>
+Novas imagens são capturadas.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Comparação</strong>
+Retirada × devolução.
+</div>
+</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">🤖 IA</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Detectar</strong>
+Identifica possíveis avarias existentes.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Aprender contexto</strong>
+Mantém a referência daquela locação.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky">
+<strong>Comparar</strong>
+Procura diferenças relevantes.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky red">
+<strong>Alerta</strong>
+Possível nova avaria + confiança.
+</div>
+</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">👤 Colaborador</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Confere</strong>
+Valida o registro inicial.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky">
+<strong>Acompanha</strong>
+Sem intervenção desnecessária.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Revisa</strong>
+Confirma qualidade das evidências.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Decide</strong>
+Valida, solicita avaliação ou contesta.
+</div>
+</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">⚖️ Governança</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Registro</strong>
+Data, hora, veículo e evidência.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Rastreabilidade</strong>
+Histórico vinculado à locação.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky red">
+<strong>Diferença</strong>
+Evidência da possível alteração.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Auditoria</strong>
+Histórico da decisão e revisão.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">14 — Problem Framing</div>
+<h2>Três problemas prioritários para o produto.</h2>
+
+<div class="problem-grid">
+
+<div class="card problem-card">
+<div class="number">PROBLEMA 01</div>
+<h3>Registro visual inconsistente</h3>
 <p>
-Registro fotográfico irrefutável na retirada (check-in) que isenta o condutor atual de danos antigos e viabiliza a cobrança justa de novos danos.
+Imagens registradas em ângulos, condições ou níveis de detalhe diferentes
+dificultam a comparação objetiva entre retirada e devolução.
 </p>
 </div>
 
-<div class="card legal-card">
-<span class="tag">SEGUROS</span>
-<h3>Padrão Probatório Securitário</h3>
+<div class="card problem-card">
+<div class="number">PROBLEMA 02</div>
+<h3>Nova avaria difícil de identificar</h3>
 <p>
-Definição dos requisitos mínimos de imagem exigidos pelas apólices para eliminar recusas técnicas de peritos da seguradora.
+Sem uma referência visual estruturada, a equipe precisa comparar registros
+manualmente e pode gastar tempo procurando diferenças pouco relevantes.
 </p>
 </div>
 
-<div class="card legal-card">
-<span class="tag">LGPD</span>
-<h3>Tratamento de Dados de Terceiros</h3>
+<div class="card problem-card">
+<div class="number">PROBLEMA 03</div>
+<h3>Decisão sem trilha de evidência</h3>
 <p>
-Conformidade na coleta e armazenamento de documentos (CNH, B.O., dados de terceiros envolvidos no acidente).
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">AUDITORIA</span>
-<h3>Imutabilidade de Registros</h3>
-<p>
-Uso de carimbos de geolocalização e horário no envio das fotos para comprovar o estado exato do veículo na entrega e no sinistro.
+Mesmo quando uma possível nova avaria é identificada, o processo precisa
+registrar como ela foi detectada e permitir revisão antes de qualquer decisão.
 </p>
 </div>
 
@@ -1370,30 +1528,44 @@ Uso de carimbos de geolocalização e horário no envio das fotos para comprovar
 
 <section class="solution">
 <div class="container">
-<div class="section-label">14 — Solution</div>
-<h2>Plataforma de Vistoria Preventiva (Check-in/Out) & Sinistro Guiado</h2>
+<div class="section-label">15 — Solution</div>
+<h2>Vistoria Inteligente com IA + Gestão de Avarias.</h2>
 <p class="section-description">
-Uma jornada mobile em que o condutor registra preventivamente o estado do veículo no aluguel e, em caso de avaria ou colisão, é guiado para capturar as fotos no ângulo exato com validação instantânea de qualidade.
+A solução combina checklist operacional, evidência visual, visão
+computacional, comparação temporal e validação humana em um único fluxo.
+A IA funciona como apoio à decisão, não como autoridade final.
 </p>
 
 <div class="solution-grid">
 
 <div class="product-screen">
 <div class="screen">
-<div class="screen-top">← FrotaPro Mobile</div>
-<h3>Vistoria de Check-in</h3>
+<div class="screen-top">← FrotaPro · Vistoria</div>
+<h3>Devolução do veículo</h3>
 
 <div class="order-status" style="background:var(--blue-light);">
-<strong style="color:var(--blue);">📸 Passo 1: Mapear Arranhões / Avarias</strong>
-Enquadre a lateral com a silhueta da câmera.
+<strong style="color:var(--blue);">⚠ Possível nova avaria</strong>
+Porta dianteira direita
 </div>
 
 <p class="screen-text">
-2 avarias pré-existentes identificadas e salvas no contrato de entrega.
+Risco superficial identificado na comparação com a vistoria de retirada.
 </p>
 
-<a class="action">Confirmar Retirada Segura</a>
-<a class="action secondary">Registrar Novo Sinistro / Dano</a>
+<div style="background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:14px;">
+<div style="font-size:11px;color:#667085;margin-bottom:8px;">CONFIANÇA DA DETECÇÃO</div>
+<strong style="font-size:25px;color:var(--blue);">87%</strong>
+<div style="height:7px;background:#e5e7eb;border-radius:10px;margin-top:7px;overflow:hidden;">
+<div style="width:87%;height:100%;background:var(--blue);border-radius:10px;"></div>
+</div>
+</div>
+
+<a class="action">Revisar evidência</a>
+<a class="action secondary">Solicitar avaliação humana</a>
+
+<p class="screen-text" style="font-size:10px; margin-top:12px; color:#98a2b3; text-align:center;">
+IA gera um alerta. A decisão depende da análise do caso.
+</p>
 </div>
 </div>
 
@@ -1401,33 +1573,59 @@ Enquadre a lateral com a silhueta da câmera.
 
 <div class="solution-step">
 <div class="step-number">1</div>
-<div><strong>Vistoria Preventiva no Check-in</strong><span>Registro obrigatório com silhueta digital na retirada/devolução. Isenta o motorista de danos antigos e atribui novos arranhões ao condutor correto.</span></div>
+<div>
+<strong>Vistoria na Retirada</strong>
+<span>
+A empresa registra imagens padronizadas do veículo antes da entrega.
+A IA auxilia na identificação de possíveis avarias já existentes.
+</span>
+</div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">2</div>
-<div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou fora de ângulo para garatir a perícia.</span></div>
+<div>
+<strong>Base Visual de Referência</strong>
+<span>
+As imagens, localização da possível avaria, tipo, confiança, data, hora
+e identificação do veículo ficam vinculados àquela locação.
+</span>
+</div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">3</div>
-<div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS, Timestamp e ID do Condutor garantem validade jurídica e contratual do laudo.</span></div>
+<div>
+<strong>Comparação na Devolução</strong>
+<span>
+Novas imagens são comparadas com a referência da retirada para procurar
+mudanças visuais relevantes na mesma região do veículo.
+</span>
+</div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">4</div>
-<div><strong>Triagem Inteligente & Agendamento</strong><span>Direciona pequenos reparos (recauchutagem/funilaria rápida) para oficinas credenciadas e sinistros graves para seguradoras em 48h.</span></div>
+<div>
+<strong>Alerta + Validação Humana</strong>
+<span>
+Uma possível nova avaria gera evidência e alerta. O colaborador revisa
+o caso antes de qualquer decisão ou cobrança.
+</span>
+</div>
 </div>
 
 </div>
 </div>
 
-<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 02) -->
-<div class="notice" style="background:var(--purple-light); border-color:#c4b5fd; color:#5b21b6; margin-top:35px;">
-<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
-<p style="margin:0; font-size:13px; color:#4c1d95;">
-<strong>O que o mercado faz:</strong> Apps passivos que atuam apenas após a batida/acidente ou formulários de vistoria em papel que não evitam a fraude de "o arranhão já estava aqui", gerando disputas com condutores e prejuízos absorvidos pela empresa.<br>
-<strong>O meu diferencial:</strong> Uma <strong>plataforma preventiva end-to-end (Check-in + Sinistro)</strong>. Registra o estado inicial exato do veículo no momento da retirada para isentar condutores honestos e cobrar responsabilidade com prova digital irrefutável. Em caso de colisão, a vistoria guiada garante aprovação do laudo em até 48h, reduzindo o downtime e o custo invisível de veículos parados ao mínimo.
+<div class="notice" style="background:var(--blue-light);border-color:#93c5fd;color:#1e40af;margin-top:35px;">
+<strong style="font-size:15px;display:block;margin-bottom:6px;">
+Diferencial de Produto
+</strong>
+<p style="margin:0;font-size:13px;color:#1e3a8a;">
+Não é apenas uma checklist digital. A proposta combina
+<strong>checklist + evidência visual + IA + comparação temporal +
+validação humana + gestão do caso</strong>.
 </p>
 </div>
 
@@ -1436,33 +1634,357 @@ Enquadre a lateral com a silhueta da câmera.
 
 <section>
 <div class="container">
-<div class="section-label">15 — Metrics</div>
-<h2>Impacto Esperado no Case FrotaPro</h2>
+<div class="section-label">16 — Como a IA funciona</div>
+<h2>IA como copiloto da vistoria, não como juiz.</h2>
+<p class="section-description">
+A arquitetura da experiência foi pensada para que o sistema possa
+automatizar tarefas de identificação e comparação sem transformar
+uma probabilidade algorítmica em uma conclusão definitiva.
+</p>
+
+<div class="pattern-grid">
+
+<div class="card pattern">
+<div class="pattern-icon">1️⃣</div>
+<h3>Identificar</h3>
+<p>
+A visão computacional analisa as imagens e procura padrões compatíveis
+com riscos, amassados, trincas ou outras alterações visuais.
+</p>
+</div>
+
+<div class="card pattern">
+<div class="pattern-icon">2️⃣</div>
+<h3>Comparar</h3>
+<p>
+O modelo compara a vistoria de devolução com a referência registrada
+na retirada e destaca diferenças relevantes.
+</p>
+</div>
+
+<div class="card pattern">
+<div class="pattern-icon">3️⃣</div>
+<h3>Sinalizar</h3>
+<p>
+O sistema apresenta a possível avaria, sua localização e um nível de
+confiança para orientar a análise.
+</p>
+</div>
+
+</div>
+
+<div class="notice" style="background:#fef2f2;border-color:#fecaca;color:#991b1b;">
+<strong>Guardrail de IA:</strong>
+Uma confiança de 87%, por exemplo, significa que o sistema identificou
+um padrão com esse nível de confiança dentro do modelo. Isso
+<strong>não significa que a responsabilidade do cliente esteja comprovada</strong>.
+O alerta precisa ser interpretado no contexto da evidência e, quando
+necessário, revisado por uma pessoa.
+</div>
+</div>
+</section>
+
+<section class="simulated">
+<div class="container">
+<div class="section-label">17 — Fluxo da Vistoria Inteligente</div>
+<h2>Da imagem à decisão registrada.</h2>
+
+<div class="simulated-grid">
+
+<div class="sim-card">
+<span class="sim-badge">ETAPA 01</span>
+<div class="number">📸</div>
+<strong>Captura</strong>
+<small>Imagens da retirada ou devolução são registradas no sistema.</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">ETAPA 02</span>
+<div class="number">🤖</div>
+<strong>Análise por IA</strong>
+<small>O sistema procura possíveis avarias e diferenças visuais.</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">ETAPA 03</span>
+<div class="number">⚠️</div>
+<strong>Alerta</strong>
+<small>Uma possível nova avaria é apresentada com evidências e confiança.</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">ETAPA 04</span>
+<div class="number">👤</div>
+<strong>Validação</strong>
+<small>O colaborador revisa o caso e registra a decisão.</small>
+</div>
+
+</div>
+
+<div class="notice" style="background:white;border-color:var(--line);color:var(--text);">
+<strong>Princípio de produto:</strong>
+Quanto maior o impacto potencial da decisão, maior deve ser o nível de
+evidência e supervisão necessário. A automação deve reduzir trabalho
+operacional sem eliminar o controle humano sobre decisões sensíveis.
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">18 — Gestão de Avarias</div>
+<h2>Da detecção ao encerramento do caso.</h2>
+<p class="section-description">
+A identificação de uma possível nova avaria é apenas o início. O produto
+também precisa permitir acompanhamento, revisão, contestação e registro
+do resultado.
+</p>
+
+<div class="board">
+<div class="board-header">
+<div class="board-title">FrotaPro · Painel de Gestão de Avarias</div>
+<div class="board-meta">Case management · status operacional</div>
+</div>
+
+<div class="swimlanes">
+
+<div class="lane">
+<div></div>
+<div class="column-title">Nova</div>
+<div class="column-title">Análise</div>
+<div class="column-title">Validação</div>
+<div class="column-title">Encerramento</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">🔎 Evidência</div>
+<div class="board-cell">
+<div class="sticky red">
+<strong>Nova avaria</strong>
+Porta dianteira direita · risco superficial.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Comparação</strong>
+Retirada × devolução.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Revisão</strong>
+Colaborador verifica as imagens.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Resultado</strong>
+Evidência validada.
+</div>
+</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">📋 Status</div>
+<div class="board-cell">
+<div class="sticky">
+<strong>Nova avaria identificada</strong>
+Caso criado automaticamente.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Em análise</strong>
+Aguardando revisão.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky purple">
+<strong>Necessita avaliação</strong>
+Evidência insuficiente ou divergente.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Resolvida</strong>
+Decisão registrada.
+</div>
+</div>
+</div>
+
+<div class="lane">
+<div class="lane-name">👤 Cliente</div>
+<div class="board-cell">
+<div class="sticky">
+<strong>Informado</strong>
+Caso registrado para análise.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky blue">
+<strong>Acompanhamento</strong>
+Status disponível.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky red">
+<strong>Contestada</strong>
+Cliente apresenta contestação.
+</div>
+</div>
+<div class="board-cell">
+<div class="sticky green">
+<strong>Encerrada</strong>
+Resultado e histórico preservados.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="legal-section">
+<div class="container">
+<div class="section-label">19 — Legal by Design</div>
+<h2>Governança da decisão automatizada.</h2>
+<p class="section-description">
+O Jurídico entra como uma camada de governança do produto: ajuda a
+definir quais evidências precisam ser registradas, como o histórico deve
+ser preservado e em quais situações a decisão precisa de revisão humana.
+</p>
+
+<div class="legal-grid">
+
+<div class="card legal-card">
+<span class="tag">EVIDÊNCIA</span>
+<h3>Registro Rastreável</h3>
+<p>
+Cada vistoria mantém imagens, data, hora, identificação do veículo,
+contexto da locação e informações associadas à possível avaria.
+</p>
+</div>
+
+<div class="card legal-card">
+<span class="tag">TRANSPARÊNCIA</span>
+<h3>Explicabilidade do Alerta</h3>
+<p>
+O sistema apresenta qual região foi sinalizada, qual tipo de alteração
+foi identificado e o nível de confiança utilizado como apoio.
+</p>
+</div>
+
+<div class="card legal-card">
+<span class="tag">HUMAN IN THE LOOP</span>
+<h3>Revisão Humana</h3>
+<p>
+A IA não determina automaticamente responsabilidade. Casos relevantes
+podem ser revisados antes de qualquer decisão com impacto para o cliente.
+</p>
+</div>
+
+<div class="card legal-card">
+<span class="tag">CONTESTAÇÃO</span>
+<h3>Histórico da Decisão</h3>
+<p>
+O produto preserva alterações, revisões, evidências e resultado do caso,
+permitindo rastrear como a decisão foi construída.
+</p>
+</div>
+
+</div>
+
+<div class="notice" style="background:var(--purple-light);border-color:#c4b5fd;color:#5b21b6;">
+<strong>Legal by Design:</strong>
+o objetivo não é transformar o produto em um sistema jurídico, mas
+incorporar desde o desenho da solução <strong>rastreabilidade,
+transparência, revisão e prevenção de decisões indevidas</strong>.
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-label">20 — Métricas</div>
+<h2>Como medir se o produto realmente melhorou a operação?</h2>
+<p class="section-description">
+As métricas abaixo são hipóteses de sucesso para validação do produto.
+Os números apresentados são exclusivamente simulados.
+</p>
 
 <div class="metrics-grid">
 
 <div class="card metric-card">
-<span class="proposed">PREVENÇÃO DE CUSTO</span>
-<h3>Recuperação de Avarias Sem Autoria</h3>
-<p>Redução de 75% nos prejuízos com arranhões e danos não identificados através da vistoria preventiva no check-in.</p>
+<span class="proposed">DADO SIMULADO · EFICIÊNCIA</span>
+<h3>Tempo Médio de Vistoria</h3>
+<p>
+Hipótese: reduzir o tempo médio de vistoria de 18 para 10 minutos
+sem reduzir a qualidade das evidências coletadas.
+</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">EFICIÊNCIA OPERACIONAL</span>
-<h3>Queda no Downtime da Frota</h3>
-<p>Redução do tempo de liberação do veículo para reparo/funilaria de 12,5 para 2,5 dias.</p>
+<span class="proposed">DADO SIMULADO · QUALIDADE</span>
+<h3>Taxa de Avarias Corretamente Identificadas</h3>
+<p>
+Acompanhar a proporção de possíveis avarias identificadas pelo sistema
+que são posteriormente confirmadas na revisão humana.
+</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">REDUÇÃO DE RECUSAS</span>
-<h3>Aprovação de Perícias de Sinistro</h3>
-<p>Queda na taxa de rejeição de laudos por seguradoras de 24% para menos de 3%.</p>
+<span class="proposed">DADO SIMULADO · IA</span>
+<h3>Taxa de Falsos Positivos</h3>
+<p>
+Monitorar alertas gerados pela IA que não são confirmados após revisão,
+evitando que aumento de automação venha acompanhado de ruído operacional.
+</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">COMPLIANCE & RISCO</span>
-<h3>Segurança Jurídica & Disputas</h3>
-<p>Zero contestações contratuais com suporte de carimbo digital imutável de geolocalização e timestamp.</p>
+<span class="proposed">DADO SIMULADO · OPERAÇÃO</span>
+<h3>Tempo Médio de Análise</h3>
+<p>
+Hipótese: reduzir o tempo médio de análise de uma possível avaria de
+2,4 dias para menos de 1 dia.
+</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">DADO SIMULADO · EXPERIÊNCIA</span>
+<h3>Taxa de Contestação</h3>
+<p>
+Acompanhar a proporção de casos contestados e verificar se evidências
+mais claras reduzem disputas improcedentes.
+</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">DADO SIMULADO · RESOLUÇÃO</span>
+<h3>Taxa de Resolução de Contestação</h3>
+<p>
+Medir quantos casos contestados conseguem ser concluídos com base no
+histórico e nas evidências disponíveis.
+</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">DADO SIMULADO · AUTOMAÇÃO</span>
+<h3>Vistorias sem Intervenção Manual</h3>
+<p>
+Monitorar o percentual de vistorias concluídas pelo fluxo automatizado
+sem necessidade de revisão adicional.
+</p>
+</div>
+
+<div class="card metric-card">
+<span class="proposed">DADO SIMULADO · CUSTO</span>
+<h3>Custo Operacional por Vistoria</h3>
+<p>
+Acompanhar o custo médio do processo considerando tempo operacional,
+revisões e tratamento dos casos de avaria.
+</p>
 </div>
 
 </div>
@@ -1472,27 +1994,64 @@ Enquadre a lateral com a silhueta da câmera.
 <section class="takeaway">
 <div class="container takeaway-grid">
 <div>
-<div class="section-label">16 — Takeaway Case 02</div>
-<h2>Conclusão da Abordagem</h2>
+<div class="section-label">21 — Takeaway Case 02</div>
+<h2>O produto transforma evidência em processo.</h2>
 <p>
-Aliar governança preventiva na retirada do veículo a um fluxo de vistoria guiada por software elimina os custos invisíveis de avarias e acelera a manutenção da frota.
+O valor da FrotaPro não está apenas em usar IA para reconhecer uma
+imagem. Está em conectar captura padronizada, comparação temporal,
+evidência, gestão do caso e validação humana em uma mesma jornada.
 </p>
 </div>
 
 <ul class="takeaway-list">
-<li>Prevenção de conflitos e prejuízos no Check-in</li>
-<li>Rigidez probatória sem perda de usabilidade</li>
-<li>Validação preventiva antifraude na ponta</li>
-<li>Redução drástica do downtime e dos arranhões sem autoria</li>
+<li>Vistoria baseada em evidências visuais</li>
+<li>IA como apoio, não como decisão final</li>
+<li>Comparação entre retirada e devolução</li>
+<li>Gestão estruturada de avarias e contestações</li>
+<li>Legal by Design como camada de governança</li>
 </ul>
 </div>
 </section>
+
+<section>
+<div class="container">
+<div class="section-label">22 — Product Takeaway</div>
+<h2>Da checklist à decisão rastreável.</h2>
+<p class="section-description">
+A principal hipótese deste case é que uma vistoria mais inteligente não
+precisa significar uma decisão totalmente automatizada. O produto pode
+usar tecnologia para reduzir trabalho manual e aumentar a qualidade das
+evidências, mantendo supervisão humana onde o risco da decisão exige.
+</p>
+
+<div class="about-grid mt40">
+
+<div class="card about-card">
+<strong>O que a solução combina</strong>
+<p>
+Checklist operacional + evidência visual + visão computacional + comparação
+temporal + validação humana + gestão do caso.
+</p>
+</div>
+
+<div class="card about-card">
+<strong>O princípio de produto</strong>
+<p>
+Automatizar a identificação de sinais, preservar a rastreabilidade da
+evidência e manter a decisão proporcional ao nível de risco.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
 
 <!-- ==================== HABILIDADES ==================== -->
 
 <section>
 <div class="container">
-<div class="section-label">17 — Competências</div>
+<div class="section-label">23 — Competências</div>
 <h2>Habilidades & Ferramentas</h2>
 
 <div class="skills">
