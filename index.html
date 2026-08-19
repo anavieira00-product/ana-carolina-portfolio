@@ -1152,6 +1152,16 @@ Identificamos o atraso na logística. Escolha abaixo como deseja prosseguir:
 
 </div>
 </div>
+
+<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 01) -->
+<div class="notice" style="background:var(--blue-light); border-color:#93c5fd; color:#1e40af; margin-top:35px;">
+<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
+<p style="margin:0; font-size:13px; color:#1e3a8a;">
+<strong>O que o mercado faz:</strong> Oferece botões genéricos de reembolso que geram alto índice de fraude (clientes pedem estorno em pequenos atrasos e ainda ficam com a mercadoria quando ela chega) ou forçam o cliente a passar por suporte humano lento.<br>
+<strong>O meu diferencial:</strong> Um <strong>motor de governança e validação de risco em tempo real</strong>. O estorno automático em 1 clique só é liberado se a API da transportadora confirmar a exceção logística real. A solução combina os direitos do CDC (Art. 35) com pontuação de risco (<em>Risk Score</em>) do usuário, entregando autonomia para o cliente honesto e proteção financeira/jurídica para a empresa.
+</p>
+</div>
+
 </div>
 </section>
 
@@ -1211,18 +1221,18 @@ Utilizamos os sinais públicos do mercado para antecipar dores, estruturar a gov
 </section>
 
 
-<!-- ==================== CASE 02: FROTA PRO (GESTÃO DE SINISTROS) ==================== -->
+<!-- ==================== CASE 02: FROTA PRO (GESTÃO PREVENTIVA & SINISTROS) ==================== -->
 
 <section id="case2" class="case-intro" style="border-top: 5px solid var(--orange);">
 <div class="container">
 <div class="case-top">
 <div>
 <div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & OPERAÇÕES B2B</div>
-<h2 class="case-title">FrotaPro<br>Gestão de Sinistros & Avarias</h2>
+<h2 class="case-title">FrotaPro<br>Gestão Preventiva & Sinistros de Frota</h2>
 </div>
 
 <p class="case-subtitle">
-Como otimizar o fluxo de abertura de sinistros, reduzir fraudes/inconsistências e diminuir o tempo de inatividade da frota (downtime) com validação digital e vistoria guiada?
+Como prevenir disputas de avarias pré-existentes (check-in/check-out), evitar prejuízos com arranhões não identificados e acelerar a liberação de sinistros com vistoria guiada e manutenção preditiva?
 <br><br>
 A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veículos criado para este portfólio.
 </p>
@@ -1230,7 +1240,7 @@ A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veíc
 
 <div class="notice">
 <strong>Contexto do Negócio:</strong>
-Em operações de frotas, o custo com avarias não identificadas no checklist de devolução/acidente e a lentidão no reembolso das seguradoras geram milhões em perdas operacionais.
+Em operações de frotas e locação (como frotas para motoristas de app ou empresas de logística), a falta de registro prévio do estado do veículo gera perdas milionárias com avarias sem autoria (arranhões, amassados) e atrasos em reformas e perícias de seguros.
 </div>
 </div>
 </section>
@@ -1238,18 +1248,26 @@ Em operações de frotas, o custo com avarias não identificadas no checklist de
 <section>
 <div class="container">
 <div class="section-label">11 — Discovery & Gargalos da Operação</div>
-<h2>Por que processos de sinistro tradicionais geram tanto prejuízo?</h2>
+<h2>Por que processos de vistoria e sinistro tradicionais geram tanto prejuízo?</h2>
 <p class="section-description">
-Analisando o fluxo de frotas e locadoras, identificamos que a ausência de padrão no registro de avarias cria uma reação em cadeia: <strong>fotos ruins -> perícia recusada -> disputa contratual com condutor -> veículo parado acumulando prejuízo (downtime).</strong>
+Analisando o fluxo de frotas e locadoras, identificamos que a ausência de registro preventivo e de padrão na vistoria cria uma reação em cadeia: <strong>arranhões não identificados na entrega -> disputas sobre a culpa do dano -> fotos ruins no sinistro -> perícia recusada -> carro parado no pátio (downtime).</strong>
 </p>
 
 <div class="pattern-grid">
 
 <div class="card pattern">
+<div class="pattern-icon">🔍</div>
+<h3>Avarias e Arranhões Sem Autoria</h3>
+<p>
+Condutores devolvem o carro com pequenos danos. Como a vistoria inicial foi informal ou em papel, o motorista nega a autoria ("já estava assim") e a empresa absorve o custo da funilaria/recauchutagem.
+</p>
+</div>
+
+<div class="card pattern">
 <div class="pattern-icon">📸</div>
 <h3>Fotos Inválidas / Incompletas</h3>
 <p>
-Condutores registram avarias sem ângulo correto ou iluminação adequada, fazendo a seguradora recusar o orçamento de reparo na 1ª análise.
+Em caso de acidentes, condutores registram o dano de forma escura ou desfocada, fazendo a seguradora recusar o orçamento de reparo na 1ª análise.
 </p>
 </div>
 
@@ -1257,15 +1275,7 @@ Condutores registram avarias sem ângulo correto ou iluminação adequada, fazen
 <div class="pattern-icon">⏳</div>
 <h3>Alto Downtime do Veículo</h3>
 <p>
-Cada dia extra de atraso na aprovação da perícia representa um veículo fora de operação gerando custo fixo em vez de receita.
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">⚖</div>
-<h3>Contestação Contratual de Avarias</h3>
-<p>
-Sem histórico de vistoria auditável com carimbo de data/hora e geolocalização, a empresa não consegue imputar a responsabilidade do dano ao condutor responsável.
+Sem triagem rápida para reparos estéticos simples vs. sinistro grave, o veículo fica semanas inativo aguardando liberação e acumulando prejuízo operacional.
 </p>
 </div>
 
@@ -1284,28 +1294,28 @@ Sem histórico de vistoria auditável com carimbo de data/hora e geolocalizaçã
 <span class="sim-badge">SIMULADO</span>
 <div class="number">R$ 480k</div>
 <strong>custo mensal por avarias não identificadas</strong>
-<small>Avarias descobertas pós-devolução sem autoria</small>
+<small>Arranhões e danos descobertos pós-devolução sem autoria</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
 <div class="number">12,5 dias</div>
 <strong>tempo médio de liberação (SLA)</strong>
-<small>Desde o aviso do acidente até o início do reparo</small>
+<small>Desde o aviso do dano até o início da funilaria/reparo</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
 <div class="number">24%</div>
 <strong>sinistros recusados na 1ª análise</strong>
-<small>Necessidade constante de reenvio de laudos</small>
+<small>Necessidade constante de reenvio de laudos por foto ruim</small>
 </div>
 
 <div class="sim-card">
 <span class="sim-badge">SIMULADO</span>
 <div class="number">15%</div>
-<strong>fração da frota inativa por sinistro</strong>
-<small>Veículos imobilizados aguardando liberação</small>
+<strong>fração da frota inativa por avaria</strong>
+<small>Veículos imobilizados em pátio aguardando triagem</small>
 </div>
 
 </div>
@@ -1314,27 +1324,27 @@ Sem histórico de vistoria auditável com carimbo de data/hora e geolocalizaçã
 
 <section class="legal-section">
 <div class="container">
-<div class="section-label">13 — Legal & Compliance Lens no Sinistro</div>
+<div class="section-label">13 — Legal & Compliance Lens no Sinistro e Check-in</div>
 <h2>Como transformar regras contratuais e regulatórias em travas de segurança no produto</h2>
 <p class="section-description">
-Aberturas de sinistro dependem de rigidez probatória. O Jurídico atuou estruturando os requisitos que o app deve exigir para garantir aceitação imediata pelas seguradoras e proteção contra fraudes.
+Vistorias e aberturas de sinistro dependem de rigidez probatória. O Jurídico atuou estruturando os requisitos exigidos para garantir responsabilização justa de condutores e aprovação imediata pelas seguradoras.
 </p>
 
 <div class="legal-grid">
 
 <div class="card legal-card">
-<span class="tag">SEGUROS</span>
-<h3>Padrão Probatório Securitário</h3>
+<span class="tag">CONTRATOS</span>
+<h3>Provisão de Avarias & Isenção</h3>
 <p>
-Definição dos requisitos mínimos de imagem exigidos pelas apólices para eliminar recusas técnicas de peritos.
+Registro fotográfico irrefutável na retirada (check-in) que isenta o condutor atual de danos antigos e viabiliza a cobrança justa de novos danos.
 </p>
 </div>
 
 <div class="card legal-card">
-<span class="tag">CONTRATOS</span>
-<h3>Cobrança Legal de Coparticipação</h3>
+<span class="tag">SEGUROS</span>
+<h3>Padrão Probatório Securitário</h3>
 <p>
-Clareza nos termos de aceite do condutor para viabilizar a cobrança justa de franquias sem contestações judiciais.
+Definição dos requisitos mínimos de imagem exigidos pelas apólices para eliminar recusas técnicas de peritos da seguradora.
 </p>
 </div>
 
@@ -1350,7 +1360,7 @@ Conformidade na coleta e armazenamento de documentos (CNH, B.O., dados de tercei
 <span class="tag">AUDITORIA</span>
 <h3>Imutabilidade de Registros</h3>
 <p>
-Uso de carimbos de geolocalização e horário no envio das fotos para comprovar o exato momento do sinistro.
+Uso de carimbos de geolocalização e horário no envio das fotos para comprovar o estado exato do veículo na entrega e no sinistro.
 </p>
 </div>
 
@@ -1361,29 +1371,29 @@ Uso de carimbos de geolocalização e horário no envio das fotos para comprovar
 <section class="solution">
 <div class="container">
 <div class="section-label">14 — Solution</div>
-<h2>Vistoria Guiada por Inteligência Artificial & Triagem de Risco</h2>
+<h2>Plataforma de Vistoria Preventiva (Check-in/Out) & Sinistro Guiado</h2>
 <p class="section-description">
-Uma jornada mobile em que o condutor é guiado para capturar as fotos no ângulo exato exigido pela seguradora, com validação instantânea de qualidade.
+Uma jornada mobile em que o condutor registra preventivamente o estado do veículo no aluguel e, em caso de avaria ou colisão, é guiado para capturar as fotos no ângulo exato com validação instantânea de qualidade.
 </p>
 
 <div class="solution-grid">
 
 <div class="product-screen">
 <div class="screen">
-<div class="screen-top">← Novo Sinistro</div>
-<h3>Vistoria Guiada</h3>
+<div class="screen-top">← FrotaPro Mobile</div>
+<h3>Vistoria de Check-in</h3>
 
 <div class="order-status" style="background:var(--blue-light);">
-<strong style="color:var(--blue);">📸 Foto 2 de 4: Parachoque Dianteiro</strong>
-Alinhe a marcação com o contorno do veículo.
+<strong style="color:var(--blue);">📸 Passo 1: Mapear Arranhões / Avarias</strong>
+Enquadre a lateral com a silhueta da câmera.
 </div>
 
 <p class="screen-text">
-Certifique-se de estar em um local iluminado para garantir a aprovação instantânea da seguradora.
+2 avarias pré-existentes identificadas e salvas no contrato de entrega.
 </p>
 
-<a class="action">Capturar Foto Conforme Silhueta</a>
-<a class="action secondary">Encaminhar para Análise de Supervisor</a>
+<a class="action">Confirmar Retirada Segura</a>
+<a class="action secondary">Registrar Novo Sinistro / Dano</a>
 </div>
 </div>
 
@@ -1391,26 +1401,36 @@ Certifique-se de estar em um local iluminado para garantir a aprovação instant
 
 <div class="solution-step">
 <div class="step-number">1</div>
-<div><strong>Checklist Assistido por Silhueta</strong><span>A câmera do app mostra o contorno onde o veículo deve se encaixar no enquadramento.</span></div>
+<div><strong>Vistoria Preventiva no Check-in</strong><span>Registro obrigatório com silhueta digital na retirada/devolução. Isenta o motorista de danos antigos e atribui novos arranhões ao condutor correto.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">2</div>
-<div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou que não comprovem o dano.</span></div>
+<div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou fora de ângulo para garatir a perícia.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">3</div>
-<div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS e Timestamp são salvos para dar validade jurídica ao laudo.</span></div>
+<div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS, Timestamp e ID do Condutor garantem validade jurídica e contratual do laudo.</span></div>
 </div>
 
 <div class="solution-step">
 <div class="step-number">4</div>
-<div><strong>Integração com Seguradoras</strong><span>Envio automático do dossiê completo, reduzindo o tempo de aprovação de 12 dias para 48h.</span></div>
+<div><strong>Triagem Inteligente & Agendamento</strong><span>Direciona pequenos reparos (recauchutagem/funilaria rápida) para oficinas credenciadas e sinistros graves para seguradoras em 48h.</span></div>
 </div>
 
 </div>
 </div>
+
+<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 02) -->
+<div class="notice" style="background:var(--purple-light); border-color:#c4b5fd; color:#5b21b6; margin-top:35px;">
+<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
+<p style="margin:0; font-size:13px; color:#4c1d95;">
+<strong>O que o mercado faz:</strong> Apps passivos que atuam apenas após a batida/acidente ou formulários de vistoria em papel que não evitam a fraude de "o arranhão já estava aqui", gerando disputas com condutores e prejuízos absorvidos pela empresa.<br>
+<strong>O meu diferencial:</strong> Uma <strong>plataforma preventiva end-to-end (Check-in + Sinistro)</strong>. Registra o estado inicial exato do veículo no momento da retirada para isentar condutores honestos e cobrar responsabilidade com prova digital irrefutável. Em caso de colisão, a vistoria guiada garante aprovação do laudo em até 48h, reduzindo o downtime e o custo invisível de veículos parados ao mínimo.
+</p>
+</div>
+
 </div>
 </section>
 
@@ -1422,27 +1442,27 @@ Certifique-se de estar em um local iluminado para garantir a aprovação instant
 <div class="metrics-grid">
 
 <div class="card metric-card">
+<span class="proposed">PREVENÇÃO DE CUSTO</span>
+<h3>Recuperação de Avarias Sem Autoria</h3>
+<p>Redução de 75% nos prejuízos com arranhões e danos não identificados através da vistoria preventiva no check-in.</p>
+</div>
+
+<div class="card metric-card">
 <span class="proposed">EFICIÊNCIA OPERACIONAL</span>
 <h3>Queda no Downtime da Frota</h3>
-<p>Redução do tempo de liberação do veículo de 12,5 para 2,5 dias.</p>
+<p>Redução do tempo de liberação do veículo para reparo/funilaria de 12,5 para 2,5 dias.</p>
 </div>
 
 <div class="card metric-card">
-<span class="proposed">REDUÇÃO DE CUSTO</span>
-<h3>Recusa de Perícia</h3>
-<p>Queda na taxa de rejeição de laudos de 24% para menos de 3%.</p>
-</div>
-
-<div class="card metric-card">
-<span class="proposed">RECUPERAÇÃO DE RECEITA</span>
-<h3>Cobrança Assertiva de Avarias</h3>
-<p>Redução de 75% nos prejuízos com avarias sem autoria/não identificadas.</p>
+<span class="proposed">REDUÇÃO DE RECUSAS</span>
+<h3>Aprovação de Perícias de Sinistro</h3>
+<p>Queda na taxa de rejeição de laudos por seguradoras de 24% para menos de 3%.</p>
 </div>
 
 <div class="card metric-card">
 <span class="proposed">COMPLIANCE & RISCO</span>
-<h3>Segurança Jurídica</h3>
-<p>Zero contestações judiciais com suporte de carimbo digital de geolocalização.</p>
+<h3>Segurança Jurídica & Disputas</h3>
+<p>Zero contestações contratuais com suporte de carimbo digital imutável de geolocalização e timestamp.</p>
 </div>
 
 </div>
@@ -1455,15 +1475,15 @@ Certifique-se de estar em um local iluminado para garantir a aprovação instant
 <div class="section-label">16 — Takeaway Case 02</div>
 <h2>Conclusão da Abordagem B2B</h2>
 <p>
-Aliar requisitos contratuais rígidos a um fluxo de produto intuitivo diminui drasticamente o atrito e as perdas financeiras em operações complexas de logística e frotas.
+Aliar governança preventiva na retirada do veículo a um fluxo de vistoria guiada por software elimina os custos invisíveis de avarias e acelera a manutenção da frota.
 </p>
 </div>
 
 <ul class="takeaway-list">
+<li>Prevenção de conflitos e prejuízos no Check-in</li>
 <li>Rigidez probatória sem perda de usabilidade</li>
 <li>Validação preventiva antifraude na ponta</li>
-<li>Redução drástica do downtime e do custo invisível</li>
-<li>Conformidade securitária garantida por software</li>
+<li>Redução drástica do downtime e dos arranhões sem autoria</li>
 </ul>
 </div>
 </section>
