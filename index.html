@@ -110,7 +110,7 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
 <section class="hero"><div class="container hero-grid"><div>
 <div class="badge">PRODUTOS DIGITAOS · LEGAL PRODUCT</div>
 <h1>Direito + Produto + <span>Tecnologia.</span></h1>
-<p class="hero-description">Advogada de Direito Bancário em transição para Produtos digitais, atuando em áreas como Product Manager, Product Owner ou analista de produtos.</p>
+<p class="hero-description">Advogada de Direito Bancário em transição para Produtos digitais, atuando em áreas como Product Manager, Product Owner ou Analista de Produtos.</p>
 <div class="buttons"><a href="#case1" class="button primary">Ver Cases</a><a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank" class="button secondary">LinkedIn</a></div>
 </div><div class="hero-panel"><small>Minha abordagem</small><h2>Investigar o problema antes de <span>desenhar a solução.</span></h2><small>Customer · Business · Technology · Legal</small></div>
 </div></section>
@@ -176,7 +176,6 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
 <table class="cluster-table"><thead><tr><th>Cluster</th><th>Possível motivo identificado</th></tr></thead><tbody>
 <tr><td>1</td><td>Pedido atrasado além do prazo</td></tr><tr><td>2</td><td>Pedido parado no centro de distribuição</td></tr><tr><td>3</td><td>Transportadora não atualiza rastreio</td></tr><tr><td>4</td><td>Pedido consta como entregue, mas não foi recebido</td></tr><tr><td>5</td><td>Cliente entrou em contato várias vezes pelo mesmo atraso</td></tr><tr><td>6</td><td>Previsão de entrega alterada</td></tr><tr><td>7</td><td>Pedido cancelado por atraso</td></tr><tr><td>8</td><td>Atraso relacionado à região/CEP</td></tr>
 </tbody></table>
-<div class="card" style="margin-top:25px"><h3>Exemplo de interpretação pelo LLM</h3><p style="color:var(--muted);font-size:13px;margin-top:8px">Cluster 17: “pedido atrasado há 5 dias”, “entrega não chegou”, “já passou o prazo”, “quero saber onde está minha encomenda”.</p><p style="color:var(--muted);font-size:13px;margin-top:8px"><strong>A IA poderia gerar:</strong> Cluster 17 — Atraso após vencimento do prazo de entrega.</p><p style="color:var(--muted);font-size:13px;margin-top:8px"><strong>Hierarquia:</strong> Entregas → Atrasos → Prazo vencido.</p></div>
 <div class="notice"><strong>Nota de método:</strong> O LLM é utilizado depois da clusterização para interpretar, nomear e organizar os grupos. Ele apoia o diagnóstico; a priorização ainda depende de impacto, frequência, esforço e validação com dados.</div>
 </div></section>
 
@@ -184,11 +183,38 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
 <div class="section-label">04 — Dados da SuccessTrail</div><h2>Diagnosticando o problema interno na SuccessTrail.</h2>
 <p class="section-description">O diagnóstico foi construído a partir da análise dos dados simulados e da aplicação de LLM para identificar padrões nas reclamações e recontatos.</p>
 <div class="simulated-grid">
-<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">8,4%</div><strong>pedidos com atraso</strong><small>Base hipotética de 100 mil pedidos/mês</small></div>
-<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">62%</div><strong>dos contatos são sobre atraso</strong><small>Sinal de fricção concentrado no pós-compra</small></div>
-<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">38%</div><strong>taxa de recontato</strong><small>Clientes sem resposta clara voltam a procurar</small></div>
-<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">4,2 dias</div><strong>tempo médio de resolução</strong><small>Prazo alto que aumenta a fricção</small></div>
-</div></div></section>
+
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">8,4%</div>
+<strong>pedidos com atraso</strong>
+<small>Base hipotética de 100 mil pedidos/mês</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">62%</div>
+<strong>dos contatos são sobre atraso</strong>
+<small>Sintoma claro de falta de visibilidade</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">38%</div>
+<strong>taxa de recontato</strong>
+<small>Clientes sem resposta clara voltam a procurar</small>
+</div>
+
+<div class="sim-card">
+<span class="sim-badge">SIMULADO</span>
+<div class="number">4,2 dias</div>
+<strong>tempo médio de resolução</strong>
+<small>Prazo alto que estimula reclamações externas</small>
+</div>
+
+</div>
+</div>
+</section>
     
 <section><div class="container">
 <div class="section-label">06 — Problem Framing</div><h2>A definição dos problemas prioritários.</h2>
