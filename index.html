@@ -138,7 +138,6 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
 <div class="card pattern"><div class="pattern-icon">🔄</div><h3>Autonomia de Resolução</h3><p>Oferecer opções claras e self-service (reembolso, novo envio ou voucher) direto no app em poucos cliques.</p></div>
 <div class="card pattern"><div class="pattern-icon">👤</div><h3>Clareza de Ownership</h3><p>Transparência sobre quem está conduzindo o problema, deixando claro o próximo passo e a responsabilidade pela resolução.</p></div>
 </div></div></section>
-
 <section id="benchmark">
   <div class="container">
     <div class="section-label">02 — Benchmark público</div>
@@ -146,9 +145,8 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
     <p class="section-description">
       Os dados públicos do Reclame Aqui ajudam a entender sinais de insatisfação e a relação entre a experiência de resolução e a intenção de recompra. Usamos esses dados como referência para calibrar hipóteses de produto da SuccessTrail.
     </p>
-    <!-- 1. REFERÊNCIAS PÚBLICAS (Linha Superior: 2 cards) -->
+    <!-- Linha Superior: 2 cards (Centralizados via CSS) -->
     <div class="benchmark benchmark-sources">
-      <!-- Card Setor de Marketplace -->
       <div class="card benchmark-card">
         <div class="company">Setor de marketplace</div>
         <div class="company-note">Referência pública · Reclame Aqui</div>
@@ -158,7 +156,6 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
         <div class="benchmark-label">voltariam a fazer negócio</div>
         <div class="benchmark-source">Fonte: Reclame Aqui</div>
       </div>
-      <!-- Card Setor de Serviços -->
       <div class="card benchmark-card">
         <div class="company">Setor de serviços</div>
         <div class="company-note">Referência pública · Reclame Aqui</div>
@@ -169,44 +166,41 @@ section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.
         <div class="benchmark-source">Fonte: Reclame Aqui</div>
       </div>
     </div>
-    <!-- 2. EXEMPLOS DE LEITURA & O QUE OBSERVAR (Linha Inferior: 3 cards) -->
+    <!-- Linha Inferior: 3 cards -->
     <div class="benchmark benchmark-insights">
-      <!-- Exemplo com Resolução/Prazo -->
       <div class="card benchmark-card">
-        <div class="company">Exemplo de leitura</div>
-        <div class="company-note">Relação entre prazo de entrega e recompra</div>
-        <div class="benchmark-number">1.000</div>
-        <div class="benchmark-label">clientes que receberam no prazo</div>
-        <div class="benchmark-number">→ recompra</div>
-        <div class="benchmark-label">maior propensão a voltar a comprar</div>
-        <div class="benchmark-source">Hipótese de análise · dados internos simulados</div>
+        <div class="company">Leitura · Marketplace</div>
+        <div class="company-note">Conversão sobre resolvidos</div>
+        <div class="benchmark-number">96,0%</div>
+        <div class="benchmark-label">retenção sobre os atendidos</div>
+        <div class="benchmark-number">Alta resposta</div>
+        <div class="benchmark-label">solução recupera quase toda a intenção de compra</div>
+        <div class="benchmark-source">Análise dedutiva · Dados do Reclame Aqui</div>
       </div>
-      <!-- Exemplo sem Resolução/Atraso -->
       <div class="card benchmark-card">
-        <div class="company">Atraso na entrega</div>
-        <div class="company-note">Exemplo para explicar a taxa de atraso</div>
-        <div class="benchmark-number">1.000</div>
-        <div class="benchmark-label">clientes que não receberam no prazo</div>
-        <div class="benchmark-number">→ menor recompra</div>
-        <div class="benchmark-label">maior risco de perda de confiança</div>
-        <div class="benchmark-source">Hipótese de análise · não representa dado público real</div>
+        <div class="company">Leitura · Serviços</div>
+        <div class="company-note">Conversão sobre resolvidos</div>
+        <div class="benchmark-number">89,8%</div>
+        <div class="benchmark-label">retenção sobre os atendidos</div>
+        <div class="benchmark-number">Sensibilidade</div>
+        <div class="benchmark-label">mesmo com solução, há ~10% de perda residual</div>
+        <div class="benchmark-source">Análise dedutiva · Dados do Reclame Aqui</div>
       </div>
-      <!-- Conclusão: Taxa e O que observar -->
       <div class="card benchmark-card">
         <div class="company">O que observar</div>
-        <div class="company-note">Sinal de negócio e indicador-chave</div>
-        <div class="benchmark-number">Taxa de Resolução</div>
-        <div class="benchmark-label">alavanca direta na retenção de clientes</div>
+        <div class="company-note">Perda total acumulada (Churn)</div>
+        <div class="benchmark-number">38,4% vs 21,9%</div>
+        <div class="benchmark-label">perda definitiva (Marketplace vs Serviços)</div>
         <div class="benchmark-number">Pós-compra</div>
-        <div class="benchmark-label">agilidade na solução recupera a confiança de recompra</div>
-        <div class="benchmark-source">Benchmark qualitativo</div>
+        <div class="benchmark-label">gargalos não resolvidos causam sangria direta de LTV</div>
+        <div class="benchmark-source">Sinal qualitativo de negócio</div>
       </div>
     </div>
-    <!-- 3. NOTA INFERIOR SEPARADA -->
-    <div class="notice">
-      <strong>Como interpretar a taxa de atraso:</strong> Se, em uma base hipotética de 1.000 clientes, os que receberam dentro do prazo apresentam maior taxa de recompra do que os que receberam depois do prazo, o atraso funciona como um sinal de possível impacto na retenção. A análise precisa ser validada com dados reais antes de virar uma meta de negócio.
-    </div>
-  </div>
+    <!-- Nota em largura total no rodapé -->
+   <div class="notice">
+  <strong>Como interpretar os dados de suporte:</strong> A relação entre a taxa de resolução e a intenção de recompra evidencia que o atendimento pós-compra funciona como uma alavanca direta de retenção. Enquanto a solução de problemas chega a preservar até 96% dos clientes impactados, a incapacidade de resolução gera um churn definitivo de até 38,4% da base de reclamantes. Essa leitura deve ser validada com a base interna da SuccessTrail antes de definir metas de produto.
+</div>
+</div>
 </section>
 
 <section class="board-section"><div class="container">
