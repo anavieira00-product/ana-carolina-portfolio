@@ -22,1514 +22,243 @@
     --purple-light:#f5f3ff;
     --dark:#111827;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-
-body{
-    font-family:Inter,Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.6;
-}
-
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:100;
-    background:rgba(246,247,249,.94);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--line);
-}
-
-nav{
-    height:70px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{font-size:21px;font-weight:800}
-.logo span{color:var(--orange)}
-
-.nav-links{
-    display:flex;
-    gap:28px;
-    list-style:none;
-    font-size:14px;
-    color:#475467;
-}
-
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:100;background:rgba(246,247,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{height:70px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:21px;font-weight:800}.logo span{color:var(--orange)}
+.nav-links{display:flex;gap:28px;list-style:none;font-size:14px;color:#475467}
 .nav-links a:hover{color:var(--orange)}
-
-section{padding:80px 0}
-
-.section-label{
-    color:var(--orange);
-    font-size:12px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    margin-bottom:10px;
-}
-
-h2{
-    font-size:40px;
-    line-height:1.15;
-    letter-spacing:-1.5px;
-}
-
-.section-description{
-    color:var(--muted);
-    width:100%;
-    max-width:100%;
-    margin-top:12px;
-}
-
-.card{
-    background:var(--white);
-    border:1px solid var(--line);
-    border-radius:15px;
-    padding:25px;
-}
-
-.mt40{margin-top:40px}
-
-/* HERO */
-
-.hero{padding:100px 0 80px}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.25fr .75fr;
-    gap:60px;
-    align-items:center;
-}
-
-.badge{
-    display:inline-flex;
-    background:var(--orange-light);
-    color:#c2410c;
-    border-radius:30px;
-    padding:7px 13px;
-    font-size:12px;
-    font-weight:800;
-    margin-bottom:22px;
-}
-
-h1{
-    font-size:clamp(45px,6vw,76px);
-    line-height:1;
-    letter-spacing:-4px;
-    margin-bottom:22px;
-}
-
-h1 span{color:var(--orange)}
-
-.hero-description{
-    color:var(--muted);
-    font-size:19px;
-    width:100%;
-    max-width:100%;
-    margin-bottom:28px;
-}
-
-.buttons{display:flex;gap:12px;flex-wrap:wrap}
-
-.button{
-    padding:12px 19px;
-    border-radius:9px;
-    border:1px solid var(--dark);
-    font-size:14px;
-    font-weight:700;
-}
-
-.button.primary{background:var(--dark);color:white}
-.button.secondary{background:white}
-
-.hero-panel{
-    background:var(--dark);
-    color:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-}
-
-.hero-panel small{
-    color:#98a2b3;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.hero-panel h2{
-    font-size:30px;
-    line-height:1.15;
-    margin:55px 0;
-}
-
-.hero-panel span{color:var(--orange)}
-
-/* ABOUT */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-}
-
-.about-text p{
-    color:#475467;
-    margin-bottom:16px;
-    width:100%;
-    max-width:100%;
-}
-
-.about-card p{
-    color:var(--muted);
-    margin-top:8px;
-    width:100%;
-    max-width:100%;
-}
-
-/* CASE */
-
-.case-intro{
-    background:var(--dark);
-    color:white;
-}
-
-.case-top{
-    display:grid;
-    grid-template-columns:1.2fr .8fr;
-    gap:50px;
-    align-items:end;
-}
-
-.case-title{
-    font-size:clamp(40px,5vw,62px);
-    line-height:1;
-    letter-spacing:-3px;
-}
-
-.case-subtitle{
-    color:#aab1bd;
-    width:100%;
-    max-width:100%;
-}
-
-.study-tag{
-    display:inline-block;
-    color:var(--orange);
-    font-size:12px;
-    font-weight:800;
-    text-transform:uppercase;
-    margin-bottom:14px;
-}
-
-.notice{
-    margin-top:25px;
-    background:#fff7ed;
-    border:1px solid #fed7aa;
-    color:#9a3412;
-    padding:16px 18px;
-    border-radius:12px;
-    font-size:13px;
-    width:100%;
-    max-width:100%;
-}
-
-/* BENCHMARK */
-
-.benchmark,
-.pattern-grid,
-.problem-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:35px;
-}
-
-.company{
-    font-size:20px;
-    font-weight:800;
-    margin-bottom:4px;
-}
-
-.company-note{
-    color:var(--muted);
-    font-size:11px;
-    margin-bottom:18px;
-}
-
-.benchmark-number{
-    font-size:30px;
-    font-weight:800;
-    color:var(--orange);
-}
-
-.benchmark-label{
-    font-size:12px;
-    color:#475467;
-    margin-bottom:14px;
-}
-
-.benchmark-source{
-    font-size:11px;
-    color:var(--blue);
-    padding-top:10px;
-    border-top:1px solid var(--line);
-}
-
-/* DISCOVERY */
-
-.pattern-icon{font-size:25px;margin-bottom:12px}
-.pattern h3{margin-bottom:7px}
-.pattern p,.problem-card p{color:var(--muted);font-size:13px;width:100%;max-width:100%;}
-
-/* SIMULATED DATA */
-
-.simulated{background:#f1f5f9}
-
-.simulated-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-top:35px;
-}
-
-.sim-card{
-    background:white;
-    border:1px solid var(--line);
-    border-radius:15px;
-    padding:22px;
-}
-
-.sim-card .number{
-    font-size:30px;
-    font-weight:800;
-    color:var(--blue);
-}
-
-.sim-card small{
-    color:var(--muted);
-    font-size:11px;
-}
-
-.sim-badge,
-.proposed{
-    display:inline-block;
-    background:var(--blue-light);
-    color:var(--blue);
-    padding:4px 7px;
-    border-radius:5px;
-    font-size:9px;
-    font-weight:800;
-    margin-bottom:10px;
-}
-
-/* BOARD */
-
-.board-section{background:#eef0f4}
-
-.board{
-    background:#dfe3e8;
-    padding:20px;
-    border-radius:18px;
-    overflow-x:auto;
-    margin-top:35px;
-}
-
-.board-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:18px;
-    min-width:1050px;
-}
-
-.board-title{font-weight:800}
-.board-meta{font-size:12px;color:#667085}
-
-.swimlanes{
-    min-width:1050px;
-    display:grid;
-    gap:10px;
-}
-
-.lane{
-    display:grid;
-    grid-template-columns:150px repeat(4,1fr);
-    gap:10px;
-}
-
-.lane-name,
-.board-cell{
-    background:#f8f9fb;
-    border-radius:10px;
-}
-
-.lane-name{
-    padding:14px;
-    font-size:13px;
-    font-weight:800;
-}
-
-.board-cell{
-    min-height:125px;
-    padding:11px;
-}
-
-.column-title{
-    font-size:11px;
-    text-transform:uppercase;
-    color:#667085;
-    font-weight:800;
-}
-
-.sticky{
-    background:white;
-    border:1px solid #d9dde3;
-    border-left:4px solid var(--orange);
-    border-radius:8px;
-    padding:11px;
-    font-size:12px;
-    box-shadow:0 2px 5px rgba(0,0,0,.04);
-}
-
-.sticky.blue{border-left-color:var(--blue)}
-.sticky.green{border-left-color:var(--green)}
-.sticky.red{border-left-color:var(--red)}
-.sticky.purple{border-left-color:var(--purple)}
-
-.sticky strong{
-    display:block;
-    font-size:12px;
-    margin-bottom:4px;
-}
-
-/* PROBLEM */
-
-.problem-card .number{
-    color:var(--red);
-    font-size:11px;
-    font-weight:800;
-    margin-bottom:16px;
-}
-
-.problem-card h3{margin-bottom:7px}
-
-/* LEGAL */
-
-.legal-section{background:white}
-
-.legal-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:35px;
-}
-
-.legal-card{background:#fafafa}
-
-.legal-card .tag{
-    display:inline-block;
-    background:var(--purple-light);
-    color:var(--purple);
-    padding:5px 8px;
-    border-radius:5px;
-    font-size:10px;
-    font-weight:800;
-    margin-bottom:13px;
-}
-
-.legal-card h3{
-    font-size:17px;
-    margin-bottom:7px;
-}
-
-.legal-card p{
-    color:var(--muted);
-    font-size:13px;
-    width:100%;
-    max-width:100%;
-}
-
-/* SOLUTION */
-
-.solution{background:#f1f5f9}
-
-.solution-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
-    align-items:center;
-    margin-top:40px;
-}
-
-.solution-box{
-    background:white;
-    border-radius:18px;
-    padding:28px;
-    border:1px solid var(--line);
-}
-
-.solution-step{
-    display:flex;
-    gap:15px;
-    padding:15px 0;
-    border-bottom:1px solid var(--line);
-}
-
-.solution-step:last-child{border-bottom:none}
-
-.step-number{
-    width:30px;
-    height:30px;
-    background:var(--dark);
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:12px;
-    flex-shrink:0;
-}
-
-.solution-step strong{display:block}
-.solution-step span{color:var(--muted);font-size:13px}
-
-.product-screen{
-    background:var(--dark);
-    border-radius:28px;
-    padding:12px;
-    width:100%;
-    max-width:360px;
-    margin:auto;
-    box-shadow:0 25px 50px rgba(0,0,0,.15);
-}
-
-.screen{
-    background:white;
-    border-radius:20px;
-    padding:24px;
-}
-
-.screen-top{
-    font-size:12px;
-    color:#667085;
-    margin-bottom:22px;
-}
-
-.order-status{
-    background:var(--orange-light);
-    padding:14px;
-    border-radius:10px;
-    margin:14px 0;
-}
-
-.order-status strong{
-    display:block;
-    color:#c2410c;
-}
-
-.screen-text{
-    font-size:12px;
-    color:#667085;
-}
-
-.action{
-    display:block;
-    background:var(--dark);
-    color:white;
-    text-align:center;
-    padding:11px;
-    border-radius:8px;
-    font-size:12px;
-    font-weight:700;
-    margin-top:10px;
-}
-
-.action.secondary{
-    background:white;
-    color:var(--text);
-    border:1px solid #ddd;
-}
-
-/* METRICS */
-
-.metrics-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-    margin-top:35px;
-}
-
-.metric-card h3{margin-bottom:7px}
-
-.metric-card p{
-    color:var(--muted);
-    font-size:14px;
-    width:100%;
-    max-width:100%;
-}
-
-/* TAKEAWAY */
-
-.takeaway{
-    background:var(--dark);
-    color:white;
-}
-
-.takeaway-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
-}
-
-.takeaway p{
-    color:#aab1bd;
-    margin-top:14px;
-    width:100%;
-    max-width:100%;
-}
-
-.takeaway-list{list-style:none}
-
-.takeaway-list li{
-    padding:11px 0;
-    border-bottom:1px solid #333b48;
-}
-
-.takeaway-list li::before{
-    content:"→";
-    color:var(--orange);
-    margin-right:10px;
-}
-
-/* SKILLS */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-top:30px;
-}
-
-.skill{
-    background:white;
-    border:1px solid var(--line);
-    padding:9px 14px;
-    border-radius:25px;
-    font-size:13px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#0b0f16;
-    color:white;
-    padding:60px 0;
-}
-
-.footer-grid{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:30px;
-}
-
-.footer-links{
-    display:flex;
-    gap:10px;
-}
-
-.footer-links a{
-    border:1px solid #343b48;
-    padding:10px 15px;
-    border-radius:8px;
-    font-size:13px;
-}
-
-.footer-links a:hover{
-    border-color:var(--orange);
-    color:var(--orange);
-}
-
-.disclaimer{
-    border-top:1px solid #252c37;
-    margin-top:40px;
-    padding-top:18px;
-    color:#667085;
-    font-size:11px;
-    width:100%;
-    max-width:100%;
-}
-
-/* RESPONSIVE */
-
+section{padding:80px 0}.section-label{color:var(--orange);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+h2{font-size:40px;line-height:1.15;letter-spacing:-1.5px}.section-description{color:var(--muted);width:100%;max-width:100%;margin-top:12px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:15px;padding:25px}.mt40{margin-top:40px}
+.hero{padding:100px 0 80px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.badge{display:inline-flex;background:var(--orange-light);color:#c2410c;border-radius:30px;padding:7px 13px;font-size:12px;font-weight:800;margin-bottom:22px}
+h1{font-size:clamp(45px,6vw,76px);line-height:1;letter-spacing:-4px;margin-bottom:22px}h1 span{color:var(--orange)}
+.hero-description{color:var(--muted);font-size:19px;width:100%;max-width:100%;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}.button{padding:12px 19px;border-radius:9px;border:1px solid var(--dark);font-size:14px;font-weight:700}
+.button.primary{background:var(--dark);color:white}.button.secondary{background:white}
+.hero-panel{background:var(--dark);color:white;padding:30px;border-radius:20px;box-shadow:0 20px 45px rgba(0,0,0,.12)}
+.hero-panel small{color:#98a2b3;text-transform:uppercase;letter-spacing:1px}.hero-panel h2{font-size:30px;line-height:1.15;margin:55px 0}.hero-panel span{color:var(--orange)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.about-text p{color:#475467;margin-bottom:16px;width:100%;max-width:100%}.about-card p{color:var(--muted);margin-top:8px;width:100%;max-width:100%}
+.case-intro{background:var(--dark);color:white}.case-top{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end}
+.case-title{font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-3px}.case-subtitle{color:#aab1bd;width:100%;max-width:100%}
+.study-tag{display:inline-block;color:var(--orange);font-size:12px;font-weight:800;text-transform:uppercase;margin-bottom:14px}
+.notice{margin-top:25px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:16px 18px;border-radius:12px;font-size:13px;width:100%;max-width:100%}
+.benchmark,.pattern-grid,.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.company{font-size:20px;font-weight:800;margin-bottom:4px}.company-note{color:var(--muted);font-size:11px;margin-bottom:18px}
+.benchmark-number{font-size:30px;font-weight:800;color:var(--orange)}.benchmark-label{font-size:12px;color:#475467;margin-bottom:14px}
+.benchmark-source{font-size:11px;color:var(--blue);padding-top:10px;border-top:1px solid var(--line)}
+.pattern-icon{font-size:25px;margin-bottom:12px}.pattern h3{margin-bottom:7px}.pattern p,.problem-card p{color:var(--muted);font-size:13px;width:100%;max-width:100%}
+.simulated{background:#f1f5f9}.simulated-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:35px}
+.sim-card{background:white;border:1px solid var(--line);border-radius:15px;padding:22px}.sim-card .number{font-size:30px;font-weight:800;color:var(--blue)}
+.sim-card small{color:var(--muted);font-size:11px}.sim-badge,.proposed{display:inline-block;background:var(--blue-light);color:var(--blue);padding:4px 7px;border-radius:5px;font-size:9px;font-weight:800;margin-bottom:10px}
+.board-section{background:#eef0f4}.board{background:#dfe3e8;padding:20px;border-radius:18px;overflow-x:auto;margin-top:35px}
+.board-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;min-width:1050px}.board-title{font-weight:800}.board-meta{font-size:12px;color:#667085}
+.swimlanes{min-width:1050px;display:grid;gap:10px}.lane{display:grid;grid-template-columns:150px repeat(4,1fr);gap:10px}
+.lane-name,.board-cell{background:#f8f9fb;border-radius:10px}.lane-name{padding:14px;font-size:13px;font-weight:800}.board-cell{min-height:125px;padding:11px}
+.column-title{font-size:11px;text-transform:uppercase;color:#667085;font-weight:800}
+.sticky{background:white;border:1px solid #d9dde3;border-left:4px solid var(--orange);border-radius:8px;padding:11px;font-size:12px;box-shadow:0 2px 5px rgba(0,0,0,.04)}
+.sticky.blue{border-left-color:var(--blue)}.sticky.green{border-left-color:var(--green)}.sticky.red{border-left-color:var(--red)}.sticky.purple{border-left-color:var(--purple)}
+.sticky strong{display:block;font-size:12px;margin-bottom:4px}
+.problem-card .number{color:var(--red);font-size:11px;font-weight:800;margin-bottom:16px}.problem-card h3{margin-bottom:7px}
+.legal-section{background:white}.legal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px}
+.legal-card{background:#fafafa}.legal-card .tag{display:inline-block;background:var(--purple-light);color:var(--purple);padding:5px 8px;border-radius:5px;font-size:10px;font-weight:800;margin-bottom:13px}
+.legal-card h3{font-size:17px;margin-bottom:7px}.legal-card p{color:var(--muted);font-size:13px;width:100%;max-width:100%}
+.solution{background:#f1f5f9}.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;margin-top:40px}
+.solution-box{background:white;border-radius:18px;padding:28px;border:1px solid var(--line)}
+.solution-step{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}.solution-step:last-child{border-bottom:none}
+.step-number{width:30px;height:30px;background:var(--dark);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.solution-step strong{display:block}.solution-step span{color:var(--muted);font-size:13px}
+.product-screen{background:var(--dark);border-radius:28px;padding:12px;width:100%;max-width:360px;margin:auto;box-shadow:0 25px 50px rgba(0,0,0,.15)}
+.screen{background:white;border-radius:20px;padding:24px}.screen-top{font-size:12px;color:#667085;margin-bottom:22px}
+.order-status{background:var(--orange-light);padding:14px;border-radius:10px;margin:14px 0}.order-status strong{display:block;color:#c2410c}
+.screen-text{font-size:12px;color:#667085}.action{display:block;background:var(--dark);color:white;text-align:center;padding:11px;border-radius:8px;font-size:12px;font-weight:700;margin-top:10px}
+.action.secondary{background:white;color:var(--text);border:1px solid #ddd}
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.metric-card h3{margin-bottom:7px}.metric-card p{color:var(--muted);font-size:14px;width:100%;max-width:100%}
+.takeaway{background:var(--dark);color:white}.takeaway-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px}.takeaway p{color:#aab1bd;margin-top:14px;width:100%;max-width:100%}
+.takeaway-list{list-style:none}.takeaway-list li{padding:11px 0;border-bottom:1px solid #333b48}.takeaway-list li::before{content:"→";color:var(--orange);margin-right:10px}
+.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}.skill{background:white;border:1px solid var(--line);padding:9px 14px;border-radius:25px;font-size:13px}
+footer{background:#0b0f16;color:white;padding:60px 0}.footer-grid{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.footer-links{display:flex;gap:10px}.footer-links a{border:1px solid #343b48;padding:10px 15px;border-radius:8px;font-size:13px}.footer-links a:hover{border-color:var(--orange);color:var(--orange)}
+.disclaimer{border-top:1px solid #252c37;margin-top:40px;padding-top:18px;color:#667085;font-size:11px;width:100%;max-width:100%}
+.cluster-flow{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:30px;font-weight:800}
+.flow-step{background:white;border:1px solid var(--line);border-radius:12px;padding:14px 18px}.flow-arrow{color:var(--orange);font-size:20px}
+.cluster-table{width:100%;border-collapse:collapse;margin-top:25px;background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.cluster-table th,.cluster-table td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:13px}
+.cluster-table th{background:#f8f9fb}.cluster-table tr:last-child td{border-bottom:none}
+.chatbot-box{background:var(--purple-light);border:1px solid #ddd6fe;color:#4c1d95;border-radius:15px;padding:20px;margin-top:18px}
 @media(max-width:850px){
-    .nav-links{display:none}
-
-    .hero-grid,
-    .case-top,
-    .about-grid,
-    .solution-grid,
-    .takeaway-grid{
-        grid-template-columns:1fr;
-    }
-
-    .benchmark,
-    .pattern-grid,
-    .problem-grid,
-    .legal-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .simulated-grid{grid-template-columns:1fr 1fr}
-
-    .footer-grid{
-        flex-direction:column;
-        align-items:flex-start;
-    }
+.nav-links{display:none}.hero-grid,.case-top,.about-grid,.solution-grid,.takeaway-grid{grid-template-columns:1fr}
+.benchmark,.pattern-grid,.problem-grid,.legal-grid{grid-template-columns:1fr 1fr}.simulated-grid{grid-template-columns:1fr 1fr}
+.footer-grid{flex-direction:column;align-items:flex-start}
 }
-
 @media(max-width:550px){
-    section{padding:65px 0}
-
-    h2{font-size:32px}
-
-    h1{
-        letter-spacing:-2px;
-        font-size:48px;
-    }
-
-    .hero{padding:70px 0}
-
-    .benchmark,
-    .pattern-grid,
-    .problem-grid,
-    .simulated-grid,
-    .legal-grid,
-    .metrics-grid{
-        grid-template-columns:1fr;
-    }
-
-    .hero-panel h2{margin:40px 0}
+section{padding:65px 0}h2{font-size:32px}h1{letter-spacing:-2px;font-size:48px}.hero{padding:70px 0}
+.benchmark,.pattern-grid,.problem-grid,.simulated-grid,.legal-grid,.metrics-grid{grid-template-columns:1fr}.hero-panel h2{margin:40px 0}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="container">
-<nav>
+<header><div class="container"><nav>
 <a href="#" class="logo">Ana<span>.</span></a>
-<ul class="nav-links">
-<li><a href="#sobre">Sobre</a></li>
-<li><a href="#case1">Case 01</a></li>
-<li><a href="#case2">Case 02</a></li>
-<li><a href="#contato">Contato</a></li>
-</ul>
-</nav>
-</div>
-</header>
+<ul class="nav-links"><li><a href="#sobre">Sobre</a></li><li><a href="#case1">Case 01</a></li><li><a href="#case2">Case 02</a></li><li><a href="#contato">Contato</a></li></ul>
+</nav></div></header>
 
-<section class="hero">
-<div class="container hero-grid">
-<div>
+<section class="hero"><div class="container hero-grid"><div>
 <div class="badge">PRODUCT MANAGEMENT · LEGAL PRODUCT</div>
 <h1>Direito + Produto + <span>Tecnologia.</span></h1>
-<p class="hero-description">
-Advogada de Direito Bancário em transição para Product Management,
-explorando como visão jurídica, experiência do cliente e tecnologia
-podem contribuir para produtos digitais melhores.
-</p>
-<div class="buttons">
-<a href="#case1" class="button primary">Ver Cases</a>
-<a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank" class="button secondary">LinkedIn</a>
-</div>
-</div>
+<p class="hero-description">Advogada de Direito Bancário em transição para Produtos digitais, atuando em áreas como PM, PO ou analista de produtos.</p>
+<div class="buttons"><a href="#case1" class="button primary">Ver Cases</a><a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank" class="button secondary">LinkedIn</a></div>
+</div><div class="hero-panel"><small>Minha abordagem</small><h2>Investigar o problema antes de <span>desenhar a solução.</span></h2><small>Customer · Business · Technology · Legal</small></div>
+</div></section>
 
-<div class="hero-panel">
-<small>Minha abordagem</small>
-<h2>Investigar o problema antes de <span>desenhar a solução.</span></h2>
-<small>Customer · Business · Technology · Legal</small>
-</div>
-</div>
-</section>
+<section id="sobre"><div class="container">
+<div class="section-label">01 — Sobre</div><h2>Uma perspectiva jurídica aplicada a Produto.</h2>
+<p class="section-description">Minha experiência no Direito Bancário desenvolveu competências em análise de riscos, contratos, interpretação normativa, resolução de problemas e comunicação com diferentes áreas.</p>
+<div class="about-grid mt40"><div class="about-text">
+<p>Ao conhecer Produtos digitais, encontrei uma área que conecta essas habilidades com tecnologia, negócio e experiência do cliente.</p>
+<p>Minha proposta é utilizar o conhecimento jurídico não apenas para identificar riscos, mas para participar da construção de soluções mais claras, seguras e eficientes.</p>
+</div><div class="card about-card"><strong>Meu foco</strong><p>Produtos e serviços digitais, nas áreas financeiras, mobilidade, logística e marketplaces nos quais experiência do cliente, negócio, tecnologia e regulação precisam caminhar juntos.</p></div></div>
+</div></section>
 
-<section id="sobre">
-<div class="container">
-<div class="section-label">01 — Sobre</div>
-<h2>Uma perspectiva jurídica aplicada a Produto.</h2>
-<p class="section-description">
-Minha experiência no Direito Bancário desenvolveu competências em
-análise de riscos, contratos, interpretação normativa, resolução
-de problemas e comunicação com diferentes áreas.
-</p>
-
-<div class="about-grid mt40">
-<div class="about-text">
-<p>
-Ao conhecer Product Management, encontrei uma área que conecta
-essas habilidades com tecnologia, negócio e experiência do cliente.
-</p>
-<p>
-Minha proposta é utilizar o conhecimento jurídico não apenas para
-identificar riscos, mas para participar da construção de soluções
-mais claras, seguras e eficientes.
-</p>
+<section id="case1" class="case-intro"><div class="container"><div class="case-top"><div>
+<div class="study-tag">CASE 01 FICTÍCIO · PRODUTO DIGITAL</div><h2 class="case-title">SuccessTrail<br>Jornada de pós-compra</h2>
+</div><p class="case-subtitle">Como reduzir a fricção na resolução de problemas após uma compra em um produto digital?<br><br>A SuccessTrail é uma empresa fictícia criada para este projeto de portfólio.</p>
 </div>
+<div class="notice"><strong>Nota metodológica:</strong> Os dados internos da Nexa Market são simulados exclusivamente para fins de estudos na descoberta de produtos digitais. As referências externas são utilizadas apenas como benchmark baseado em informações públicas.</div>
+</div></section>
 
-<div class="card about-card">
-<strong>Meu foco</strong>
-<p>
-Produtos e serviços digitais, especialmente em ambientes
-financeiros, mobilidade, logística e marketplaces nos quais experiência
-do cliente, negócio, tecnologia e regulação precisam caminhar juntos.
-</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== CASE 01: NEXA MARKET ==================== -->
-
-<section id="case1" class="case-intro">
-<div class="container">
-<div class="case-top">
-<div>
-<div class="study-tag">CASE 01 FICTÍCIO · PRODUTO DIGITAL</div>
-<h2 class="case-title">Nexa Market<br>Jornada de pós-compra</h2>
-</div>
-
-<p class="case-subtitle">
-Como reduzir a fricção na resolução de problemas após uma compra
-em um produto digital?
-<br><br>
-A Nexa Market é uma empresa fictícia criada para este projeto
-de portfólio.
-</p>
-</div>
-
-<div class="notice">
-<strong>Nota metodológica:</strong>
-Os dados internos da Nexa Market são simulados exclusivamente para
-fins de exercício de Product Management. As referências externas
-são utilizadas apenas como benchmark baseado em informações públicas.
-</div>
-</div>
-</section>
-
-<section id="benchmark">
-<div class="container">
-<div class="section-label">02 — Benchmark público (Sinais de Mercado)</div>
-<h2>Por que analisar dados públicos do Reclame Aqui?</h2>
-<p class="section-description">
-Antes de desenhar a solução da Nexa, analisei indicadores de diferentes setores no Reclame Aqui. O objetivo não foi comparar marcas, mas entender a causa-raiz da insatisfação no pós-compra: <strong>o cliente recorre a canais públicos quando perde a confiança na capacidade de resolução do próprio app.</strong>
-</p>
-
+<section id="benchmark"><div class="container">
+<div class="section-label">02 — Benchmark público</div><h2>Por que analisar dados públicos do Reclame Aqui?</h2>
+<p class="section-description">Os dados públicos do Reclame Aqui ajudam a entender sinais de insatisfação e, principalmente, a relação entre a experiência de resolução e a intenção de voltar a comprar. O objetivo é usar esses sinais como referência para formular hipóteses de produto, e não como retrato dos dados internos da SuccessTrail.</p>
 <div class="benchmark">
-
-<div class="card benchmark-card">
-<div class="company">Setor bancário</div>
-<div class="company-note">Referência pública · Reclame Aqui</div>
-<div class="benchmark-number">35,4%</div>
-<div class="benchmark-label">reclamações resolvidas</div>
-<div class="benchmark-number">27,1%</div>
-<div class="benchmark-label">voltariam a fazer negócio</div>
-<div class="benchmark-source">Fonte: Reclame Aqui</div>
+<div class="card benchmark-card"><div class="company">Exemplo de leitura</div><div class="company-note">Relação entre prazo de entrega e recompra</div><div class="benchmark-number">1.000</div><div class="benchmark-label">clientes que receberam no prazo</div><div class="benchmark-number">→ recompra</div><div class="benchmark-label">maior propensão a voltar a comprar</div><div class="benchmark-source">Hipótese de análise · dados internos simulados</div></div>
+<div class="card benchmark-card"><div class="company">Atraso na entrega</div><div class="company-note">Exemplo para explicar a taxa de atraso</div><div class="benchmark-number">1.000</div><div class="benchmark-label">clientes que não receberam no prazo</div><div class="benchmark-number">→ menor recompra</div><div class="benchmark-label">maior risco de perda de confiança</div><div class="benchmark-source">Hipótese de análise · não representa dado público real</div></div>
+<div class="card benchmark-card"><div class="company">O que observar</div><div class="company-note">Sinal de negócio</div><div class="benchmark-number">Pós-compra</div><div class="benchmark-label">momento crítico da jornada</div><div class="benchmark-number">Confiança</div><div class="benchmark-label">impacta resolução e recompra</div><div class="benchmark-source">Benchmark qualitativo</div></div>
 </div>
+<div class="notice"><strong>Como interpretar a taxa de atraso:</strong> se, em uma base hipotética de 1.000 clientes, os que receberam dentro do prazo apresentam maior taxa de recompra do que os que receberam depois do prazo, o atraso funciona como um sinal de possível impacto na retenção. A análise precisa ser validada com dados reais antes de virar uma meta de negócio.</div>
+</div></section>
 
-<div class="card benchmark-card">
-<div class="company">Setor de marketplace</div>
-<div class="company-note">Referência pública · Reclame Aqui</div>
-<div class="benchmark-number">64,2%</div>
-<div class="benchmark-label">reclamações resolvidas</div>
-<div class="benchmark-number">61,6%</div>
-<div class="benchmark-label">voltariam a fazer negócio</div>
-<div class="benchmark-source">Fonte: Reclame Aqui</div>
-</div>
-
-<div class="card benchmark-card">
-<div class="company">Setor de serviços</div>
-<div class="company-note">Referência pública · Reclame Aqui</div>
-<div class="benchmark-number">87%</div>
-<div class="benchmark-label">reclamações resolvidas</div>
-<div class="benchmark-number">78,1%</div>
-<div class="benchmark-label">voltariam a fazer negócio</div>
-<div class="benchmark-source">Fonte: Reclame Aqui</div>
-</div>
-
-</div>
-
-<div class="notice">
-<strong>Conexão Estratégica:</strong>
-Setores com maior taxa de "volta a fazer negócio" são aqueles que entregam <strong>previsibilidade e autonomia</strong> na resolução. O desafio da Nexa é trazer essa capacidade de solução para dentro do aplicativo, evitando o transbordo para órgãos externos e suporte humano.
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-label">03 — Discovery & Hipóteses</div>
-<h2>Quais padrões aprendidos no mercado foram aplicados na Nexa?</h2>
-<p class="section-description">
-Cruzando os sinais do Reclame Aqui com as dores típicas de e-commerce, estruturei o Discovery da Nexa Market focado nos 3 pilares que mais geram atrito pós-venda.
-</p>
-
+<section><div class="container">
+<div class="section-label">03 — Discovery & Hipóteses</div><h2>Quais as possíveis hipóteses de solução do problema?</h2>
 <div class="pattern-grid">
+<div class="card pattern"><div class="pattern-icon">📦</div><h3>Previsibilidade Proativa</h3><p>Reduzir a ansiedade informando o status antes do cliente precisar perguntar (evita abertura de tickets e reclamações externas).</p></div>
+<div class="card pattern"><div class="pattern-icon">🔄</div><h3>Autonomia de Resolução</h3><p>Oferecer opções claras e self-service (reembolso, novo envio ou voucher) direto no app em poucos cliques.</p></div>
+<div class="card pattern"><div class="pattern-icon">👤</div><h3>Clareza de Ownership</h3><p>Transparência sobre quem está conduzindo o problema, deixando claro o próximo passo e a responsabilidade pela resolução.</p></div>
+</div></div></section>
 
-<div class="card pattern">
-<div class="pattern-icon">📦</div>
-<h3>Previsibilidade Proativa</h3>
-<p>
-Reduzir a ansiedade informando o status antes do cliente precisar perguntar (evita abertura de tickets e reclamações externas).
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">🔄</div>
-<h3>Autonomia de Resolução</h3>
-<p>
-Oferecer opções claras e self-service (reembolso, novo envio ou voucher) direto no app em poucos cliques.
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">👤</div>
-<h3>Clareza de Ownership</h3>
-<p>
-Transparência sobre quem está conduzindo o problema (Nexa vs. Parceiro Logístico), estabelecendo SLAs reais.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="simulated">
-<div class="container">
-<div class="section-label">04 — Dados da Nexa</div>
-<h2>Diagnosticando o problema interno na Nexa.</h2>
-<p class="section-description">
-Com base no aprendizado de mercado, simulamos o cenário da Nexa Market para identificar onde a retenção de clientes estava sendo afetada.
-</p>
-
+<section class="simulated"><div class="container">
+<div class="section-label">04 — Dados da SuccessTrail</div><h2>Diagnosticando o problema interno na SuccessTrail.</h2>
+<p class="section-description">O diagnóstico foi construído a partir da análise dos dados simulados e da aplicação de LLM para identificar padrões nas reclamações e recontatos.</p>
 <div class="simulated-grid">
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">8,4%</div><strong>pedidos com atraso</strong><small>Base hipotética de 100 mil pedidos/mês</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">62%</div><strong>dos contatos são sobre atraso</strong><small>Sinal de fricção concentrado no pós-compra</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">38%</div><strong>taxa de recontato</strong><small>Clientes sem resposta clara voltam a procurar</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">4,2 dias</div><strong>tempo médio de resolução</strong><small>Prazo alto que aumenta a fricção</small></div>
+</div></div></section>
 
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">8,4%</div>
-<strong>pedidos com atraso</strong>
-<small>Base hipotética de 100 mil pedidos/mês</small>
-</div>
+<section class="board-section"><div class="container">
+<div class="section-label">05 — Análise de reclamações</div><h2>Onde a experiência e a confiança quebram?</h2>
+<p class="section-description">A partir dos dados analisados com LLM, foi possível identificar padrões recorrentes nas reclamações e recontatos e localizar os principais pontos de quebra da experiência.</p>
+<div class="cluster-flow"><div class="flow-step">Texto da reclamação/recontato</div><div class="flow-arrow">→</div><div class="flow-step">Embedding</div><div class="flow-arrow">→</div><div class="flow-step">Clusterização</div><div class="flow-arrow">→</div><div class="flow-step">Tema do cluster</div></div>
+<table class="cluster-table"><thead><tr><th>Cluster</th><th>Possível motivo identificado</th></tr></thead><tbody>
+<tr><td>1</td><td>Pedido atrasado além do prazo</td></tr><tr><td>2</td><td>Pedido parado no centro de distribuição</td></tr><tr><td>3</td><td>Transportadora não atualiza rastreio</td></tr><tr><td>4</td><td>Pedido consta como entregue, mas não foi recebido</td></tr><tr><td>5</td><td>Cliente entrou em contato várias vezes pelo mesmo atraso</td></tr><tr><td>6</td><td>Previsão de entrega alterada</td></tr><tr><td>7</td><td>Pedido cancelado por atraso</td></tr><tr><td>8</td><td>Atraso relacionado à região/CEP</td></tr>
+</tbody></table>
+<div class="card" style="margin-top:25px"><h3>Exemplo de interpretação pelo LLM</h3><p style="color:var(--muted);font-size:13px;margin-top:8px">Cluster 17: “pedido atrasado há 5 dias”, “entrega não chegou”, “já passou o prazo”, “quero saber onde está minha encomenda”.</p><p style="color:var(--muted);font-size:13px;margin-top:8px"><strong>A IA poderia gerar:</strong> Cluster 17 — Atraso após vencimento do prazo de entrega.</p><p style="color:var(--muted);font-size:13px;margin-top:8px"><strong>Hierarquia:</strong> Entregas → Atrasos → Prazo vencido.</p></div>
+<div class="notice"><strong>Nota de método:</strong> O LLM é utilizado depois da clusterização para interpretar, nomear e organizar os grupos. Ele apoia o diagnóstico; a priorização ainda depende de impacto, frequência, esforço e validação com dados.</div>
+</div></section>
 
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">62%</div>
-<strong>dos contatos são sobre atraso</strong>
-<small>Sintoma claro de falta de visibilidade</small>
-</div>
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">38%</div>
-<strong>taxa de recontato</strong>
-<small>Clientes sem resposta clara voltam a procurar</small>
-</div>
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">4,2 dias</div>
-<strong>tempo médio de resolução</strong>
-<small>Prazo alto que estimula reclamações externas</small>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="board-section">
-<div class="container">
-<div class="section-label">05 — Customer Journey</div>
-<h2>Onde a experiência e a confiança quebram?</h2>
-<p class="section-description">
-Mapeei a jornada como um board de produto, evidenciando o momento em que a falta de suporte interno força o cliente a buscar solução fora do ecossistema da marca.
-</p>
-
-<div class="board">
-<div class="board-header">
-<div class="board-title">Nexa Market · Jornada pós-compra</div>
-<div class="board-meta">Discovery board · hipótese de produto</div>
-</div>
-
-<div class="swimlanes">
-
-<div class="lane">
-<div></div>
-<div class="column-title">Compra</div>
-<div class="column-title">Pedido</div>
-<div class="column-title">Problema</div>
-<div class="column-title">Resolução</div>
-</div>
-
-<div class="lane">
-<div class="lane-name">👤 Cliente</div>
-<div class="board-cell"><div class="sticky blue"><strong>Compra</strong>Realiza o pedido.</div></div>
-<div class="board-cell"><div class="sticky"><strong>Acompanha</strong>Espera atualização.</div></div>
-<div class="board-cell"><div class="sticky red"><strong>⚠ Dor</strong>Pedido atrasado / sem status.</div></div>
-<div class="board-cell"><div class="sticky green"><strong>Resultado</strong>Ação self-service no app.</div></div>
-</div>
-
-<div class="lane">
-<div class="lane-name">🧩 Produto</div>
-<div class="board-cell"><div class="sticky blue"><strong>Status</strong>Pedido criado.</div></div>
-<div class="board-cell"><div class="sticky"><strong>Tracking</strong>Mostra evolução.</div></div>
-<div class="board-cell"><div class="sticky red"><strong>Gap</strong>Atendimento passivo/lento.</div></div>
-<div class="board-cell"><div class="sticky green"><strong>Opportunity</strong>Central de Resolução.</div></div>
-</div>
-
-<div class="lane">
-<div class="lane-name">🏪 Parceiro</div>
-<div class="board-cell"><div class="sticky purple"><strong>Venda</strong>Processa pedido.</div></div>
-<div class="board-cell"><div class="sticky purple"><strong>Logística</strong>Entrega.</div></div>
-<div class="board-cell"><div class="sticky red"><strong>Escalonamento</strong>Falta de SLA visível.</div></div>
-<div class="board-cell"><div class="sticky green"><strong>SLA</strong>Integração proativa.</div></div>
-</div>
-
-<div class="lane">
-<div class="lane-name">⚖ Jurídico</div>
-<div class="board-cell"><div class="sticky purple"><strong>Oferta</strong>Regras aplicáveis.</div></div>
-<div class="board-cell"><div class="sticky purple"><strong>Contratos</strong>Papéis definidos.</div></div>
-<div class="board-cell"><div class="sticky red"><strong>Legal risk</strong>Transbordo para Procon/RA.</div></div>
-<div class="board-cell"><div class="sticky green"><strong>Guardrail</strong>Legal by design + Trava de Risco.</div></div>
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-label">06 — Problem Framing</div>
-<h2>A definição dos problemas prioritários.</h2>
-
+<section><div class="container">
+<div class="section-label">06 — Problem Framing</div><h2>A definição dos problemas prioritários.</h2>
+<p class="section-description">Os problemas prioritários foram definidos a partir dos padrões encontrados na análise com LLM, combinando frequência dos temas, impacto na experiência e potencial de resolução por produto.</p>
 <div class="problem-grid">
+<div class="card problem-card"><div class="number">PROBLEMA 01</div><h3>Falta de previsibilidade proativa</h3><p>O cliente descobre o atraso quando a data passa, sem aviso claro do produto. Isso gera perda de confiança e novos contatos.</p></div>
+<div class="card problem-card"><div class="number">PROBLEMA 02</div><h3>Custo de recontato</h3><p>Sem resposta rápida e acionável, o cliente procura novamente a empresa em diferentes canais, aumentando o custo operacional.</p></div>
+<div class="card problem-card"><div class="number">PROBLEMA 03</div><h3>Falta de opcionalidade</h3><p>O cliente identifica o problema, mas não encontra caminhos claros para aceitar um novo prazo, solicitar reembolso ou receber uma compensação.</p></div>
+</div></div></section>
 
-<div class="card problem-card">
-<div class="number">PROBLEMA 01</div>
-<h3>Falta de previsibilidade proativa</h3>
-<p>
-O cliente descobre o atraso quando a data passa, sem aviso do app. Isso gera perda de confiança imediata.
-</p>
-</div>
-
-<div class="card problem-card">
-<div class="number">PROBLEMA 02</div>
-<h3>Custo de recontato (38%)</h3>
-<p>
-Sem resposta rápida no app, o cliente aciona múltiplos canais (chat, telefone, Reclame Aqui), encarecendo a operação.
-</p>
-</div>
-
-<div class="card problem-card">
-<div class="number">PROBLEMA 03</div>
-<h3>Falta de opcionalidade</h3>
-<p>
-O cliente quer resolver o problema sozinho (cancelar, pedir estorno), mas fica preso aguardando atendimento humano.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="legal-section">
-<div class="container">
-<div class="section-label">07 — Legal Lens</div>
-<h2>Conectando os direitos do consumidor às regras do produto</h2>
-<p class="section-description">
-A perspectiva jurídica garante que as regras de cancelamento, estorno e garantia estejam em conformidade com o CDC (Código de Defesa do Consumidor), transformando exigências legais em jornadas simples e protegidas contra fraudes.
-</p>
-
-<div class="legal-grid">
-
-<div class="card legal-card">
-<span class="tag">CONSUMIDOR</span>
-<h3>Direito à Informação</h3>
-<p>
-Transparência total nos prazos e motivos do atraso, conforme o Art. 6º do CDC, reduzindo contestações.
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">OFERTA</span>
-<h3>Cumprimento Forçado</h3>
-<p>
-Automação do Art. 35 do CDC: oferecer opções imediatas (troca, estorno ou aceite de novo prazo) condicionadas à confirmação do status logístico.
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">RESPONSABILIDADE</span>
-<h3>Cadeia de Fornecimento</h3>
-<p>
-Acordos de SLA claros com parceiros logísticos para repasse de custos decorrentes de falhas na entrega.
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">PRODUTO</span>
-<h3>Legal by Design & Risk Control</h3>
-<p>
-Self-service com motor de regras: casos elegíveis são automatizados; situações suspeitas/sem confirmação passam por triagem de supervisão humana.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="solucao" class="solution">
-<div class="container">
-<div class="section-label">08 — Solution</div>
-<h2>Central de Resolução Pós-Compra.</h2>
-<p class="section-description">
-A resposta ao benchmark e aos dados internos: uma interface em que o cliente resolve o atraso com 1 clique, com validações de segurança em background para proteger o negócio contra oportunismo.
-</p>
-
+<section class="solution"><div class="container">
+<div class="section-label">07 — Solution</div><h2>Central de Resolução Pós-Compra.</h2>
+<p class="section-description">Uma central dentro do produto para transformar um problema de entrega em uma jornada de resolução clara, com opções que variam conforme o estágio do pedido e validações de risco em background.</p>
 <div class="solution-grid">
-
-<div class="product-screen">
-<div class="screen">
-<div class="screen-top">← Meus pedidos</div>
-<h3>Pedido #12345</h3>
-
-<div class="order-status">
-<strong>⚠ Pedido atrasado</strong>
-Nova previsão: 18/08
-</div>
-
-<p class="screen-text">
-Identificamos o atraso na logística. Escolha abaixo como deseja prosseguir:
-</p>
-
-<a class="action">Aceitar novo prazo</a>
-<a class="action secondary">Solicitar reembolso imediato</a>
-
-<p class="screen-text" style="font-size:10px; margin-top:12px; color:#98a2b3; text-align:center;">
-*Estorno condicionado à verificação do rastreio do parceiro logístico.
-</p>
-</div>
-</div>
-
+<div class="product-screen"><div class="screen">
+<div class="screen-top">← Meus pedidos</div><h3>Pedido #12345</h3>
+<div class="order-status"><strong>⚠ Pedido atrasado</strong>Nova previsão: 18/08</div>
+<p class="screen-text">Identificamos o atraso na logística. Escolha abaixo como deseja prosseguir:</p>
+<a class="action">Aceitar novo prazo + 10% de desconto</a><a class="action secondary">Solicitar reembolso imediato</a><a class="action secondary">Falar com assistente</a>
+<p class="screen-text" style="font-size:10px;margin-top:12px;color:#98a2b3;text-align:center">As opções disponíveis variam conforme o estágio do pedido e as validações de segurança.</p>
+</div></div>
 <div class="solution-box">
-
-<div class="solution-step">
-<div class="step-number">1</div>
-<div><strong>Detectar Proativamente</strong><span>O sistema identifica o atraso no rastreio da transportadora.</span></div>
+<div class="solution-step"><div class="step-number">1</div><div><strong>Detectar Proativamente</strong><span>O sistema identifica o atraso no rastreio da transportadora e aciona a jornada antes do cliente precisar entrar em contato.</span></div></div>
+<div class="solution-step"><div class="step-number">2</div><div><strong>Motor de Regras & Riscos</strong><span>Valida o status logístico e outras condições de elegibilidade antes de liberar ações sensíveis como o reembolso.</span></div></div>
+<div class="solution-step"><div class="step-number">3</div><div><strong>Dar Opcionalidade Segura</strong><span>Oferece novo prazo com 10% de desconto, reembolso imediato quando elegível ou encaminhamento para supervisão humana.</span></div></div>
+<div class="solution-step"><div class="step-number">4</div><div><strong>Executar sem Fricção</strong><span>Após aprovação, a integração com o gateway de pagamento executa o reembolso; em paralelo, o chatbot orienta o cliente e reduz a necessidade de recontato humano.</span></div></div>
+<div class="solution-step"><div class="step-number">5</div><div><strong>Medir o impacto</strong><span>Reduzir custo com taxa de recontato e aumentar receita por meio de recompra, especialmente quando a compensação preserva a relação com o cliente.</span></div></div>
+</div></div>
+<div class="chatbot-box"><strong>🤖 Chatbot de resolução</strong><p style="margin-top:6px;font-size:13px">O chatbot funciona como camada de orientação: explica o status, apresenta as opções elegíveis, coleta informações e encaminha exceções para atendimento humano. O objetivo não é substituir o suporte, mas reduzir contatos repetitivos e facilitar a resolução.</p></div>
+<div class="notice" style="background:var(--blue-light);border-color:#93c5fd;color:#1e40af;margin-top:25px">
+<strong style="font-size:15px;display:block;margin-bottom:6px">💡 Diferencial em Relação ao Padrão de Mercado</strong>
+<p style="margin:0;font-size:13px;color:#1e3a8a"><strong>O diferencial:</strong> a Central combina detecção proativa, opcionalidade, chatbot e governança de risco. Em vez de apresentar uma solução única para todos os atrasos, o produto adapta a ação ao estágio do fluxo: pode oferecer novo prazo com benefício, liberar reembolso quando elegível ou direcionar para supervisão humana.</p>
 </div>
+</div></section>
 
-<div class="solution-step">
-<div class="step-number">2</div>
-<div><strong>Motor de Regras & Riscos</strong><span>Valida se a entrega não consta como realizada para impedir fraudes antes de liberar o botão.</span></div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">3</div>
-<div><strong>Dar Opcionalidade Segura</strong><span>Permitir estorno em 1 clique para casos validados ou direcionar para supervisão humana.</span></div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">4</div>
-<div><strong>Executar sem Fricção</strong><span>Integração com gateway de pagamento para reembolso instantâneo após aprovação.</span></div>
-</div>
-
-</div>
-</div>
-
-<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 01) -->
-<div class="notice" style="background:var(--blue-light); border-color:#93c5fd; color:#1e40af; margin-top:35px;">
-<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
-<p style="margin:0; font-size:13px; color:#1e3a8a;">
-<strong>O que o mercado faz:</strong> Oferece botões genéricos de reembolso que geram alto índice de fraude (clientes pedem estorno em pequenos atrasos e ainda ficam com a mercadoria quando ela chega) ou forçam o cliente a passar por suporte humano lento.<br>
-<strong>O meu diferencial:</strong> Um <strong>motor de governança e validação de risco em tempo real</strong>. O estorno automático em 1 clique só é liberado se a API da transportadora confirmar a exceção logística real. A solução combina os direitos do CDC (Art. 35) com pontuação de risco (<em>Risk Score</em>) do usuário, entregando autonomia para o cliente honesto e proteção financeira/jurídica para a empresa.
-</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-label">09 — Metrics</div>
-<h2>Métricas de Impacto no Negócio</h2>
-
+<section><div class="container">
+<div class="section-label">08 — Metrics</div><h2>Métricas de Impacto no Negócio</h2>
 <div class="metrics-grid">
+<div class="card metric-card"><span class="proposed">KPI DE NEGÓCIO</span><h3>Taxa de Recompra</h3><p>Medir a diferença de recompra entre clientes que receberam dentro do prazo, clientes afetados por atraso e clientes que utilizaram a Central de Resolução.</p></div>
+<div class="card metric-card"><span class="proposed">KPI DE EFICIÊNCIA</span><h3>Taxa de Recontato</h3><p>Meta de estudo: reduzir a taxa de recontato de 38% para 15%, validando a meta em experimento controlado antes da escala.</p></div>
+<div class="card metric-card"><span class="proposed">KPI DE EXPERIÊNCIA</span><h3>CSAT do Pós-Compra</h3><p>Meta de estudo: elevar a satisfação na resolução de problemas de 2,8 para 4,5 estrelas, acompanhando também o tempo de resolução.</p></div>
+<div class="card metric-card"><span class="proposed">GUARDRAIL DE SEGURANÇA</span><h3>Estornos Indevidos</h3><p>Acompanhar estornos de pedidos comprovadamente entregues e casos encaminhados para revisão humana, evitando que a redução de fricção aumente perdas por fraude.</p></div>
+</div></div></section>
 
-<div class="card metric-card">
-<span class="proposed">KPI DE NEGÓCIO</span>
-<h3>Redução do Transbordo Externo</h3>
-<p>Meta: Reduzir em 40% o volume de reclamações em canais terceiros (Reclame Aqui / Procon).</p>
-</div>
+<section class="takeaway"><div class="container takeaway-grid"><div>
+<div class="section-label">09 — Takeaway Case 01</div><h2>Resumo da Estratégia</h2>
+<p>Partimos de sinais públicos para formular hipóteses, analisamos dados simulados com apoio de LLM para identificar os principais padrões de fricção e desenhamos uma Central de Resolução que combina previsibilidade, opcionalidade, chatbot e governança de risco.</p>
+</div><ul class="takeaway-list">
+<li>Benchmark usado para formular hipóteses</li><li>LLM aplicado à identificação e interpretação de padrões</li><li>Problemas priorizados a partir dos dados</li><li>Jornada de resolução com opções conforme o contexto</li><li>Redução de recontato e potencial aumento de recompra</li>
+</ul></div></section>
 
-<div class="card metric-card">
-<span class="proposed">KPI DE EFICIÊNCIA</span>
-<h3>Taxa de Recontato</h3>
-<p>Meta: Reduzir a taxa de recontato no suporte interno de 38% para 15%.</p>
-</div>
+<!-- CASE 02 -->
+<section id="case2" class="case-intro" style="border-top:5px solid var(--orange)"><div class="container"><div class="case-top"><div>
+<div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & OPERAÇÕES</div><h2 class="case-title">FrotaPro<br>Gestão Preventiva & Sinistros de Frota</h2>
+</div><p class="case-subtitle">Como prevenir disputas de avarias pré-existentes (check-in/check-out), evitar prejuízos com arranhões não identificados e acelerar a liberação de sinistros com vistoria guiada e manutenção preditiva?<br><br>A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veículos criado para este portfólio.</p>
+</div><div class="notice"><strong>Contexto do Negócio:</strong> Em operações de frotas e locação, a falta de registro prévio do estado do veículo gera perdas com avarias sem autoria e atrasos em reformas e perícias de seguros.</div></div></section>
 
-<div class="card metric-card">
-<span class="proposed">KPI DE EXPERIÊNCIA</span>
-<h3>CSAT do Pós-Compra</h3>
-<p>Elevar a satisfação do cliente na resolução de problemas de 2.8 para 4.5 estrelas.</p>
-</div>
+<section><div class="container"><div class="section-label">10 — Discovery & Gargalos da Operação</div><h2>Por que processos de vistoria e sinistro tradicionais geram tanto prejuízo?</h2><p class="section-description">Analisando o fluxo de frotas e locadoras, identificamos que a ausência de registro preventivo e de padrão na vistoria cria uma reação em cadeia: <strong>arranhões não identificados na entrega → disputas sobre a culpa do dano → fotos ruins no sinistro → perícia recusada → carro parado no pátio.</strong></p>
+<div class="pattern-grid"><div class="card pattern"><div class="pattern-icon">🔍</div><h3>Avarias e Arranhões Sem Autoria</h3><p>Condutores devolvem o carro com pequenos danos. Como a vistoria inicial foi informal ou em papel, a empresa absorve o custo.</p></div><div class="card pattern"><div class="pattern-icon">📸</div><h3>Fotos Inválidas / Incompletas</h3><p>Em caso de acidentes, condutores registram o dano de forma escura ou desfocada, aumentando recusas e retrabalho.</p></div><div class="card pattern"><div class="pattern-icon">⏳</div><h3>Alto Downtime do Veículo</h3><p>Sem triagem rápida para reparos simples versus sinistro grave, o veículo fica inativo aguardando liberação.</p></div></div></div></section>
 
-<div class="card metric-card">
-<span class="proposed">GUARDRAIL DE SEGURANÇA</span>
-<h3>Taxa de Falsos Positivos & Fraude</h3>
-<p>Garantir 0% de estornos indevidos em pedidos comprovadamente entregues pela transportadora.</p>
-</div>
+<section class="simulated"><div class="container"><div class="section-label">11 — Dados Simulados da FrotaPro</div><h2>Cenário operacional e financeiro antes do produto</h2><div class="simulated-grid">
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">R$ 480k</div><strong>custo mensal por avarias não identificadas</strong><small>Arranhões e danos descobertos pós-devolução sem autoria</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">12,5 dias</div><strong>tempo médio de liberação (SLA)</strong><small>Desde o aviso do dano até o início do reparo</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">24%</div><strong>sinistros recusados na 1ª análise</strong><small>Necessidade de reenvio de laudos por foto ruim</small></div>
+<div class="sim-card"><span class="sim-badge">SIMULADO</span><div class="number">15%</div><strong>fração da frota inativa por avaria</strong><small>Veículos imobilizados aguardando triagem</small></div>
+</div></div></section>
 
-</div>
-</div>
-</section>
+<section class="legal-section"><div class="container"><div class="section-label">12 — Legal & Compliance Lens</div><h2>Como transformar regras contratuais e regulatórias em travas de segurança no produto</h2><p class="section-description">Vistorias e aberturas de sinistro dependem de evidências confiáveis. A perspectiva jurídica contribui para transformar requisitos contratuais e regulatórios em regras de produto, sem retirar usabilidade da jornada.</p>
+<div class="legal-grid"><div class="card legal-card"><span class="tag">CONTRATOS</span><h3>Registro de Avarias</h3><p>Registro fotográfico na retirada e devolução para diferenciar danos preexistentes de novos danos.</p></div><div class="card legal-card"><span class="tag">SEGUROS</span><h3>Padrão Probatório</h3><p>Definição dos requisitos mínimos de imagem e informação para reduzir recusas técnicas.</p></div><div class="card legal-card"><span class="tag">LGPD</span><h3>Tratamento de Dados</h3><p>Regras para coleta e armazenamento de documentos e dados de terceiros envolvidos no acidente.</p></div><div class="card legal-card"><span class="tag">AUDITORIA</span><h3>Registros Auditáveis</h3><p>Geolocalização, horário e identificação da operação para fortalecer rastreabilidade e auditoria.</p></div></div></div></section>
 
-<section class="takeaway">
-<div class="container takeaway-grid">
-<div>
-<div class="section-label">10 — Takeaway Case 01</div>
-<h2>Resumo da Estratégia</h2>
-<p>
-Utilizamos os sinais públicos do mercado para antecipar dores, estruturar a governança jurídica da jornada e criar um produto digital focado em retenção de confiança e prevenção a fraudes.
-</p>
-</div>
+<section class="solution"><div class="container"><div class="section-label">13 — Solution</div><h2>Plataforma de Vistoria Preventiva (Check-in/Out) & Sinistro Guiado</h2><p class="section-description">Uma jornada mobile em que o condutor registra preventivamente o estado do veículo e, em caso de avaria ou colisão, é guiado para capturar as fotos necessárias com validação instantânea de qualidade.</p>
+<div class="solution-grid"><div class="product-screen"><div class="screen"><div class="screen-top">← FrotaPro Mobile</div><h3>Vistoria de Check-in</h3><div class="order-status" style="background:var(--blue-light)"><strong style="color:var(--blue)">📸 Passo 1: Mapear Arranhões / Avarias</strong>Enquadre a lateral com a silhueta da câmera.</div><p class="screen-text">2 avarias pré-existentes identificadas e salvas no contrato de entrega.</p><a class="action">Confirmar Retirada Segura</a><a class="action secondary">Registrar Novo Sinistro / Dano</a></div></div>
+<div class="solution-box"><div class="solution-step"><div class="step-number">1</div><div><strong>Vistoria Preventiva no Check-in</strong><span>Registro obrigatório com silhueta digital na retirada/devolução para diferenciar danos antigos e novos.</span></div></div><div class="solution-step"><div class="step-number">2</div><div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou fora de ângulo.</span></div></div><div class="solution-step"><div class="step-number">3</div><div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS, timestamp e ID da operação fortalecem a rastreabilidade do laudo.</span></div></div><div class="solution-step"><div class="step-number">4</div><div><strong>Triagem Inteligente & Agendamento</strong><span>Direciona reparos simples e sinistros graves para os fluxos adequados, reduzindo o tempo parado.</span></div></div></div></div>
+<div class="notice" style="background:var(--purple-light);border-color:#c4b5fd;color:#5b21b6;margin-top:35px"><strong style="font-size:15px;display:block;margin-bottom:6px">💡 Diferencial em Relação ao Padrão de Mercado</strong><p style="margin:0;font-size:13px;color:#4c1d95"><strong>O diferencial:</strong> uma plataforma preventiva end-to-end que registra o estado inicial do veículo, orienta a vistoria e valida a qualidade das evidências antes que o problema avance para disputa ou perícia.</p></div>
+</div></section>
 
-<ul class="takeaway-list">
-<li>Benchmark orientado a decisões</li>
-<li>Problem framing embasado em dados</li>
-<li>Jornada ponta a ponta com visibilidade</li>
-<li>Conformidade com o CDC com travas antifraude</li>
-<li>Redução comprovada de transbordo, prejuízos e custos</li>
-</ul>
-</div>
-</section>
+<section><div class="container"><div class="section-label">14 — Metrics</div><h2>Impacto Esperado no Case FrotaPro</h2><div class="metrics-grid">
+<div class="card metric-card"><span class="proposed">PREVENÇÃO DE CUSTO</span><h3>Recuperação de Avarias Sem Autoria</h3><p>Redução esperada de 75% nos prejuízos com danos não identificados, a ser validada por experimento e rollout.</p></div>
+<div class="card metric-card"><span class="proposed">EFICIÊNCIA OPERACIONAL</span><h3>Queda no Downtime da Frota</h3><p>Meta de estudo: reduzir o tempo médio de liberação de 12,5 para 2,5 dias.</p></div>
+<div class="card metric-card"><span class="proposed">REDUÇÃO DE RECUSAS</span><h3>Aprovação de Perícias</h3><p>Meta de estudo: reduzir a taxa de rejeição de laudos de 24% para menos de 3%.</p></div>
+<div class="card metric-card"><span class="proposed">COMPLIANCE & RISCO</span><h3>Disputas Contratuais</h3><p>Acompanhar contestações relacionadas à autoria de avarias e à qualidade dos registros digitais.</p></div>
+</div></div></section>
 
+<section class="takeaway"><div class="container takeaway-grid"><div><div class="section-label">15 — Takeaway Case 02</div><h2>Conclusão da Abordagem</h2><p>Aliar governança preventiva na retirada do veículo a um fluxo de vistoria guiada por software transforma requisitos de prova, operação e risco em uma jornada digital mais previsível.</p></div><ul class="takeaway-list"><li>Prevenção de conflitos e prejuízos no Check-in</li><li>Rigidez probatória sem perda de usabilidade</li><li>Validação preventiva na ponta</li><li>Redução de downtime e retrabalho</li></ul></div></section>
 
-<!-- ==================== CASE 02: FROTA PRO (GESTÃO PREVENTIVA & SINISTROS) ==================== -->
+<section><div class="container"><div class="section-label">16 — Competências</div><h2>Habilidades & Ferramentas</h2><div class="skills">
+<div class="skill">Product Discovery</div><div class="skill">Problem Framing</div><div class="skill">Mapeamento de Jornada (Service Design)</div><div class="skill">Legal Product Design & Compliance</div><div class="skill">Análise de Riscos & Prevenção à Fraude</div><div class="skill">Análise de Dados & Benchmarking</div><div class="skill">LLM & Análise de Texto</div><div class="skill">SQL (Básico / Intermediário)</div><div class="skill">Figma & Prototipagem</div><div class="skill">Gestão de Stakeholders</div>
+</div></div></section>
 
-<section id="case2" class="case-intro" style="border-top: 5px solid var(--orange);">
-<div class="container">
-<div class="case-top">
-<div>
-<div class="study-tag">CASE 02 FICTÍCIO · MOBILIDADE & OPERAÇÕES</div>
-<h2 class="case-title">FrotaPro<br>Gestão Preventiva & Sinistros de Frota</h2>
-</div>
-
-<p class="case-subtitle">
-Como prevenir disputas de avarias pré-existentes (check-in/check-out), evitar prejuízos com arranhões não identificados e acelerar a liberação de sinistros com vistoria guiada e manutenção preditiva?
-<br><br>
-A FrotaPro é um ecossistema fictício de gestão de frotas e locação de veículos criado para este portfólio.
-</p>
-</div>
-
-<div class="notice">
-<strong>Contexto do Negócio:</strong>
-Em operações de frotas e locação (como frotas para motoristas de app ou empresas de logística), a falta de registro prévio do estado do veículo gera perdas milionárias com avarias sem autoria (arranhões, amassados) e atrasos em reformas e perícias de seguros.
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-label">11 — Discovery & Gargalos da Operação</div>
-<h2>Por que processos de vistoria e sinistro tradicionais geram tanto prejuízo?</h2>
-<p class="section-description">
-Analisando o fluxo de frotas e locadoras, identificamos que a ausência de registro preventivo e de padrão na vistoria cria uma reação em cadeia: <strong>arranhões não identificados na entrega -> disputas sobre a culpa do dano -> fotos ruins no sinistro -> perícia recusada -> carro parado no pátio (downtime).</strong>
-</p>
-
-<div class="pattern-grid">
-
-<div class="card pattern">
-<div class="pattern-icon">🔍</div>
-<h3>Avarias e Arranhões Sem Autoria</h3>
-<p>
-Condutores devolvem o carro com pequenos danos. Como a vistoria inicial foi informal ou em papel, o motorista nega a autoria ("já estava assim") e a empresa absorve o custo da funilaria/recauchutagem.
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">📸</div>
-<h3>Fotos Inválidas / Incompletas</h3>
-<p>
-Em caso de acidentes, condutores registram o dano de forma escura ou desfocada, fazendo a seguradora recusar o orçamento de reparo na 1ª análise.
-</p>
-</div>
-
-<div class="card pattern">
-<div class="pattern-icon">⏳</div>
-<h3>Alto Downtime do Veículo</h3>
-<p>
-Sem triagem rápida para reparos estéticos simples vs. sinistro grave, o veículo fica semanas inativo aguardando liberação e acumulando prejuízo operacional.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="simulated">
-<div class="container">
-<div class="section-label">12 — Dados Simulados da FrotaPro</div>
-<h2>Cenário operacional e financeiro antes do produto</h2>
-
-<div class="simulated-grid">
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">R$ 480k</div>
-<strong>custo mensal por avarias não identificadas</strong>
-<small>Arranhões e danos descobertos pós-devolução sem autoria</small>
-</div>
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">12,5 dias</div>
-<strong>tempo médio de liberação (SLA)</strong>
-<small>Desde o aviso do dano até o início da funilaria/reparo</small>
-</div>
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">24%</div>
-<strong>sinistros recusados na 1ª análise</strong>
-<small>Necessidade constante de reenvio de laudos por foto ruim</small>
-</div>
-
-<div class="sim-card">
-<span class="sim-badge">SIMULADO</span>
-<div class="number">15%</div>
-<strong>fração da frota inativa por avaria</strong>
-<small>Veículos imobilizados em pátio aguardando triagem</small>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="legal-section">
-<div class="container">
-<div class="section-label">13 — Legal & Compliance Lens no Sinistro e Check-in</div>
-<h2>Como transformar regras contratuais e regulatórias em travas de segurança no produto</h2>
-<p class="section-description">
-Vistorias e aberturas de sinistro dependem de rigidez probatória. O Jurídico atuou estruturando os requisitos exigidos para garantir responsabilização justa de condutores e aprovação imediata pelas seguradoras.
-</p>
-
-<div class="legal-grid">
-
-<div class="card legal-card">
-<span class="tag">CONTRATOS</span>
-<h3>Provisão de Avarias & Isenção</h3>
-<p>
-Registro fotográfico irrefutável na retirada (check-in) que isenta o condutor atual de danos antigos e viabiliza a cobrança justa de novos danos.
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">SEGUROS</span>
-<h3>Padrão Probatório Securitário</h3>
-<p>
-Definição dos requisitos mínimos de imagem exigidos pelas apólices para eliminar recusas técnicas de peritos da seguradora.
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">LGPD</span>
-<h3>Tratamento de Dados de Terceiros</h3>
-<p>
-Conformidade na coleta e armazenamento de documentos (CNH, B.O., dados de terceiros envolvidos no acidente).
-</p>
-</div>
-
-<div class="card legal-card">
-<span class="tag">AUDITORIA</span>
-<h3>Imutabilidade de Registros</h3>
-<p>
-Uso de carimbos de geolocalização e horário no envio das fotos para comprovar o estado exato do veículo na entrega e no sinistro.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="solution">
-<div class="container">
-<div class="section-label">14 — Solution</div>
-<h2>Plataforma de Vistoria Preventiva (Check-in/Out) & Sinistro Guiado</h2>
-<p class="section-description">
-Uma jornada mobile em que o condutor registra preventivamente o estado do veículo no aluguel e, em caso de avaria ou colisão, é guiado para capturar as fotos no ângulo exato com validação instantânea de qualidade.
-</p>
-
-<div class="solution-grid">
-
-<div class="product-screen">
-<div class="screen">
-<div class="screen-top">← FrotaPro Mobile</div>
-<h3>Vistoria de Check-in</h3>
-
-<div class="order-status" style="background:var(--blue-light);">
-<strong style="color:var(--blue);">📸 Passo 1: Mapear Arranhões / Avarias</strong>
-Enquadre a lateral com a silhueta da câmera.
-</div>
-
-<p class="screen-text">
-2 avarias pré-existentes identificadas e salvas no contrato de entrega.
-</p>
-
-<a class="action">Confirmar Retirada Segura</a>
-<a class="action secondary">Registrar Novo Sinistro / Dano</a>
-</div>
-</div>
-
-<div class="solution-box">
-
-<div class="solution-step">
-<div class="step-number">1</div>
-<div><strong>Vistoria Preventiva no Check-in</strong><span>Registro obrigatório com silhueta digital na retirada/devolução. Isenta o motorista de danos antigos e atribui novos arranhões ao condutor correto.</span></div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">2</div>
-<div><strong>Validação de Qualidade em Tempo Real</strong><span>O sistema rejeita na hora fotos desfocadas, escuras ou fora de ângulo para garatir a perícia.</span></div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">3</div>
-<div><strong>Carimbo Digital Auditável</strong><span>Metadata de GPS, Timestamp e ID do Condutor garantem validade jurídica e contratual do laudo.</span></div>
-</div>
-
-<div class="solution-step">
-<div class="step-number">4</div>
-<div><strong>Triagem Inteligente & Agendamento</strong><span>Direciona pequenos reparos (recauchutagem/funilaria rápida) para oficinas credenciadas e sinistros graves para seguradoras em 48h.</span></div>
-</div>
-
-</div>
-</div>
-
-<!-- BLOCO ADICIONADO: DIFERENCIAL DE MERCADO (CASE 02) -->
-<div class="notice" style="background:var(--purple-light); border-color:#c4b5fd; color:#5b21b6; margin-top:35px;">
-<strong style="font-size:15px; display:block; margin-bottom:6px;">💡 Diferencial em Relação ao Padrão de Mercado</strong>
-<p style="margin:0; font-size:13px; color:#4c1d95;">
-<strong>O que o mercado faz:</strong> Apps passivos que atuam apenas após a batida/acidente ou formulários de vistoria em papel que não evitam a fraude de "o arranhão já estava aqui", gerando disputas com condutores e prejuízos absorvidos pela empresa.<br>
-<strong>O meu diferencial:</strong> Uma <strong>plataforma preventiva end-to-end (Check-in + Sinistro)</strong>. Registra o estado inicial exato do veículo no momento da retirada para isentar condutores honestos e cobrar responsabilidade com prova digital irrefutável. Em caso de colisão, a vistoria guiada garante aprovação do laudo em até 48h, reduzindo o downtime e o custo invisível de veículos parados ao mínimo.
-</p>
-</div>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="section-label">15 — Metrics</div>
-<h2>Impacto Esperado no Case FrotaPro</h2>
-
-<div class="metrics-grid">
-
-<div class="card metric-card">
-<span class="proposed">PREVENÇÃO DE CUSTO</span>
-<h3>Recuperação de Avarias Sem Autoria</h3>
-<p>Redução de 75% nos prejuízos com arranhões e danos não identificados através da vistoria preventiva no check-in.</p>
-</div>
-
-<div class="card metric-card">
-<span class="proposed">EFICIÊNCIA OPERACIONAL</span>
-<h3>Queda no Downtime da Frota</h3>
-<p>Redução do tempo de liberação do veículo para reparo/funilaria de 12,5 para 2,5 dias.</p>
-</div>
-
-<div class="card metric-card">
-<span class="proposed">REDUÇÃO DE RECUSAS</span>
-<h3>Aprovação de Perícias de Sinistro</h3>
-<p>Queda na taxa de rejeição de laudos por seguradoras de 24% para menos de 3%.</p>
-</div>
-
-<div class="card metric-card">
-<span class="proposed">COMPLIANCE & RISCO</span>
-<h3>Segurança Jurídica & Disputas</h3>
-<p>Zero contestações contratuais com suporte de carimbo digital imutável de geolocalização e timestamp.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section class="takeaway">
-<div class="container takeaway-grid">
-<div>
-<div class="section-label">16 — Takeaway Case 02</div>
-<h2>Conclusão da Abordagem</h2>
-<p>
-Aliar governança preventiva na retirada do veículo a um fluxo de vistoria guiada por software elimina os custos invisíveis de avarias e acelera a manutenção da frota.
-</p>
-</div>
-
-<ul class="takeaway-list">
-<li>Prevenção de conflitos e prejuízos no Check-in</li>
-<li>Rigidez probatória sem perda de usabilidade</li>
-<li>Validação preventiva antifraude na ponta</li>
-<li>Redução drástica do downtime e dos arranhões sem autoria</li>
-</ul>
-</div>
-</section>
-
-<!-- ==================== HABILIDADES ==================== -->
-
-<section>
-<div class="container">
-<div class="section-label">17 — Competências</div>
-<h2>Habilidades & Ferramentas</h2>
-
-<div class="skills">
-<div class="skill">Product Discovery</div>
-<div class="skill">Problem Framing</div>
-<div class="skill">Mapeamento de Jornada (Service Design)</div>
-<div class="skill">Legal Product Design & Compliance</div>
-<div class="skill">Análise de Riscos & Prevenção à Fraude</div>
-<div class="skill">Análise de Dados & Benchmarking</div>
-<div class="skill">SQL (Básico / Intermediário)</div>
-<div class="skill">Figma & Prototipagem</div>
-<div class="skill">Gestão de Stakeholders</div>
-</div>
-</div>
-</section>
-
-<!-- ==================== FOOTER ==================== -->
-
-<footer id="contato">
-<div class="container">
-<div class="footer-grid">
-<div>
-<h3 style="font-size:24px; margin-bottom:8px;">Vamos conversar?</h3>
-<p style="color:#98a2b3; font-size:14px;">Aberto a oportunidades em Product Management / Product Operations.</p>
-</div>
-
-<div class="footer-links">
-<a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank">LinkedIn</a>
-<a href="mailto:contato@exemplo.com">E-mail</a>
-</div>
-</div>
-
-<div class="disclaimer">
-© 2026 Ana Carolina. Projeto de portfólio desenvolvido para demonstrar a aplicação de competências jurídicas, análise de risco e gestão de produto digital.
-</div>
-</div>
-</footer>
-
+<footer id="contato"><div class="container"><div class="footer-grid"><div><h3 style="font-size:24px;margin-bottom:8px">Vamos conversar?</h3><p style="color:#98a2b3;font-size:14px">Aberto a oportunidades em Product Management / Product Operations.</p></div><div class="footer-links"><a href="https://www.linkedin.com/in/ana-carolina-vieira-2a7933201/" target="_blank">LinkedIn</a><a href="mailto:contato@exemplo.com">E-mail</a></div></div><div class="disclaimer">© 2026 Ana Carolina. Projeto de portfólio desenvolvido para demonstrar a aplicação de competências jurídicas, análise de risco e gestão de produto digital.</div></div></footer>
 </body>
 </html>
